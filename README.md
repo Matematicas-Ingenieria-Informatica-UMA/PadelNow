@@ -6,3 +6,4 @@ Arturo Aguilera González
 Matías Ramírez Durán
 Mario Quiñones Madrona
 Alberto Sánchez Muñoz
+Javier Guerrero Rico
