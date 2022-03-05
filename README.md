@@ -7,3 +7,4 @@
 - Mario Quiñones Madrona
 - Alberto Sánchez Muñoz
 - Javier Guerrero Rico
+- Alejandro Rey Leyva
