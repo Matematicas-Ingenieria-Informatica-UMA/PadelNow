@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="351.13" height="461.44" viewBox="0 0 351.13 461.44">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: #1d2c54;
+      }
+
+      .cls-2 {
+        fill: #dedfdf;
+      }
+
+      .cls-3 {
+        fill: #494949;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #211915;
+        stroke-miterlimit: 10;
+        stroke-width: 0.25px;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5, .cls-6 {
+        font-size: 95.99px;
+        font-family: Teko-Regular, Teko;
+      }
+
+      .cls-6 {
+        fill: #5173b1;
+      }
+    </style>
+  </defs>
+  <title>Logo PadelNow</title>
+  <g id="Bola">
+    <path class="cls-1" d="M480.81,255.45c0,96-78.58,173.81-175.51,173.81S129.79,351.44,129.79,255.45A172.54,172.54,0,0,1,132,228C145.25,145.05,217.8,81.64,305.3,81.64,402.23,81.64,480.81,159.46,480.81,255.45Z" transform="translate(-129.79 -81.64)"/>
+    <path class="cls-2" d="M129.9,249.21c4.84.54,11.48,1.46,19.27,3.11,10.47,2.21,29,6.29,49.7,17.7a138.71,138.71,0,0,1,35.75,27.07c15.13,16.09,22.83,32.48,28.76,45.1,7.3,15.53,4.95,15.22,12.26,29.62a173.83,173.83,0,0,0,25.87,38.13,163.38,163.38,0,0,0,20,18.59c4.3-.39,8.91-1,13.78-1.79s9.19-1.77,13.28-2.79a138.6,138.6,0,0,1-22-16.23A145.75,145.75,0,0,1,299.81,375c-4.58-7.61-7.65-14.55-13.79-28.42-6.84-15.46-6-15.82-10.38-24.51a160,160,0,0,0-44.43-54.47c-4.16-3.33-7.83-5.91-9.1-6.8a177.45,177.45,0,0,0-17.45-10.73,172,172,0,0,0-33.19-13.2A188.91,188.91,0,0,0,136.83,230c-2.11-.21-3.88-.35-5.11-.44-.47,3.1-.88,6.38-1.19,9.84S130,246.1,129.9,249.21Z" transform="translate(-129.79 -81.64)"/>
+    <path class="cls-2" d="M282.79,82.62A559.27,559.27,0,0,1,348.4,120.4c22.69,15.21,57.57,38.93,92.94,79.15a408.92,408.92,0,0,1,39.57,53.11,182.37,182.37,0,0,1-.82,18.63,185,185,0,0,1-3.26,21.2,285.28,285.28,0,0,0-35.23-63.06c-26.41-35.69-55-56.56-84-77.88-27.93-20.51-54.86-35.63-67.41-42.64-14.89-8.3-27.74-14.78-37.28-19.4,4.71-1.38,9.72-2.7,15-3.92S278.05,83.42,282.79,82.62Z" transform="translate(-129.79 -81.64)"/>
+  </g>
+  <g id="Capa_1" data-name="Capa 1">
+    <g id="N">
+      <g id="Agujero">
+        <circle class="cls-3" cx="179.05" cy="159.59" r="8.12"/>
+        <ellipse class="cls-4" cx="311.62" cy="242.91" rx="7.41" ry="4.81" transform="translate(-184.35 309.68) rotate(-60)"/>
+      </g>
+      <g id="Agujero-2" data-name="Agujero">
+        <circle class="cls-3" cx="126.92" cy="134.36" r="8.12"/>
+        <ellipse class="cls-4" cx="259.49" cy="217.69" rx="7.41" ry="4.81" transform="translate(-188.57 251.93) rotate(-60)"/>
+      </g>
+      <g id="Agujero-3" data-name="Agujero">
+        <circle class="cls-3" cx="153.06" cy="133.84" r="8.12"/>
+        <ellipse class="cls-4" cx="285.63" cy="217.16" rx="7.41" ry="4.81" transform="translate(-175.04 274.3) rotate(-60)"/>
+      </g>
+      <g id="Agujero-4" data-name="Agujero">
+        <circle class="cls-3" cx="153.04" cy="160.31" r="8.12"/>
+        <ellipse class="cls-4" cx="285.6" cy="243.64" rx="7.41" ry="4.81" transform="translate(-197.98 287.52) rotate(-60)"/>
+      </g>
+      <g id="Agujero-5" data-name="Agujero">
+        <circle class="cls-3" cx="205.36" cy="186.98" r="8.12"/>
+        <ellipse class="cls-4" cx="337.93" cy="270.31" rx="7.41" ry="4.81" transform="translate(-194.92 346.17) rotate(-60)"/>
+      </g>
+      <g id="Agujero-6" data-name="Agujero">
+        <circle class="cls-3" cx="179.04" cy="186.58" r="8.12"/>
+        <ellipse class="cls-4" cx="311.61" cy="269.9" rx="7.41" ry="4.81" transform="translate(-207.73 323.17) rotate(-60)"/>
+      </g>
+      <g id="Agujero-7" data-name="Agujero">
+        <circle class="cls-3" cx="205.34" cy="213.46" r="8.12"/>
+        <ellipse class="cls-4" cx="337.91" cy="296.78" rx="7.41" ry="4.81" transform="translate(-217.85 359.39) rotate(-60)"/>
+      </g>
+      <g id="Agujero-8" data-name="Agujero">
+        <circle class="cls-3" cx="231.48" cy="212.93" r="8.12"/>
+        <ellipse class="cls-4" cx="364.05" cy="296.25" rx="7.41" ry="4.81" transform="translate(-204.33 381.76) rotate(-60)"/>
+      </g>
+      <g id="Agujero-9" data-name="Agujero">
+        <circle class="cls-3" cx="101.13" cy="241.93" r="8.12"/>
+        <ellipse class="cls-4" cx="233.7" cy="325.25" rx="7.41" ry="4.81" transform="translate(-294.61 283.37) rotate(-60)"/>
+      </g>
+      <g id="Agujero-10" data-name="Agujero">
+        <circle class="cls-3" cx="74.81" cy="241.53" r="8.12"/>
+        <ellipse class="cls-4" cx="207.37" cy="324.85" rx="7.41" ry="4.81" transform="translate(-307.43 260.38) rotate(-60)"/>
+      </g>
+      <g id="Agujero-11" data-name="Agujero">
+        <circle class="cls-3" cx="101.11" cy="268.4" r="8.12"/>
+        <ellipse class="cls-4" cx="233.68" cy="351.72" rx="7.41" ry="4.81" transform="translate(-317.55 296.59) rotate(-60)"/>
+      </g>
+      <g id="Agujero-12" data-name="Agujero">
+        <circle class="cls-3" cx="74.78" cy="268" r="8.12"/>
+        <ellipse class="cls-4" cx="207.35" cy="351.32" rx="7.41" ry="4.81" transform="translate(-330.37 273.59) rotate(-60)"/>
+      </g>
+      <g id="Agujero-13" data-name="Agujero">
+        <circle class="cls-3" cx="74.79" cy="188.02" r="8.12"/>
+        <ellipse class="cls-4" cx="207.36" cy="271.34" rx="7.41" ry="4.81" transform="translate(-261.1 233.61) rotate(-60)"/>
+      </g>
+      <g id="Agujero-14" data-name="Agujero">
+        <circle class="cls-3" cx="100.93" cy="187.5" r="8.12"/>
+        <ellipse class="cls-4" cx="233.5" cy="270.82" rx="7.41" ry="4.81" transform="translate(-247.57 255.99) rotate(-60)"/>
+      </g>
+      <g id="Agujero-15" data-name="Agujero">
+        <circle class="cls-3" cx="74.77" cy="214.49" r="8.12"/>
+        <ellipse class="cls-4" cx="207.34" cy="297.81" rx="7.41" ry="4.81" transform="translate(-284.03 246.83) rotate(-60)"/>
+      </g>
+      <g id="Agujero-16" data-name="Agujero">
+        <circle class="cls-3" cx="100.91" cy="213.97" r="8.12"/>
+        <ellipse class="cls-4" cx="233.48" cy="297.29" rx="7.41" ry="4.81" transform="translate(-270.51 269.2) rotate(-60)"/>
+      </g>
+      <g id="Agujero-17" data-name="Agujero">
+        <circle class="cls-3" cx="75.24" cy="134.55" r="8.12"/>
+        <ellipse class="cls-4" cx="207.81" cy="217.87" rx="7.41" ry="4.81" transform="translate(-214.57 207.26) rotate(-60)"/>
+      </g>
+      <g id="Agujero-18" data-name="Agujero">
+        <circle class="cls-3" cx="101.38" cy="134.03" r="8.12"/>
+        <ellipse class="cls-4" cx="233.95" cy="217.35" rx="7.41" ry="4.81" transform="translate(-201.05 229.64) rotate(-60)"/>
+      </g>
+      <g id="Agujero-19" data-name="Agujero">
+        <circle class="cls-3" cx="75.22" cy="161.02" r="8.12"/>
+        <ellipse class="cls-4" cx="207.79" cy="244.35" rx="7.41" ry="4.81" transform="translate(-237.5 220.48) rotate(-60)"/>
+      </g>
+      <g id="Agujero-20" data-name="Agujero">
+        <circle class="cls-3" cx="101.36" cy="160.5" r="8.12"/>
+        <ellipse class="cls-4" cx="233.92" cy="243.82" rx="7.41" ry="4.81" transform="translate(-223.98 242.86) rotate(-60)"/>
+      </g>
+      <g id="Agujero-21" data-name="Agujero">
+        <circle class="cls-3" cx="101.37" cy="81.08" r="8.12"/>
+        <ellipse class="cls-4" cx="233.93" cy="164.4" rx="7.41" ry="4.81" transform="matrix(0.5, -0.87, 0.87, 0.5, -155.2, 203.16)"/>
+      </g>
+      <g id="Agujero-22" data-name="Agujero">
+        <circle class="cls-3" cx="75.04" cy="80.68" r="8.12"/>
+        <ellipse class="cls-4" cx="207.61" cy="164" rx="7.41" ry="4.81" transform="translate(-168.01 180.16) rotate(-60)"/>
+      </g>
+      <g id="Agujero-23" data-name="Agujero">
+        <circle class="cls-3" cx="101.35" cy="107.55" r="8.12"/>
+        <ellipse class="cls-4" cx="233.91" cy="190.88" rx="7.41" ry="4.81" transform="translate(-178.14 216.37) rotate(-60)"/>
+      </g>
+      <g id="Agujero-24" data-name="Agujero">
+        <circle class="cls-3" cx="75.02" cy="107.15" r="8.12"/>
+        <ellipse class="cls-4" cx="207.59" cy="190.48" rx="7.41" ry="4.81" transform="translate(-190.95 193.38) rotate(-60)"/>
+      </g>
+      <g id="Agujero-25" data-name="Agujero">
+        <circle class="cls-3" cx="126.67" cy="106.24" r="8.12"/>
+        <ellipse class="cls-4" cx="259.24" cy="189.56" rx="7.41" ry="4.81" transform="translate(-164.34 237.65) rotate(-60)"/>
+      </g>
+      <g id="Agujero-26" data-name="Agujero">
+        <circle class="cls-3" cx="257.49" cy="239.97" r="8.12"/>
+        <ellipse class="cls-4" cx="390.06" cy="323.29" rx="7.41" ry="4.81" transform="translate(-214.74 417.8) rotate(-60)"/>
+      </g>
+      <g id="Agujero-27" data-name="Agujero">
+        <circle class="cls-3" cx="231.48" cy="240.69" r="8.12"/>
+        <ellipse class="cls-4" cx="364.05" cy="324.02" rx="7.41" ry="4.81" transform="translate(-228.37 395.64) rotate(-60)"/>
+      </g>
+      <g id="Agujero-28" data-name="Agujero">
+        <circle class="cls-3" cx="283.5" cy="266.54" r="8.12"/>
+        <ellipse class="cls-4" cx="416.07" cy="349.86" rx="7.41" ry="4.81" transform="translate(-224.74 453.62) rotate(-60)"/>
+      </g>
+      <g id="Agujero-29" data-name="Agujero">
+        <circle class="cls-3" cx="257.49" cy="267.26" r="8.12"/>
+        <ellipse class="cls-4" cx="390.06" cy="350.59" rx="7.41" ry="4.81" transform="translate(-238.38 431.45) rotate(-60)"/>
+      </g>
+      <g id="Agujero-30" data-name="Agujero">
+        <circle class="cls-3" cx="283.85" cy="240.9" r="8.12"/>
+        <ellipse class="cls-4" cx="416.41" cy="324.22" rx="7.41" ry="4.81" transform="translate(-202.37 441.1) rotate(-60)"/>
+      </g>
+      <g id="Agujero-31" data-name="Agujero">
+        <circle class="cls-3" cx="257.51" cy="187" r="8.12"/>
+        <ellipse class="cls-4" cx="390.08" cy="270.32" rx="7.41" ry="4.81" transform="translate(-168.85 391.34) rotate(-60)"/>
+      </g>
+      <g id="Agujero-32" data-name="Agujero">
+        <circle class="cls-3" cx="283.65" cy="186.47" r="8.12"/>
+        <ellipse class="cls-4" cx="416.22" cy="269.79" rx="7.41" ry="4.81" transform="translate(-155.33 413.71) rotate(-60)"/>
+      </g>
+      <g id="Agujero-33" data-name="Agujero">
+        <circle class="cls-3" cx="257.49" cy="213.47" r="8.12"/>
+        <ellipse class="cls-4" cx="390.06" cy="296.79" rx="7.41" ry="4.81" transform="translate(-191.79 404.56) rotate(-60)"/>
+      </g>
+      <g id="Agujero-34" data-name="Agujero">
+        <circle class="cls-3" cx="283.63" cy="212.95" r="8.12"/>
+        <ellipse class="cls-4" cx="416.2" cy="296.27" rx="7.41" ry="4.81" transform="translate(-178.27 426.93) rotate(-60)"/>
+      </g>
+      <g id="Agujero-35" data-name="Agujero">
+        <circle class="cls-3" cx="257.96" cy="133.53" r="8.12"/>
+        <ellipse class="cls-4" cx="390.52" cy="216.85" rx="7.41" ry="4.81" transform="translate(-122.32 364.99) rotate(-60)"/>
+      </g>
+      <g id="Agujero-36" data-name="Agujero">
+        <circle class="cls-3" cx="284.09" cy="133" r="8.12"/>
+        <ellipse class="cls-4" cx="416.66" cy="216.33" rx="7.41" ry="4.81" transform="translate(-108.8 387.36) rotate(-60)"/>
+      </g>
+      <g id="Agujero-37" data-name="Agujero">
+        <circle class="cls-3" cx="257.93" cy="160" r="8.12"/>
+        <ellipse class="cls-4" cx="390.5" cy="243.32" rx="7.41" ry="4.81" transform="translate(-145.26 378.21) rotate(-60)"/>
+      </g>
+      <g id="Agujero-38" data-name="Agujero">
+        <circle class="cls-3" cx="284.07" cy="159.48" r="8.12"/>
+        <ellipse class="cls-4" cx="416.64" cy="242.8" rx="7.41" ry="4.81" transform="translate(-131.74 400.58) rotate(-60)"/>
+      </g>
+      <g id="Agujero-39" data-name="Agujero">
+        <circle class="cls-3" cx="284.08" cy="80.06" r="8.12"/>
+        <ellipse class="cls-4" cx="416.65" cy="163.38" rx="7.41" ry="4.81" transform="matrix(0.5, -0.87, 0.87, 0.5, -62.95, 360.88)"/>
+      </g>
+      <g id="Agujero-40" data-name="Agujero">
+        <circle class="cls-3" cx="257.76" cy="79.66" r="8.12"/>
+        <ellipse class="cls-4" cx="390.33" cy="162.98" rx="7.41" ry="4.81" transform="translate(-75.77 337.88) rotate(-60)"/>
+      </g>
+      <g id="Agujero-41" data-name="Agujero">
+        <circle class="cls-3" cx="284.06" cy="106.53" r="8.12"/>
+        <ellipse class="cls-4" cx="416.63" cy="189.85" rx="7.41" ry="4.81" transform="translate(-85.89 374.1) rotate(-60)"/>
+      </g>
+      <g id="Agujero-42" data-name="Agujero">
+        <circle class="cls-3" cx="257.74" cy="106.13" r="8.12"/>
+        <ellipse class="cls-4" cx="390.31" cy="189.45" rx="7.41" ry="4.81" transform="translate(-98.71 351.1) rotate(-60)"/>
+      </g>
+    </g>
+    <g id="PadelNow">
+      <text class="cls-5" transform="translate(27.7 428.23)">Padel Now</text>
+      <text class="cls-6" transform="translate(25.7 425.78)">Padel Now</text>
+    </g>
+  </g>
+</svg>
