@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C15BD025-E9B0-2252-4B2E-C35B1505DE17" name="País">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>ED90F6A1-165F-B9F5-E6F5-2223CBABF29A</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nombre" id="17837A64-6473-A345-97DC-0E60F4BE6AA9">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>FADEB056-664C-6D06-E542-609499C17CFB</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Foto" id="59C64C7B-05FE-3517-BF3C-CE08A866467F">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>A9B1062D-F587-CFD2-2D6B-A30F1893AE0D</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Continente_Nombre" id="71F667DD-261C-20CA-0A3A-2392AEE13B64">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>62A70BC9-1300-F874-27B9-B2253B9EE019</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F206CAD6-18D9-C732-4CB4-FF77C814BCDB" referredColumn="CD21380A-0340-1AD7-ACD3-FF724E2ABC08"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C04F4BA-82BE-59F7-74F8-B9EFEC09C56B" name="País_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>62D31251-206D-EF20-0792-77F6D5619B41</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17837A64-6473-A345-97DC-0E60F4BE6AA9"/>
+<colUsage columnID="71F667DD-261C-20CA-0A3A-2392AEE13B64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EA275DA-0CCA-8882-BC92-790F4820B989" name="País_Continente_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>DDF09926-4080-3501-AC96-8FD7F90140DC</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71F667DD-261C-20CA-0A3A-2392AEE13B64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

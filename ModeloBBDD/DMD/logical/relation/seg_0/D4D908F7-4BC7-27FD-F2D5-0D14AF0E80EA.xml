@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_26" directorySegmentName="seg_0" id="D4D908F7-4BC7-27FD-F2D5-0D14AF0E80EA">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:09:18 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<sourcePk>857CD659-0B66-6399-C80A-4C08922E78A8</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>es de</nameOnSource>
+<nameOnTarget> tiene de revés</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E6734E6F-D45F-65A2-99BC-C1099BE99911</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>365D95F6-1F61-55D1-3A82-F849BBA6BECE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="973EF4AF-9A2B-D3B6-B410-B9D41AF9A557" name="User">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>55EF3736-2848-DFE2-DF8A-0D50619643DD</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Username" id="B6F66F67-73D1-23C9-A06E-4BE68A30916B">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>865EFB29-54BA-8D01-2BBE-C2C7922D4B86</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contraseña" id="72DE85A6-841F-310F-F89C-6F23F3FCA124">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>8D483DBE-A9E8-B4C9-5AA6-CF4F4E95C16E</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="43DBDC1F-5622-2EAD-0C34-D3939EA6E370">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>BD06A85C-BCC8-E434-EE33-5C54FD57B680</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellidos" id="C4277B67-47EB-BAFF-CCCD-AEE81F778AD2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>583F1ADE-ABBB-ACA2-CAD6-0F3F3660921A</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Correo" id="C140BA47-BB60-CAE9-60D9-BCBADFDC652B">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>502D7014-5B19-B5FB-746E-51BA0DAA3939</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Foto" id="A77EBC6A-7BBD-B7EB-F4E1-6EB49EAB6163">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>A30CDF72-354B-A9BA-223A-71790AB8C7A1</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_Username" id="1355D48F-AAC2-B995-2E24-82BFEE34F164">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>B1A2F6A9-F056-299B-960A-E39E869BE767</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E38011D-B7E1-5C5D-0661-B96C6EEEF64E" referredColumn="B6F66F67-73D1-23C9-A06E-4BE68A30916B"/>
+</associations>
+</Column>
+<Column name="Sexo" id="09641BC4-E0F4-2AE2-850D-24221AE5F4B6">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>E60A9C2F-A9AF-297A-3708-2572D614D99C</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AC251B6B-56EB-A7FC-718F-16519C5B7AC8" name="User_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>52CD9996-E465-4D55-6378-2BF4E859FA22</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6F66F67-73D1-23C9-A06E-4BE68A30916B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C85570E-6085-D4D6-A648-A80B2ACF5344" name="User_User_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>96156379-D2D8-90F9-AB5A-B4BFEA1AD5D0</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1355D48F-AAC2-B995-2E24-82BFEE34F164"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

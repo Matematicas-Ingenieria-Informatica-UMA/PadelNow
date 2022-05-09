@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="38B05199-C313-949B-D444-DF6B04C4014E" containerWithKeyObject="7B0D3C40-8249-F37B-1DAB-7846EA7F47E5" localFKIndex="20214B5A-CBD2-31FC-3649-53BD3388334F" name="Batalla_Freestyler_FKv2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>B117613D-2B91-0095-9970-8D57A6E328D0</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Freestyler</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4B9A6650-75AB-3C9B-6AD0-4269CDE172FD</referredTableID>
+<keyObject>411C063A-65E7-AD6D-62C5-7ACFFCAD2D66</keyObject>
+<referredKeyID>411C063A-65E7-AD6D-62C5-7ACFFCAD2D66</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>AKA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

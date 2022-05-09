@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F1928F63-B83E-7353-488A-6A8BE8CB2382" containerWithKeyObject="ABEFFEBB-792E-2797-A4CF-36BB1A8708B1" localFKIndex="9473BDD9-0ECC-DFDF-5352-0E297710E3DE" name="Competición_Jurado_FKv2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>CE806CAC-37DE-58F0-4BC1-F27935C14A7F</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Jurado</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>66DACAF9-76B6-1983-A536-C037D3EE4F44</referredTableID>
+<keyObject>AE6FCB1D-D4B5-8165-8AB3-BA942B0E52F1</keyObject>
+<referredKeyID>AE6FCB1D-D4B5-8165-8AB3-BA942B0E52F1</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>AKA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

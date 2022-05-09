@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D456B84E-A084-4C70-8AB9-D77247F708C6" containerWithKeyObject="224E1D49-F1D8-0ECA-15A8-87158D65DC3F" localFKIndex="1AE6A130-E765-8887-FABE-FB904FDA4327" name="Liga_Competición_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>00BFCA57-50FD-ACCE-3860-5399D2A077F6</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Competición</referredTableLongName>
+<arc>81AA4142-2F3B-7B29-E1B7-A61189043404</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>ABEFFEBB-792E-2797-A4CF-36BB1A8708B1</referredTableID>
+<keyObject>D60DFADA-7154-C00D-67C4-50C63363CE2C</keyObject>
+<referredKeyID>D60DFADA-7154-C00D-67C4-50C63363CE2C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Empresa,Nombre,Año</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

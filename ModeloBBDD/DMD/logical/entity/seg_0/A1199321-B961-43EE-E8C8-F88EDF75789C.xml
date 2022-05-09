@@ -1,0 +1,168 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A1199321-B961-43EE-E8C8-F88EDF75789C" name="Partido">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:59:37 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Partido" id="7C1FAB0E-2115-1517-CD32-B436CDE4677E">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:33 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Resultado" id="3B9ED0B2-E719-43B0-9755-890277DC05AC">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:59:43 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha" id="462F0EB5-DCA4-2676-CD60-37E50C81470B">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:59:48 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="JuezSilla" id="1086F65F-5B29-D90D-04E5-61BD4D0FCE5C">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:59:52 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BolasBreaks" id="ABD07F9F-B64E-64AE-7851-A1301ADB3E99">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:59:56 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Winners" id="335241FB-6C2E-45C0-E62C-7A6E8C0231C8">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:03 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Smashes" id="38D6EFC0-A7E3-BE10-4543-76EF60E43F3B">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:07 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ErroresNoForzados" id="E53AE15A-0314-BF46-B6B5-280BAAEC9764">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:10 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BolasOro" id="A19F7AAF-C204-3B42-2FAD-F5352F8FABFB">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:17 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Duración" id="33432011-1B50-A3E5-03C6-08A16C727A21">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:22 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fase" id="11A874CC-3D38-5545-293D-53EA2166DEF6">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:00:27 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Pareja" id="83C9F718-5C4F-4BC6-678B-C5C56F48A488">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:19:53 UTC</createdTime>
+<generatorID>8B2DF19D-8EDD-9BA0-322A-FEFA020FECBA</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<referedAttribute>3DC5BCD8-FDE9-61DA-AE17-656426E0015A</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Pareja1" id="22E857D6-F36F-E18F-590B-9879201DF0A4">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:23:27 UTC</createdTime>
+<generatorID>E0D117A3-A34E-8D1A-DAFA-7517F4A725D5</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<referedAttribute>3DC5BCD8-FDE9-61DA-AE17-656426E0015A</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BF73F227-F6C4-5D1C-C1B9-8BC3AD597F1C" name="Partido PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:19:53 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>83C9F718-5C4F-4BC6-678B-C5C56F48A488</attributeRef>
+<attributeRef>22E857D6-F36F-E18F-590B-9879201DF0A4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

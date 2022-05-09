@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pareja2" directorySegmentName="seg_0" id="E0D117A3-A34E-8D1A-DAFA-7517F4A725D5">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:23:27 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<sourcePk>2D42FB5A-151D-3332-3976-7634346CB43F</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>juega</nameOnSource>
+<nameOnTarget>forma parte</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>365D95F6-1F61-55D1-3A82-F849BBA6BECE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A1199321-B961-43EE-E8C8-F88EDF75789C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

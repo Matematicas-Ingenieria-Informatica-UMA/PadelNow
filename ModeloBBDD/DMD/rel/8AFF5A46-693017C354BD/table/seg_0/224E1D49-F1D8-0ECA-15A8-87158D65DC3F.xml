@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="224E1D49-F1D8-0ECA-15A8-87158D65DC3F" name="Liga">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>1DDE96A4-D063-2250-C319-86839A3702BD</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Empresa" id="054FC2EF-0F13-620B-3D6E-9E6252CC1285">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>51CD0D11-FF93-8598-8296-7163203F4EB9</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D456B84E-A084-4C70-8AB9-D77247F708C6" referredColumn="F1688E07-05A7-E962-4A58-58A7C248A6DC"/>
+</associations>
+</Column>
+<Column name="Nombre" id="0DFFFF05-2EC1-94B2-CB76-0073B746EB86">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>9830D36B-28AD-B326-D324-A5B95E20CA1D</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D456B84E-A084-4C70-8AB9-D77247F708C6" referredColumn="2A69B2EA-A638-600E-75CC-A3246BE66B50"/>
+</associations>
+</Column>
+<Column name="Año" id="71EBA0E6-CDB3-D63A-73C9-06494C18B1CA">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>9FB2DF3D-6BA4-4B7B-FD73-4603B7FAD08D</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D456B84E-A084-4C70-8AB9-D77247F708C6" referredColumn="FA664598-1D11-ABF8-8AA9-C8414DA27C2A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E0FF139-9F2D-9C22-A4DB-0C5A4E581105" name="Liga_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>B525113A-BB83-9277-EDD8-DEAC33691A85</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="054FC2EF-0F13-620B-3D6E-9E6252CC1285"/>
+<colUsage columnID="0DFFFF05-2EC1-94B2-CB76-0073B746EB86"/>
+<colUsage columnID="71EBA0E6-CDB3-D63A-73C9-06494C18B1CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1AE6A130-E765-8887-FABE-FB904FDA4327" name="Liga_Competición_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>00BFCA57-50FD-ACCE-3860-5399D2A077F6</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="054FC2EF-0F13-620B-3D6E-9E6252CC1285"/>
+<colUsage columnID="0DFFFF05-2EC1-94B2-CB76-0073B746EB86"/>
+<colUsage columnID="71EBA0E6-CDB3-D63A-73C9-06494C18B1CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

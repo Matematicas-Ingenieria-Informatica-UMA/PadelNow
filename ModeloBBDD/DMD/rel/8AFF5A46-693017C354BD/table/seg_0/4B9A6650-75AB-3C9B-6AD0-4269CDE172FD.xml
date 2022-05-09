@@ -1,0 +1,299 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B9A6650-75AB-3C9B-6AD0-4269CDE172FD" name="Freestyler">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>F4E1E2D7-DF8D-8ABC-D911-A7DEADFBE8C0</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AKA" id="ECB9717E-304F-CF78-B8A4-9D1E876BFF63">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>630DE77D-4D7F-53EF-27C6-D92670A2585B</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="5DE4D027-0799-1275-EA7C-738AD050088A">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>CA7CD4D9-D4BE-BC16-D566-EE220BAA5325</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellidos" id="8F7A97EB-D86E-F308-B602-703C565DEF62">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>A723194F-DBA1-0CF5-4929-4197C18C12BA</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Foto" id="63DFDEEC-A954-409C-195E-C7CE9F042AB9">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>74151B0E-228E-9A68-3C3A-3A3EBCC920B0</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Media" id="881055C7-5990-78F8-F3AD-AE4074283FA9">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>08CC4387-B69F-3108-B71D-E60EEC8426E9</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sexo" id="41174272-F8CA-6B84-D818-B04AE807D9D8">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>AC4E67C6-E8B2-C510-EBF1-66E3CA5B6B0D</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ciudad" id="78AE7125-3EF2-F9F5-A376-36CF7F6FC57C">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>62E16740-F1B9-94CD-B0A8-44016164B38F</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Continente" id="661CFF75-9292-E148-F39A-BB5034D59FDB">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>E6C650CA-0286-5541-0627-967B86BCFD30</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaNacimiento" id="E885DC22-CEA3-CB59-D27E-F40A3CA1F125">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>8C74DDBE-924B-A6F5-3853-E0157C0E4704</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Competición_Empresa" id="44EE586D-BF88-0523-4BBF-901AD1358170">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>FAC381BD-AD43-946E-BBCD-72ADDBA34473</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA454A74-E5B9-E2ED-FEBB-0E976F36B138" referredColumn="F1688E07-05A7-E962-4A58-58A7C248A6DC"/>
+</associations>
+</Column>
+<Column name="Competición_Nombre" id="103ABB5A-42A9-911D-A856-F93F557E882E">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>C9C1E9A7-06FC-FF70-2ED0-940DA44F3B00</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA454A74-E5B9-E2ED-FEBB-0E976F36B138" referredColumn="2A69B2EA-A638-600E-75CC-A3246BE66B50"/>
+</associations>
+</Column>
+<Column name="Competición_Año" id="561CDFF7-8B1D-3727-60A1-53546AFE5F18">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>90EEFF62-EA19-122B-6C09-7AE3AE55E649</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA454A74-E5B9-E2ED-FEBB-0E976F36B138" referredColumn="FA664598-1D11-ABF8-8AA9-C8414DA27C2A"/>
+</associations>
+</Column>
+<Column name="Competición_Empresa2" id="2EB398F0-C404-12C9-4A4F-3EEE24B62F2C">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>20C3A47E-C58E-3ECC-FD88-A584825CD2D3</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6FA8C78-03BB-A4EE-9680-8FBDE75681CD" referredColumn="F1688E07-05A7-E962-4A58-58A7C248A6DC"/>
+</associations>
+</Column>
+<Column name="Competición_Nombre2" id="80643581-B69F-A44A-125C-2E7DA3FD3F2D">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>B3AECB92-76DA-4AA7-593D-60263A9EE7B1</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6FA8C78-03BB-A4EE-9680-8FBDE75681CD" referredColumn="2A69B2EA-A638-600E-75CC-A3246BE66B50"/>
+</associations>
+</Column>
+<Column name="Competición_Año2" id="59C74A40-AB73-ABFD-96FF-654B6F1248E3">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>D8CE5061-52DA-A8D1-B5C8-0199AC7AFCDE</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6FA8C78-03BB-A4EE-9680-8FBDE75681CD" referredColumn="FA664598-1D11-ABF8-8AA9-C8414DA27C2A"/>
+</associations>
+</Column>
+<Column name="Continente_Nombre" id="A2F07522-A747-E492-4B3B-F77D33689BE8">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>E57506FF-46CA-B781-D9F2-1725690A9B72</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE4D5528-8FC5-8567-A2A4-88320B78AB6D" referredColumn="CD21380A-0340-1AD7-ACD3-FF724E2ABC08"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="411C063A-65E7-AD6D-62C5-7ACFFCAD2D66" name="Freestyler_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>DF79CF57-A506-FC54-D9D5-D54DB28CE078</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECB9717E-304F-CF78-B8A4-9D1E876BFF63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EFB84467-A7E2-0387-4C9C-5B71BD406D5D" name="Freestyler__IDX">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>EF0D6FD9-8767-B774-4EB8-EEC8E379DEBB</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="A2F07522-A747-E492-4B3B-F77D33689BE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34F205FB-7FAE-FFF8-CFF3-FCB14ACBCC6D" name="Freestyler__IDXv1">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E42293A5-FE44-10FF-E483-F6467EAC1BF6</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="44EE586D-BF88-0523-4BBF-901AD1358170"/>
+<colUsage columnID="103ABB5A-42A9-911D-A856-F93F557E882E"/>
+<colUsage columnID="561CDFF7-8B1D-3727-60A1-53546AFE5F18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B9E7A1FA-F866-3E2C-7FE2-1B1BC8BB5E97" name="Freestyler__IDXv2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>CC7A49B1-36C8-52BE-7528-A884C4745469</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="2EB398F0-C404-12C9-4A4F-3EEE24B62F2C"/>
+<colUsage columnID="80643581-B69F-A44A-125C-2E7DA3FD3F2D"/>
+<colUsage columnID="59C74A40-AB73-ABFD-96FF-654B6F1248E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF9C1870-C7D0-354A-C070-E25327F88C3C" name="Freestyler_Continente_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>EF0D6FD9-8767-B774-4EB8-EEC8E379DEBB</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2F07522-A747-E492-4B3B-F77D33689BE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37D1F64B-29F9-F0ED-F68D-5F8236113365" name="Freestyler_Competición_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>E42293A5-FE44-10FF-E483-F6467EAC1BF6</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44EE586D-BF88-0523-4BBF-901AD1358170"/>
+<colUsage columnID="103ABB5A-42A9-911D-A856-F93F557E882E"/>
+<colUsage columnID="561CDFF7-8B1D-3727-60A1-53546AFE5F18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BCF2D437-A41D-61BD-07B9-14EE989BF777" name="Freestyler_Competición_FKv2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>CC7A49B1-36C8-52BE-7528-A884C4745469</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2EB398F0-C404-12C9-4A4F-3EEE24B62F2C"/>
+<colUsage columnID="80643581-B69F-A44A-125C-2E7DA3FD3F2D"/>
+<colUsage columnID="59C74A40-AB73-ABFD-96FF-654B6F1248E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

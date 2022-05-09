@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3141DEF-5066-8690-9015-7C51CF9F8A58" containerWithKeyObject="D71C7C4F-CB10-11CF-1058-8A093580C9B6" localFKIndex="3C89EC25-006E-EF93-263E-ECD39232DC32" name="Comentario_Batalla_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>03B1FE7A-03DA-FB2E-28F9-274C2E81C6B8</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Batalla</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7B0D3C40-8249-F37B-1DAB-7846EA7F47E5</referredTableID>
+<keyObject>5294E8EB-29DC-C707-89C6-E5CABE6FEAD4</keyObject>
+<referredKeyID>5294E8EB-29DC-C707-89C6-E5CABE6FEAD4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Batalla_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

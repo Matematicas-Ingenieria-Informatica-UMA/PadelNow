@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14734D41-6040-F2F6-EA53-18798908D339" name="Resultado">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>6ECBB178-3025-755F-FB50-E3B36F8525CC</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PtosGallo1" id="91A700E7-AC6E-38C7-7107-8B867D1C303D">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>232C7789-7EF4-B71F-6A2A-E20F1CE36CDA</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PtosGallo2" id="5A2C20BA-F945-2810-2F22-18F93B3C3BBF">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>7C59371A-E178-81DF-9E40-5B7180313EFC</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Jurado_AKA" id="FEC3AFA6-3837-124B-8DE9-4473027391E4">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>E0AF1487-FA9A-8807-65CE-B5391C429EA5</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54A0A6C2-C634-1311-5C8B-9C593F8D7949" referredColumn="36E380C8-0ACF-5ABE-7A24-47ACCD9B58BF"/>
+</associations>
+</Column>
+<Column name="Batalla_Batalla_ID" id="586D6519-1B4D-4C2B-A510-22E4F1045186">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5DAC8C45-7C75-D82F-8ED0-BB74A6590C58" referredColumn="7D1FDD60-722D-78EB-D53C-D4397BC60C94"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B62B7267-A165-EAF5-E00E-011227DB5C8F" name="Resultado_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>EAF20F39-A3CC-F65F-05AD-12DB211CEB61</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEC3AFA6-3837-124B-8DE9-4473027391E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CFC0592F-36ED-9723-BBB4-E15E9CB67EF3" name="Resultado_Jurado_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>2901568F-C21F-7A1A-14B4-EBB9DE75A1A7</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEC3AFA6-3837-124B-8DE9-4473027391E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CE6D381-DE3F-9C75-62E3-827B7D6BC0C7" name="Resultado_Batalla_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>48384E59-614E-0F35-7EF4-9BED19288BD2</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="586D6519-1B4D-4C2B-A510-22E4F1045186"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="483999E9-59A5-D29C-ABCF-1EAB46E08374" containerWithKeyObject="BDE086E2-1ABF-0C18-D8C7-DB202BD91E62" localFKIndex="3F29E3BC-1116-B154-DD6A-B212A5A60F36" name="Posición_Freestyler_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>7E8796E0-C2E7-7FE0-2FA1-6AFD46D2A981</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Freestyler</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4B9A6650-75AB-3C9B-6AD0-4269CDE172FD</referredTableID>
+<keyObject>411C063A-65E7-AD6D-62C5-7ACFFCAD2D66</keyObject>
+<referredKeyID>411C063A-65E7-AD6D-62C5-7ACFFCAD2D66</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>AKA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="365D95F6-1F61-55D1-3A82-F849BBA6BECE" name="Pareja">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:56:18 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Pareja" id="3DC5BCD8-FDE9-61DA-AE17-656426E0015A">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:58:26 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TemporadasActivo" id="C4B3489F-0905-22B5-E275-F37E90786F0C">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:56:23 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Entrenador" id="1EF4288A-CA71-54D0-4D3B-ECC75E4A1D90">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:57:54 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TopRanking" id="8F3FC26D-3215-03E5-2D7A-7E2778272BCB">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:58:10 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Jugador" id="C3F80E4B-FD14-5762-FB75-7E17C3AA17B5">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:09:18 UTC</createdTime>
+<generatorID>D4D908F7-4BC7-27FD-F2D5-0D14AF0E80EA</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<referedAttribute>93B6B9A3-9844-9F6D-FFB8-BB71019F1270</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Jugador1" id="BF4B296E-838B-3553-2D9E-1DC15900A06E">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 10:14:18 UTC</createdTime>
+<generatorID>645C335F-2FC6-2E61-D6C5-C0A40BF6E159</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<referedAttribute>93B6B9A3-9844-9F6D-FFB8-BB71019F1270</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2D42FB5A-151D-3332-3976-7634346CB43F" name="Pareja PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-05-06 09:58:21 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<engineerTo>
+<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3DC5BCD8-FDE9-61DA-AE17-656426E0015A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

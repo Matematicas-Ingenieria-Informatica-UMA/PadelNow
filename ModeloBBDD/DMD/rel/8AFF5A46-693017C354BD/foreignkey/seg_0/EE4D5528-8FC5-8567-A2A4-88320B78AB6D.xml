@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EE4D5528-8FC5-8567-A2A4-88320B78AB6D" containerWithKeyObject="4B9A6650-75AB-3C9B-6AD0-4269CDE172FD" localFKIndex="BF9C1870-C7D0-354A-C070-E25327F88C3C" name="Freestyler_Continente_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>EF0D6FD9-8767-B774-4EB8-EEC8E379DEBB</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Continente</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>413CC94E-C9A0-D3FE-DA7E-16E6E2D30DFA</referredTableID>
+<keyObject>3DCB83C9-7F56-AB02-C81F-B3CF96F48226</keyObject>
+<referredKeyID>3DCB83C9-7F56-AB02-C81F-B3CF96F48226</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Nombre</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

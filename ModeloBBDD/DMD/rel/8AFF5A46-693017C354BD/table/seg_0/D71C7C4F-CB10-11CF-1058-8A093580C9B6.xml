@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D71C7C4F-CB10-11CF-1058-8A093580C9B6" name="Comentario">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>4E002B5C-CAED-49DD-29C7-F631709668FF</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDComentario" id="52613FCD-041F-9175-7AB7-A9F3E795F456">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>9E76EB28-C830-7ADB-BDE6-7662B73791F9</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="2E57FBE9-E304-5FC4-7DE5-91820CBD88A2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>3A8E0CA6-983C-7382-19F3-2111F6C1D3B7</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contenido" id="AF578048-C939-D06B-60F1-F472C82515D3">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>5D8EDBBC-610B-5CAD-5B1B-1D5C84C437FC</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_Username" id="1E9DBD46-775F-6170-1555-BC0AF6D0C47C">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>85274748-4801-B37E-420E-79A85D25E8A7</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0858C907-66C5-23F8-AF16-18E1F14E6F1D" referredColumn="B6F66F67-73D1-23C9-A06E-4BE68A30916B"/>
+</associations>
+</Column>
+<Column name="Batalla_Batalla_ID" id="BDBCC95A-66BC-B20A-3683-1EBEE08B0623">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3141DEF-5066-8690-9015-7C51CF9F8A58" referredColumn="7D1FDD60-722D-78EB-D53C-D4397BC60C94"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="64D7D1DA-835E-A4A4-64E5-9CF32B98443A" name="Comentario_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>774660AC-4B38-0834-C25E-83FB1DB2DFE9</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52613FCD-041F-9175-7AB7-A9F3E795F456"/>
+<colUsage columnID="1E9DBD46-775F-6170-1555-BC0AF6D0C47C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C89EC25-006E-EF93-263E-ECD39232DC32" name="Comentario_Batalla_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>03B1FE7A-03DA-FB2E-28F9-274C2E81C6B8</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDBCC95A-66BC-B20A-3683-1EBEE08B0623"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E787B00-0E13-C0B7-0146-F10136F48932" name="Comentario_User_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>02846EA7-79FF-B79E-F516-424AC586164F</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E9DBD46-775F-6170-1555-BC0AF6D0C47C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

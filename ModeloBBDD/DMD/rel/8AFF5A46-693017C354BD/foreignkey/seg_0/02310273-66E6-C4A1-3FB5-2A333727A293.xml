@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="02310273-66E6-C4A1-3FB5-2A333727A293" containerWithKeyObject="ABEFFEBB-792E-2797-A4CF-36BB1A8708B1" localFKIndex="5AF0FB1F-CED5-9119-323A-004917C4D51E" name="Competición_Freestyler_FKv2">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>CC7A49B1-36C8-52BE-7528-A884C4745469</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<referredTableLongName>Freestyler</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4B9A6650-75AB-3C9B-6AD0-4269CDE172FD</referredTableID>
+<keyObject>411C063A-65E7-AD6D-62C5-7ACFFCAD2D66</keyObject>
+<referredKeyID>411C063A-65E7-AD6D-62C5-7ACFFCAD2D66</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>AKA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

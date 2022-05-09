@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2C93A1F1-E1E8-DCDF-7637-5F474942035D" name="Ciudad">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>0E211B31-9499-ECCE-5028-74462C5F0C53</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nombre" id="CC0F173A-E723-96E4-7D01-311BE73E5732">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>81A98BFE-D5DC-4422-DA49-B4B99929E755</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Foto" id="634A197A-FA1B-2BF9-79AD-4C186B993A46">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>41E831CB-44E0-E762-B3D9-B477D3D920F6</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="País_Nombre" id="46DA2FA4-93D9-48C9-899E-F554224BC62E">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>9775B6E7-141F-9DD5-12CA-63BEE65EE34A</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F21CBC9-8847-8820-0792-363AFF4FE9CB" referredColumn="17837A64-6473-A345-97DC-0E60F4BE6AA9"/>
+</associations>
+</Column>
+<Column name="País_Continente_Nombre" id="70798633-17BD-062E-0B5E-5F4EB7F78E8D">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>E036DF03-7B54-1717-44C0-17B0FFC0CD99</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F21CBC9-8847-8820-0792-363AFF4FE9CB" referredColumn="71F667DD-261C-20CA-0A3A-2392AEE13B64"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D27F3CAA-A618-4881-C54B-6BDCFC5E0511" name="Ciudad_PK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>92D856EB-C0AA-F324-C3B1-025204165F76</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC0F173A-E723-96E4-7D01-311BE73E5732"/>
+<colUsage columnID="46DA2FA4-93D9-48C9-899E-F554224BC62E"/>
+<colUsage columnID="70798633-17BD-062E-0B5E-5F4EB7F78E8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51D0ABC9-D967-8929-2E6B-D5B258F317AC" name="Ciudad_País_FK">
+<createdBy>Arturo Aguilera</createdBy>
+<createdTime>2022-03-07 01:03:38 UTC</createdTime>
+<generatorID>B53857C4-137A-75F2-0AB6-AFF52E27756E</generatorID>
+<ownerDesignName>DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46DA2FA4-93D9-48C9-899E-F554224BC62E"/>
+<colUsage columnID="70798633-17BD-062E-0B5E-5F4EB7F78E8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
