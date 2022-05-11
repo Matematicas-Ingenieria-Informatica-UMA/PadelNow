@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="94633C66-D28E-C343-3DC2-C2A3CCC8AA8E" name="Torneo">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7460BAF3-4A28-426D-2321-96F5F42FB4CC" name="Circuito">
 <createdBy>Arturo Aguilera</createdBy>
-<createdTime>2022-05-06 10:01:16 UTC</createdTime>
+<createdTime>2022-05-11 13:28:55 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
 <engineerTo>
 <item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Nombre" id="67D12756-27D6-B086-B97A-F7E40E3069E6">
+<Attribute name="Nombre" id="4CAA55B2-151F-9BA8-0861-CEB7FE430FE5">
 <createdBy>Arturo Aguilera</createdBy>
-<createdTime>2022-05-11 13:29:27 UTC</createdTime>
+<createdTime>2022-05-11 13:29:16 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
 <engineerTo>
 <item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
@@ -25,9 +25,9 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="FaseInicial" id="B6584E03-3D3E-2B25-C012-2C3D8849A5D4">
+<Attribute name="Año" id="BA64F1EC-AA22-6882-2A66-54570B03E072">
 <createdBy>Arturo Aguilera</createdBy>
-<createdTime>2022-05-06 10:01:22 UTC</createdTime>
+<createdTime>2022-05-11 13:29:01 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
 <engineerTo>
 <item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>

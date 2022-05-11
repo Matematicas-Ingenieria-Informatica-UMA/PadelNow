@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D5B2B25-611F-91A6-3C8F-27560B94D9E7" name="Competición">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D5B2B25-611F-91A6-3C8F-27560B94D9E7" name="Institución">
 <createdBy>Arturo Aguilera</createdBy>
 <createdTime>2022-05-06 10:02:12 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Nombre" id="6B878DFD-2F95-AB81-0632-8BFD9CFE2DE1">
+<Attribute name="ID_Competicion" id="803425BE-BC24-20DE-78F0-57C617DA8D68">
 <createdBy>Arturo Aguilera</createdBy>
-<createdTime>2022-05-06 10:02:21 UTC</createdTime>
+<createdTime>2022-05-06 10:02:57 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
 <engineerTo>
 <item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
@@ -25,9 +25,9 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Year" id="6EECFA81-7F35-912F-CC21-2D4D4400808C">
+<Attribute name="Nombre" id="6B878DFD-2F95-AB81-0632-8BFD9CFE2DE1">
 <createdBy>Arturo Aguilera</createdBy>
-<createdTime>2022-05-06 10:02:25 UTC</createdTime>
+<createdTime>2022-05-06 10:02:21 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
 <engineerTo>
 <item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
@@ -58,16 +58,6 @@
 <Attribute name="Internacional?" id="EE654BF4-1B40-346D-1090-7F4EC8BF3BF2">
 <createdBy>Arturo Aguilera</createdBy>
 <createdTime>2022-05-06 10:02:44 UTC</createdTime>
-<ownerDesignName>DMD</ownerDesignName>
-<engineerTo>
-<item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
-</engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID_Competicion" id="803425BE-BC24-20DE-78F0-57C617DA8D68">
-<createdBy>Arturo Aguilera</createdBy>
-<createdTime>2022-05-06 10:02:57 UTC</createdTime>
 <ownerDesignName>DMD</ownerDesignName>
 <engineerTo>
 <item key="8AFF5A46-813C-A657-5FFE-693017C354BD" value="true"/>
