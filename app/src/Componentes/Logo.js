@@ -1,8 +1,6 @@
 import React from "react";
-import "./Logo.css"
+import "../style/Logo.css";
 
 export default function Header() {
-  return (
-    <img className ="Logo" src="/logo.svg" alt="logo PadelNow"/>
-  );
+    return <img className="Logo" src="/logo.svg" alt="logo PadelNow" />;
 }

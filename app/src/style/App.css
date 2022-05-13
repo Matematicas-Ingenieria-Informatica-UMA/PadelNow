@@ -2,7 +2,8 @@
   display: flex;
   text-align: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: fit-content;
 }
 /*
 .App-logo {

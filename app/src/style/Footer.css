@@ -1,0 +1,50 @@
+.Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    background: linear-gradient(264.07deg, #455981 12.07%, #39334A 100.91%);
+}
+
+.LogoBlue{
+    height: 100px;
+}
+
+.TituloAzul{
+    background: linear-gradient(180deg, #6281BF 0%, #455981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.FooterFirst{
+    margin: 10px 30px;
+}
+
+.SobreNosotros{
+    width: 100%;
+}
+
+.SubtituloFooter{
+    margin: -10px 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.FooterSecond{
+    justify-content: left;
+    flex-direction: row;
+}
+
+.FooterThird{
+    display: flex;
+    flex-direction: column;
+    margin: 75px;
+}
