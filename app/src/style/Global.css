@@ -69,9 +69,17 @@ button {
 
 
 /*COMPONENTES GLOBALES*/
+
 .SepVert{
   background-color: white;
-  width: 1px;
-  height: 175px;
+  width: .5px;
+  height: 80%;
+  
+}
+
+.SepHor{
+  background-color: white;
+  height: .5px;
+  width: 100%;
   
 }
