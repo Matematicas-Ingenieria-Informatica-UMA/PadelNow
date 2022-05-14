@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="SepVert"></div>
 
             <div className="FooterThird">
-                <h4>¿Tienes algún problema?</h4>
+                <h4 className="TienesAlgun">¿Tienes algún problema?</h4>
                 <h4 className="SubtituloFooter">Enviar Incidencia</h4>
             </div>
         </div>
