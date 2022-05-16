@@ -9,6 +9,7 @@ h1 {
   font-weight: 700;
   font-size: 25px;
   color: #fcfcfc;
+  margin: 0;
 }
 
 h2 {
@@ -16,8 +17,9 @@ h2 {
   letter-spacing: 1px;
   font-style: normal;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   color: #fcfcfc;
+  margin: 0;
 }
 
 h3 {
@@ -25,8 +27,9 @@ h3 {
   letter-spacing: 1px;
   font-style: normal;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 18px;
   color: #fcfcfc;
+  margin: 0;
 }
 
 h4 {
@@ -35,9 +38,18 @@ h4 {
   font-family: "Poppins";
   letter-spacing: 1px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: 300;
+  font-size: 18;
   color: #fcfcfc;
+  margin: 0;
+}
+
+.LeftAlign{
+  text-align: left;
+}
+
+.CenterAlign{
+  text-align: center;
 }
 
 /* INPUTS */
@@ -112,12 +124,4 @@ button:active{
 
 .noDisplay {
   display: none;
-}
-
-/*COMPONENTES GLOBALES*/
-
-.SepHor {
-  background-color: white;
-  height: 0.5px;
-  width: 100%;
 }

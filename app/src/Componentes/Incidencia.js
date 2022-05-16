@@ -7,7 +7,7 @@ export default function Incidencia() {
   return (
     <div className="IncidenciaCard">
 
-      <h2>Rellene sus datos</h2>
+      <h1 className="LeftAlign">Rellene sus datos</h1>
 
       <div className="IncidenciaTop">
         <div className="InputStyle DataInput">
