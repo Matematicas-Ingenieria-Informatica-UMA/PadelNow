@@ -1,0 +1,57 @@
+.IncidenciaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+
+  padding: 10px 50px;
+
+  width: 80%;
+  max-width: 1000px;
+  height: fit-content;
+
+  background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
+  border-radius: 20px;
+}
+
+.DataInput {
+  max-width: auto;
+}
+
+.IncidenciaTop {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  gap: 10px;
+
+  width: 100%;
+}
+
+@media screen and (max-width: 610px) {
+  .IncidenciaTop {
+    flex-wrap: wrap;
+  }
+}
+
+.IncidenciaBottom {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  align-content: space-around;
+
+  height: fit-content;
+  width: 100%;
+}
+
+.ProblemInput {
+  display: inline-block;
+  word-wrap: break-word;
+  padding: 10px 20px;
+
+  min-height: 100px;
+  height: 100%;
+  max-width: 100%;
+}

@@ -6,7 +6,7 @@ export default function Generos() {
         <>
             <div className="Generos">
                 <img src="/Masc.svg" alt="Masculino" />
-                <div className="SepVertGeneros"> </div>
+                <div className="SepVert"> </div>
                 <img src="/Fem.svg" alt="Femenino" />
             </div>
         </>

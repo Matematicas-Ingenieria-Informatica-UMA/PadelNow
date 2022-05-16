@@ -1,5 +1,5 @@
 /* TIPOGRAÍA */
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
 /* ENCABEZADOS */
 h1 {
@@ -54,6 +54,17 @@ input {
   width: 100%;
 }
 
+.InputStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #eff0f7;
+  width: 100%;
+  min-width: max-content;
+  gap: 10px;
+  padding: 0 5px;
+}
+
 /*BOTONES*/
 
 button {
@@ -61,18 +72,52 @@ button {
   border: none;
 }
 
-/*NO DISPLAY*/
-
-.noDisplay{
-  display:none
+button:hover{
+  transform: scale(1.05);
 }
 
+button:active{
+  transform: scale(0.95);
+}
+
+.SimpleButton{
+  color: white;
+  text-decoration: underline;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+}
+
+.BotonConFondo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+
+  padding: 10px;
+  width: fit-content;
+  max-width: 280px;
+
+  background: #455981;
+  border-radius: 8px;
+}
+
+/*NO DISPLAY*/
+
+.noDisplay {
+  display: none;
+}
 
 /*COMPONENTES GLOBALES*/
 
-.SepHor{
+.SepHor {
   background-color: white;
-  height: .5px;
+  height: 0.5px;
   width: 100%;
-  
 }

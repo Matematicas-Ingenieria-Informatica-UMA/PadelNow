@@ -22,6 +22,7 @@ export default function Header() {
                             type="text"
                             id="Search"
                             placeholder="Buscar..."
+                            className="SearchInput"
                         />
                     </div>
                     <button
