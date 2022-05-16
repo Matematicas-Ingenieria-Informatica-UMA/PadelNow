@@ -34,3 +34,10 @@
 .Content {
     font-size: 1.5em;
 }
+
+.NoticiaSepHor{
+    height: 1px;
+    width: 100%;
+    justify-content: center;
+    background: white;
+}

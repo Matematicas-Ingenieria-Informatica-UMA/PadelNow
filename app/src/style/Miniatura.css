@@ -1,0 +1,15 @@
+.Miniatura{
+    width: 300px;
+    height: 220px;
+    padding: 15px;
+    border: 15px;
+}
+
+.FotoMini{
+    height: fit-content;
+    width: 300px;
+}
+
+.TituloMini{
+    text-decoration: underline;
+}

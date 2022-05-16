@@ -1,4 +1,4 @@
-.Parejas{
+.Jugadores{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     margin: 10px;
 }
 
-.ParejasGenero{
+.JugadoresGenero{
     display: flex;
     align-items: center;
     flex-direction: column;

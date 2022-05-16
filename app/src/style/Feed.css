@@ -1,3 +1,18 @@
 .Feed{
     height: 600px;
 }
+
+.MiniaturasRow{
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    margin: 0px 65px;
+}
+
+.VerMas{
+    padding: 20px 0;
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: underline;
+}

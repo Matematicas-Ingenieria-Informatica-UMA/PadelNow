@@ -3,9 +3,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 879px;
-    height: 490px;
-    padding: 20px;
+    width: 90%;
+    height: 450px;
+    padding: 2%;
+    margin: 1%;
     gap: 20px;
     background: linear-gradient(56.62deg, #33364B 0%, #43567C 100%);
     border-radius: 20px;
@@ -16,13 +17,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 410px;
-    height: 450px;
+    width: 45%;
+    height: 100%;
     background-color: grey;
 }
 
 .Datos{
-    width: 410px;
+    width: fit-content;
     height: 450px;
 }
 
@@ -68,7 +69,7 @@
     align-items: center;
     padding: 0px;
     gap: 20px;
-    
+    margin-bottom: 10px;
     width: 410px;
     height: 50px;
     

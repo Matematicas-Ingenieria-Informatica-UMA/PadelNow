@@ -77,6 +77,11 @@ export default function Header() {
                             Ver Torneos
                         </button>
                     </Link>
+                    <Link to="/noticias">
+                        <button className="DesplegableTitles">
+                            Todas las Noticias
+                        </button>
+                    </Link>
                 </div>
                 <div className="HeaderSepHor"></div>
                 <div className="DesplegableBottom">
