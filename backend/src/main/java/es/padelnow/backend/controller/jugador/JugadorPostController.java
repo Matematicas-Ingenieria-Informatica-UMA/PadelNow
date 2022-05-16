@@ -1,10 +1,7 @@
 package es.padelnow.backend.controller.jugador;
 
-import es.padelnow.core.jugador.useCases.JugadorCreator;
-import es.padelnow.core.jugador.enums.Pais;
-import es.padelnow.core.jugador.enums.Sexo;
-import lombok.Getter;
-import lombok.Setter;
+import es.padelnow.core.jugador.useCases.create.CreateJugadorRequest;
+import es.padelnow.core.jugador.useCases.create.JugadorCreator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,16 +15,11 @@ public class JugadorPostController {
     }
 
     @PostMapping("/jugador")
-    public ResponseEntity create(@RequestBody Request request) {
+    public ResponseEntity<String> create(@RequestBody CreateJugadorRequest request) {
+        this.creator.create(request);
+
         return new ResponseEntity(HttpStatus.CREATED);
     }
 }
 
-@Getter
-@Setter
-class Request {
-    private String nombre;
-    private String apellidos;
-    private Sexo sexo;
-    private Pais pais;
-}
+

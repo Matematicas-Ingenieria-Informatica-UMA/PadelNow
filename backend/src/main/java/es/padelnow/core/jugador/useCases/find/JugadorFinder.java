@@ -1,9 +1,7 @@
-package es.padelnow.core.jugador.useCases;
+package es.padelnow.core.jugador.useCases.find;
 
 import es.padelnow.core.jugador.Jugador;
 import es.padelnow.core.jugador.JugadorRepository;
-import es.padelnow.core.jugador.enums.Pais;
-import es.padelnow.core.jugador.enums.Sexo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +11,7 @@ import java.util.Optional;
 @Service
 public final class JugadorFinder {
 
-    private JugadorRepository repository;
+    private final JugadorRepository repository;
 
     @Autowired
     public JugadorFinder(JugadorRepository repository) {
@@ -21,11 +19,10 @@ public final class JugadorFinder {
     }
 
     public Jugador find(Long id) {
-        Optional<Jugador> jugador = repository.findById(id);
-        return jugador.isPresent() ? jugador.get() : null;
+        return this.repository.findById(id).orElse(null);
     }
 
     public List<Jugador> findAll() {
-        return repository.findAll();
+        return this.repository.findAll();
     }
 }

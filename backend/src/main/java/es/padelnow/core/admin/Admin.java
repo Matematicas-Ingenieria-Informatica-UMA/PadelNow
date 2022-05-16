@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @AllArgsConstructor
@@ -17,7 +18,8 @@ import javax.persistence.Id;
 public class Admin {
 
     @Id
-    private String username;
+    @GeneratedValue
+    private Long username;
 
     @Column(nullable = false, name = "contraseña")
     private String contrasena;

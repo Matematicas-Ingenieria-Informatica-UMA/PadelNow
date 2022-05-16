@@ -6,6 +6,7 @@ import es.padelnow.core.jugador.enums.PosicionDeJuego;
 import es.padelnow.core.jugador.enums.Sexo;
 import es.padelnow.core.pareja.Pareja;
 import es.padelnow.core.posicion.Posicion;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,6 +20,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @Entity
+@EqualsAndHashCode
 public class Jugador {
 
     public Jugador(String nombre, String apellidos, Sexo sexo, Pais pais) {
@@ -28,7 +30,8 @@ public class Jugador {
         this.pais = pais;
     }
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private Long id;
 
     @Column(nullable = false)
@@ -36,7 +39,8 @@ public class Jugador {
 
     @Column(nullable = false)
     private String apellidos;
-
+    
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Sexo sexo;
 
@@ -44,6 +48,7 @@ public class Jugador {
 
     private float altura;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Pais pais;
 
@@ -52,9 +57,11 @@ public class Jugador {
     @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "brazo_dominante")
     private BrazoDominante brazoDominante;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "posicion_de_juego")
     private PosicionDeJuego posicionDeJuego;
 

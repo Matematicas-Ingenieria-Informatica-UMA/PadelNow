@@ -2,20 +2,16 @@ package es.padelnow.core.noticia;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface NoticiaRepository extends JpaRepository<Noticia, Long>{
+@Repository
+public interface NoticiaRepository extends JpaRepository<Noticia, Long> {
 
-    Optional<Noticia> findById (Long Id);
-
-    // NO SE SI FUNCIONA
-    // TODO
-    @Query("SELECT n FROM Noticia n WHERE (n.cuerpo LIKE %?1% IGNORECASE) OR (n.titulo LIKE %?1% IGNORECASE)")
-    List<Noticia> searchByCuerpoOrTituloIgnoreCase(String keyword);
-
-    // List<Noticia> findByCuerpoIgnoreCaseContaining(String keyword);
-
+    @Query("SELECT n FROM Noticia n WHERE"
+            + " LOWER(n.titulo) LIKE LOWER('%?1%')"
+            + " OR LOWER(n.cuerpo) LIKE LOWER('%?1%')")
+    List<Noticia> search(String Keyword);
 
 }

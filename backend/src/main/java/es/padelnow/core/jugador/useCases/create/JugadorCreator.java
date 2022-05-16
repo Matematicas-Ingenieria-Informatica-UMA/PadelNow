@@ -1,16 +1,14 @@
-package es.padelnow.core.jugador.useCases;
+package es.padelnow.core.jugador.useCases.create;
 
 import es.padelnow.core.jugador.Jugador;
 import es.padelnow.core.jugador.JugadorRepository;
-import es.padelnow.core.jugador.enums.Pais;
-import es.padelnow.core.jugador.enums.Sexo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public final class JugadorCreator {
 
-    private JugadorRepository repository;
+    private final JugadorRepository repository;
 
     @Autowired
     public JugadorCreator(JugadorRepository repository) {
@@ -18,8 +16,8 @@ public final class JugadorCreator {
     }
 
 
-    public Jugador create(String nombre, String apellido, Sexo sexo, Pais pais) {
-        Jugador jugador = new Jugador(nombre, apellido, sexo, pais);
+    public Jugador create(CreateJugadorRequest request) {
+        Jugador jugador = new Jugador(request.getNombre(), request.getApellidos(), request.getSexo(), request.getPais());
 
         return repository.save(jugador);
     }
