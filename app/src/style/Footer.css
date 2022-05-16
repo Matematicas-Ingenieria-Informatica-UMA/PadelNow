@@ -41,6 +41,14 @@
     height: 30px;
 }
 
+.SubtituloFooter:hover{
+    transform: scale(1.05);
+}
+
+.SubtituloFooter:active{
+    transform: scale(0.95);
+}
+
 .FooterSecond{
     display: flex;
     flex-direction: column;
@@ -60,7 +68,7 @@
 }
 
 .TienesAlgun{
-    width: 150%;
+    width: 100%;
     height: 50px;
     margin: 0px;
 }
@@ -71,11 +79,11 @@
     font-weight: 1;
     font-size: 20px;
     height: 30px;
-    width: 150%;
+    width: 100%;
 }
 
-.SepVert{
-    background-color: #6281BF;
-    height: 80%;
+.FooterSepVert{
+    background: #6281BF;
     width: 1px;
-  }
+    height: 150px;
+}

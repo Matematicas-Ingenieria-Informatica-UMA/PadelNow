@@ -74,7 +74,7 @@
   top: 50px;
   padding: 15px 10px;
   width: fit-content;
-  height: 250px;
+  height: 350px;
 
   display: flex;
   flex-direction: column;
@@ -83,6 +83,7 @@
 
   background: linear-gradient(180deg, #455981 32.72%, #3a334a 95.94%);
   border-radius: 0px 0px 0px 20px;
+  z-index: 100;
 }
 
 .DesplegableTitles {
@@ -90,7 +91,7 @@
   justify-content: left;
   font-family: "Poppins";
   font-weight: 200;
-  font-size: 15px;
+  font-size: 20px;
   color: #fcfcfc;
 }
 
@@ -108,4 +109,10 @@
 
 .DesplegableBottom {
   height: fit-content;
+}
+
+.HeaderSepHor{
+  background: #6281BF;
+  height: 1px;
+  width: 100%;
 }

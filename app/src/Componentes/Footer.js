@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Link } from "wouter";
 import "../style/Footer.css";
 import "../style/Global.css";
 
@@ -14,7 +15,7 @@ export default function Footer() {
                 <h1 className="TituloAzul">PadelNow</h1>
             </div>
 
-            <div className="SepVert"></div>
+            <div className="FooterSepVert"></div>
 
             <div className="FooterSecond">
                 <h1 className="SobreNosotros">Sobre Nosotros</h1>
@@ -23,11 +24,13 @@ export default function Footer() {
                 <h4 className="SubtituloFooter">Facebook</h4>
             </div>
 
-            <div className="SepVert"></div>
+            <div className="FooterSepVert"></div>
 
             <div className="FooterThird">
                 <h1 className="TienesAlgun">¿Tienes algún problema?</h1>
-                <h4 className="SubtituloFooter">Enviar Incidencia</h4>
+                <Link to="/enviarincidencia">
+                    <h4 className="SubtituloFooter">Enviar Incidencia</h4>
+                </Link>
                 <h4 className="Copyright">© Derechos reservados</h4>
             </div>
         </div>

@@ -1,0 +1,109 @@
+.Pareja{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 325px;
+    background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
+    margin: 40px;
+    border-radius: 10px;
+}
+
+
+
+
+.ParejaUp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.PJugador1{
+    margin: 0px 0px 0px 3%;
+}
+
+.PJugador2{
+    margin: 0px 3% 0px 0px;
+}
+
+.Posicion{
+    display: flex;
+    align-items: center;
+    font-size: 200px;
+    height: 180px;
+    width: 90px;
+    font-weight: 700;
+}
+
+
+
+.PosyEntrenador{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+}
+
+.PSepHor{
+    background-color: white;
+    height: 1px;
+    width: 90%;
+}
+
+.ParejaPuntos{
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    margin: 10px;
+}
+
+.PFoto{
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(16.33deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 121.02%);
+    margin-top: 20px;
+}
+
+.PNombre{
+    display: flex;
+    justify-content: center;
+}
+
+.PRanking{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    
+}
+.Almohadilla{
+    margin-top: 120px;
+    font-size: 210%;
+    width: 35px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Entrenador{
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    font-weight: 100;
+}
+
+.PEntrenadorNombre{
+    justify-content: center;
+    margin: 0px;
+    font-weight: 100;
+    font-size: 25px;
+}

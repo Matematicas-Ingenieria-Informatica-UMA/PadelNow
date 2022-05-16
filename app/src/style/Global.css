@@ -44,12 +44,34 @@ h4 {
   margin: 0;
 }
 
+/* TEXTO */
+
+p{
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1em;
+  color: black;
+}
+
 .LeftAlign{
   text-align: left;
 }
 
 .CenterAlign{
   text-align: center;
+}
+
+.TextColorBlack {
+  color: black;
+}
+
+.TextColorWhite {
+  color: white;
+}
+
+.TextColorGrey{
+  color: grey;
 }
 
 /* INPUTS */

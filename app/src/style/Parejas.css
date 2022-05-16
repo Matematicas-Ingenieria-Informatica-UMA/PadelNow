@@ -1,0 +1,14 @@
+.Parejas{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+}
+
+.ParejasGenero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}

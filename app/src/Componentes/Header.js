@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "wouter";
 
 import "../style/Header.css";
 import "../style/Global.css";
@@ -11,10 +11,12 @@ export default function Header() {
     return (
         <>
             <div className="Header">
-                <div className="TitleHeader">
-                    <Logo></Logo>
-                    <h2 className="Title">PadelNow</h2>
-                </div>
+                <Link to="/">
+                    <div className="TitleHeader">
+                        <Logo></Logo>
+                        <h2 className="Title">PadelNow</h2>
+                    </div>
+                </Link>
                 <div className="Navigate">
                     <div className="Search">
                         <img src="/lense.svg" alt="Search" />
@@ -50,33 +52,40 @@ export default function Header() {
                 onMouseLeave={() => setClase("noDisplay")}
             >
                 <div className="DesplegableTop">
-                    <button
-                        className="DesplegableTitles"
-                        // onClick={() => (
-                        //     <Router>
-                        //         <Switch>
-                        //             <Route exact path="/Jugadores">
-                        //                 <Jugadores />
-                        //             </Route>
-                        //         </Switch>
-                        //     </Router>
-                        // )}
-                    >
-                        Partidos
-                    </button>
-                    <button className="DesplegableTitles">Parejas</button>
-                    <button className="DesplegableTitles">Circuitos</button>
-                    <button className="DesplegableTitles">Torneos</button>
+                    <Link to="/partidos">
+                        <button className="DesplegableTitles">
+                            Últimos Partidos
+                        </button>
+                    </Link>
+                    <Link to="/jugadores">
+                        <button className="DesplegableTitles">
+                            Ver Jugadores
+                        </button>
+                    </Link>
+                    <Link to="/parejas">
+                        <button className="DesplegableTitles">
+                            Ver Parejas
+                        </button>
+                    </Link>
+                    <Link to="/circuitos">
+                        <button className="DesplegableTitles">
+                            Ver Circuitos
+                        </button>
+                    </Link>
+                    <Link to="/torneos">
+                        <button className="DesplegableTitles">
+                            Ver Torneos
+                        </button>
+                    </Link>
                 </div>
-                <div className="SepHor"></div>
+                <div className="HeaderSepHor"></div>
                 <div className="DesplegableBottom">
                     <button className="DesplegableTitles">Modo Claro</button>
-                    <button className="DesplegableTitles">
-                        Sobre Nosotros
-                    </button>
-                    <button className="DesplegableTitles">
-                        Enviar Incidencia
-                    </button>
+                    <Link to="/enviarincidencia">
+                        <button className="DesplegableTitles">
+                            Enviar Incidencia
+                        </button>
+                    </Link>
                 </div>
             </div>
         </>

@@ -11,8 +11,7 @@
   max-width: 1000px;
   height: fit-content;
 
-  background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
-  border-radius: 20px;
+  background: none;
 }
 
 .DataInput {

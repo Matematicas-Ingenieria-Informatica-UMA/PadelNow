@@ -1,23 +1,41 @@
+import { Route, Switch, Link } from "wouter";
+
 import Header from "./Componentes/Header";
 import Footer from "./Componentes/Footer";
-import Feed from "./Componentes/Feed";
-import Jugador from "./Componentes/Jugador";
+import Feed from "./Vistas/Feed";
+import Jugadores from "./Vistas/Jugadores";
+import Parejas from "./Vistas/Parejas";
+import Partidos from "./Vistas/Partidos";
+import EnviarIncidencia from "./Vistas/EnviarIncidencia";
 import Generos from "./Componentes/Generos";
-import Incidencia from "./Componentes/Incidencia";
-import Partido from "./Componentes/Partido";
 
 import "./style/App.css";
 
 function App() {
     return (
         <div className="App">
-            <Header></Header>
-            <Generos></Generos>
-            <Incidencia></Incidencia>
-            <Partido></Partido>
-            <Feed></Feed>
-            <Jugador></Jugador>
-            <Footer></Footer>
+            <Header />
+            <Switch>
+                <Route path="/" exact>
+                    <Feed />
+                </Route>
+                <Route path="/jugadores" exact>
+                    <Generos />
+                    <Jugadores />
+                </Route>
+                <Route path="/parejas" exact>
+                    <Generos />
+                    <Parejas />
+                </Route>
+                <Route path="/enviarincidencia" exact>
+                    <EnviarIncidencia />
+                </Route>
+                <Route path="/partidos" exact>
+                    <Generos />
+                    <Partidos />
+                </Route>
+            </Switch>
+            <Footer />
         </div>
     );
 }
