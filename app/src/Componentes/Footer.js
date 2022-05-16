@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="SepVert"></div>
 
             <div className="FooterSecond">
-                <h4 className="SobreNosotros">Sobre Nosotros</h4>
+                <h1 className="SobreNosotros">Sobre Nosotros</h1>
                 <h4 className="SubtituloFooter">Instagram</h4>
                 <h4 className="SubtituloFooter">Twitter</h4>
                 <h4 className="SubtituloFooter">Facebook</h4>
@@ -26,8 +26,9 @@ export default function Footer() {
             <div className="SepVert"></div>
 
             <div className="FooterThird">
-                <h4 className="TienesAlgun">¿Tienes algún problema?</h4>
+                <h1 className="TienesAlgun">¿Tienes algún problema?</h1>
                 <h4 className="SubtituloFooter">Enviar Incidencia</h4>
+                <h4 className="Copyright">© Derechos reservados</h4>
             </div>
         </div>
     );

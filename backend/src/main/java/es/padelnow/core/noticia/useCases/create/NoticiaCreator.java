@@ -27,9 +27,4 @@ public class NoticiaCreator {
         Noticia noticia = new Noticia(titulo, autor, new Date(System.currentTimeMillis()));
         return repo.save(noticia);
     }
-
-    public Noticia create() {
-        Noticia noticia = new Noticia();
-        return repo.save(noticia);
-    }
 }

@@ -19,7 +19,8 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Noticia {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
 
     @Column(nullable = false)
@@ -34,22 +35,28 @@ public class Noticia {
     @Column
     private String subtitulo;
 
-    @ColumnDefault( value = "CURRENT_TIMESTAMP" )
+    @ColumnDefault(value = "CURRENT_TIMESTAMP")
     @Column(nullable = false)
     private Date fecha;
 
     @Column
     private URL foto;
 
-    public Noticia (String titulo,String autor, Date fecha){
+    public Noticia(String titulo, String autor, Date fecha) {
         this.titulo = titulo;
         this.autor = autor;
-        this.fecha=fecha;
+        this.fecha = fecha;
     }
 
-    public Noticia(long id,String titulo,String autor, Date fecha){
-        this(titulo,autor,fecha);
+    public Noticia(long id, String titulo, String autor, Date fecha) {
+        this(titulo, autor, fecha);
         this.id = id;
+    }
+
+    public Noticia(String titulo, String cuerpo, String autor, String subtitulo, URL foto) {
+        this(titulo, autor, new Date(System.currentTimeMillis()));
+        this.cuerpo = cuerpo;
+        this.foto = foto;
     }
 
 }

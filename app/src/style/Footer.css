@@ -22,13 +22,13 @@
 }
 
 .FooterFirst{
-    margin: 20px 15%;
+    margin: 20px 8%;
 }
 
 .SobreNosotros{
     display: flex;
     justify-content: left;
-    width: 100%;
+    width: 120%;
     height: 50px;
     margin: 15px 0px 5px 0px;
 }
@@ -44,21 +44,38 @@
 .FooterSecond{
     display: flex;
     flex-direction: column;
-    height: 150px;
-    width: 80%;
+    height: 100%;
+    width: 90%;
     justify-content: left;
-    margin: 0 10%;
+    margin-left: 8%;
 }
 
 .FooterThird{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    justify-content: space-between;
+    width: 108%;
     height: 150px;
-    margin: 0px 5%;
+    margin: 0px 0px 0px 4%;
 }
 
 .TienesAlgun{
-    width: 100%;
-    margin: 0;
+    width: 150%;
+    height: 50px;
+    margin: 0px;
 }
+
+.Copyright{
+    margin: 0px;
+    font-style: italic;
+    font-weight: 1;
+    font-size: 20px;
+    height: 30px;
+    width: 150%;
+}
+
+.SepVert{
+    background-color: #6281BF;
+    height: 80%;
+    width: 1px;
+  }

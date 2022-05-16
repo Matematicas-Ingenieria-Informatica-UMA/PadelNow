@@ -1,0 +1,17 @@
+.Generos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25%;
+    padding: 10px 0;
+    width: 100%;
+    height: fit-content;
+
+    background: linear-gradient(254.27deg, #43567C -2.78%, #39334A 100%);
+}
+
+.SepVert{
+    background-color: #6281BF;
+    width: .5px;
+    height: auto;
+  }

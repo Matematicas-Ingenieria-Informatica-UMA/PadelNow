@@ -1,9 +1,10 @@
 .App {
   display: flex;
-  text-align: center;
   flex-direction: column;
   justify-content: space-between;
   height: fit-content;
+
+  gap: 50px; /*Quitar esto cuando terminemos las pruebas */
 }
 /*
 .App-logo {

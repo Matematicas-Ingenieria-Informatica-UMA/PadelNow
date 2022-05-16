@@ -1,0 +1,107 @@
+.Jugador{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 879px;
+    height: 490px;
+    padding: 20px;
+    gap: 20px;
+    background: linear-gradient(56.62deg, #33364B 0%, #43567C 100%);
+    border-radius: 20px;
+}
+
+.Imagen{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 450px;
+    background-color: grey;
+}
+
+.Datos{
+    width: 410px;
+    height: 450px;
+}
+
+
+.Tabla{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 360px;
+}
+
+#prim{
+    width: 174.75px;
+    height: 40px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+/* or 100% */
+
+    letter-spacing: 1px;
+
+/* Grayscale / Off-white */
+
+    color: #FCFCFC; 
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.Nombre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 410px;
+    height: 50px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#sec{
+    width: 174.75px;
+    height: 40px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    /* or 100% */
+    
+    letter-spacing: 1px;
+    
+    /* Grayscale / Off-white */
+    
+    color: #FCFCFC;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
