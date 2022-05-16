@@ -28,6 +28,7 @@ export default function Footer() {
             <div className="FooterThird">
                 <h4 className="TienesAlgun">¿Tienes algún problema?</h4>
                 <h4 className="SubtituloFooter">Enviar Incidencia</h4>
+                <h4 className="Copyright">© Derechos reservados</h4>
             </div>
         </div>
     );
