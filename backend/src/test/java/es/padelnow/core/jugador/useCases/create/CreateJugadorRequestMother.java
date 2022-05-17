@@ -10,6 +10,6 @@ public final class CreateJugadorRequestMother {
     }
 
     public static CreateJugadorRequest random() {
-        return new CreateJugadorRequest("Juan", "Lebron Chincoa", Sexo.MASCULINO, Pais.SPAIN);
+        return new CreateJugadorRequest("Juan", "Lebron Chincoa", Sexo.MASCULINO, Pais.ES);
     }
 }
