@@ -1,76 +1,86 @@
 .Jugador {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: row;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
-    max-width: 300px;
-    min-width: fit-content;
-    height: fit-content;
+  width: 100%;
+  height: fit-content;
 
-    gap: 10px;
+  gap: 10px;
 
-    padding: 20px 10px;
+  padding: 20px 0;
 
-    background: linear-gradient(56.62deg, #33364b 0%, #43567c 100%);
-    border-radius: 20px;
+  background: linear-gradient(56.62deg, #33364b 0%, #43567c 100%);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .Jugador {
+    flex-wrap: wrap;
+  }
 }
 
 .Imagen {
-    width: 150px;
-    height: 200px;
-    background: linear-gradient(
-        16.33deg,
-        #c4c4c4 0%,
-        rgba(196, 196, 196, 0) 121.02%
-    );
+  width: 150px;
+  height: 200px;
+  background: linear-gradient(
+    16.33deg,
+    #c4c4c4 0%,
+    rgba(196, 196, 196, 0) 121.02%
+  );
 }
 
 .Datos {
-    width: fit-content;
-    height: fit-content;
+  height: fit-content;
+  margin: 0 20px;
 }
 
 .Tabla {
-    margin: 10px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1%;
+
+  width: 80%;
+  margin: 10px 0 0 20px;
 }
 
 .JugadorFont {
-    font-size: 10px;
-    text-align: justify;
+  font-size: 10px;
+  text-align: left;
 }
 
 .JugadorVerMas {
-    width: 100%;
-    text-align: right;
-    font-family: "Poppins";
-    color: #fcfcfc;
-    text-decoration: underline;
+  width: 100%;
+  text-align: right;
+  font-family: "Poppins";
+  color: #fcfcfc;
+  text-decoration: underline;
 }
 
 .JugadorVerMas:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .JugadorVerMas:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .Nombre {
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    height: fit-content;
+  text-align: center;
+  width: 95%;
+  margin: auto;
+  height: fit-content;
 }
 
 .JugadorSepHor {
-    background-color: white;
-    height: 1px;
-    width: 98%;
+  background-color: white;
+  height: 1px;
+  width: 98%;
 }
 
-.JugadorDisplay{
-    display: none;
+.JugadorNoDisplay {
+  display: none;
 }
