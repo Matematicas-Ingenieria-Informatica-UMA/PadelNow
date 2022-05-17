@@ -1,13 +1,11 @@
 .Jugadores{
     display: flex;
     flex-direction: row;
-    align-self: center;
-    justify-content: space-around;
 
-    gap: 5%;
+    gap: 20px;
 
-    width: 90%;
-    margin-top: 20px;
+    width: 100%;
+    margin: 20px auto;
 }
 
 .JugadoresGenero{

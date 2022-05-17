@@ -1,0 +1,43 @@
+.Error{
+    width: 100%;
+    height: fit-content;
+    max-width: 300px;
+
+    padding: 20px;
+    
+    margin: auto;
+
+    background:none;
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.ErrorButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 10px 15px;
+    width: 80%;
+    height: 50px;
+    background: #33354a;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  .ErrorButton:hover {
+    transform: scale(1.05);
+  }
+  
+  .ErrorButton:active {
+    transform: scale(0.95);
+  }

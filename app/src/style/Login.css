@@ -32,6 +32,14 @@
     text-decoration: underline;
 }
 
+.SinLogin:hover{
+    transform: scale(1.05);
+}
+
+.SinLogin:active{
+    transform: scale(0.95);
+}
+
 .LoginTitle{
     color: black;
     font-family: 'Poppins';
@@ -68,6 +76,22 @@
     border-radius: 10px;
 }
 
+.LoginButton:hover{
+    transform: scale(1.05);
+}
+
+.LoginButton:active{
+    transform: scale(0.95);
+}
+
 .OlvContra{
     height: 50px;
+}
+
+.OlvContra:hover{
+    transform: scale(1.05);
+}
+
+.OlvContra:active{
+    transform: scale(0.95);
 }
