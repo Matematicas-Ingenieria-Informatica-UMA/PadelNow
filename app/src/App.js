@@ -1,4 +1,4 @@
-import { Route, Switch, Link } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 
 import Header from "./Componentes/Header";
 import Footer from "./Componentes/Footer";
@@ -8,16 +8,31 @@ import Parejas from "./Vistas/Parejas";
 import Partidos from "./Vistas/Partidos";
 import EnviarIncidencia from "./Vistas/EnviarIncidencia";
 import Generos from "./Componentes/Generos";
+import Login from "./Componentes/Login";
+import Crud from "./Componentes/Crud";
 
 import "./style/App.css";
 
 function App() {
+    const [location, setLocation] = useLocation();
     return (
         <div className="App">
-            <Header />
+            {location.startsWith("/admin") ? <></> : <Header />}
             <Switch>
                 <Route path="/" exact>
                     <Feed />
+                </Route>
+                <Route path="/admin" exact>
+                    <div className="AdminBackground">
+                        <h1 className="TituloAdmin">PadelNow</h1>
+                        <Login />
+                    </div>
+                </Route>
+                <Route path="/admin/crud" exact>
+                    <div className="AdminBackground">
+                        <h1 className="TituloAdmin">PadelNow</h1>
+                        <Crud></Crud>
+                    </div>
                 </Route>
                 <Route path="/jugadores" exact>
                     <Generos />
@@ -34,8 +49,12 @@ function App() {
                     <Generos />
                     <Partidos />
                 </Route>
+                <Route path="/torneos" exact>
+                    <Login />
+                </Route>
+                <Route>ERROR 404</Route>
             </Switch>
-            <Footer />
+            {location.startsWith("/admin") ? <></> : <Footer />}
         </div>
     );
 }

@@ -1,5 +1,7 @@
 import React from "react";
+
 import Jugador from "../Componentes/Jugador";
+
 import "../style/Jugadores.css";
 
 export default function Jugadores() {
