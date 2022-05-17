@@ -1,54 +1,46 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
+
 import "../style/Jugador.css";
 
 export default function Jugador() {
-  return (
-    <>
-      <div className="Jugador">
-        <div className="Imagen">
-            <img src=".\logo.svg" alt="foto"/>
-        </div>
-        <div className="Datos">
-          <h1 className="Nombre">ALEJANDRA SALAZAR BENGOECHEA</h1>
-          <hr></hr>
-          <div className="Tabla">
-            <table >
-              <tr>
-                <td id="prim">Fecha de Nacimiento</td>
-                <td id="sec">31 de Diciembre de 1985</td>
-              </tr>
-              <tr>
-                <td id="prim">Nacionalidad</td>
-                <td id="sec">Española</td>
-              </tr>
-              <tr>
-                <td id="prim">Ciudad</td>
-                <td id="sec">Madrid</td>
-              </tr>
-              <tr>
-                <td id="prim">Ranking</td>
-                <td id="sec">1</td>
-              </tr>
-              <tr>
-                <td id="prim">Brazo dom.</td>
-                <td id="sec">Diestra</td>
-              </tr>
-              <tr>
-                <td id="prim">Compañerx</td>
-                <td id="sec">Gemma Triay</td>
-              </tr>
-              <tr>
-                <td id="prim">Altura</td>
-                <td id="sec">1,68</td>
-              </tr>
-              <tr>
-                <td id="prim">Posición</td>
-                <td id="sec">Revés</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+    const [miniatura, setMiniatura] = useState("Tabla");
+    return (
+        <>
+            <div className="Jugador">
+                <div className="Imagen"></div>
+                <div className="Datos">
+                    <h1 className="Nombre">ALEJANDRA SALAZAR BENGOECHEA</h1>
+                    <div className="{miniatura} JugadorFont">
+                        <div className="JugadorSepHor"></div>
+                        <h4>Fecha de Nacimiento</h4>
+                        <h3>31 de diciembre de 1985</h3>
+                        <h4>Nacionalidad</h4>
+                        <h3>Española</h3>
+                        <h4>Ciudad</h4>
+                        <h3>Madrid</h3>
+                        <h4>Ranking</h4>
+                        <h3>1</h3>
+                        <h4>Brazo Dominante</h4>
+                        <h3>Diestra</h3>
+                        <h4>Compañerx</h4>
+                        <h3>Gemma Triay</h3>
+                        <h4>Altura</h4>
+                        <h3>1'68</h3>
+                        <h4>Posición</h4>
+                        <h3>Revés</h3>
+                        <button className="JugadorFont">Ver Menos</button>
+                    </div>
+                    <button
+                        className="JugadorVerMas JugadorFont"
+                        onClick={() => {
+                            setMiniatura("JugadorDisplay Tabla");
+                        }}
+                    >
+                        Ver Más
+                    </button>
+                </div>
+            </div>
+        </>
+    );
 }

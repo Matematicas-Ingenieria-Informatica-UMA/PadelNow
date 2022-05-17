@@ -1,108 +1,76 @@
-.Jugador{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+.Jugador {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 450px;
-    padding: 2%;
-    margin: 1%;
-    gap: 20px;
-    background: linear-gradient(56.62deg, #33364B 0%, #43567C 100%);
+
+    width: 100%;
+    max-width: 300px;
+    min-width: fit-content;
+    height: fit-content;
+
+    gap: 10px;
+
+    padding: 20px 10px;
+
+    background: linear-gradient(56.62deg, #33364b 0%, #43567c 100%);
     border-radius: 20px;
 }
 
-.Imagen{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    height: 100%;
-    background-color: grey;
+.Imagen {
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(
+        16.33deg,
+        #c4c4c4 0%,
+        rgba(196, 196, 196, 0) 121.02%
+    );
 }
 
-.Datos{
+.Datos {
     width: fit-content;
-    height: 450px;
+    height: fit-content;
 }
 
-
-.Tabla{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 410px;
-    height: 360px;
+.Tabla {
+    margin: 10px 0 0 20px;
 }
 
-#prim{
-    width: 174.75px;
-    height: 40px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 20px;
-/* or 100% */
-
-    letter-spacing: 1px;
-
-/* Grayscale / Off-white */
-
-    color: #FCFCFC; 
-
-
-/* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 1;
+.JugadorFont {
+    font-size: 10px;
+    text-align: justify;
 }
 
-.Nombre{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.JugadorVerMas {
+    width: 100%;
+    text-align: right;
+    font-family: "Poppins";
+    color: #fcfcfc;
+    text-decoration: underline;
+}
+
+.JugadorVerMas:hover {
+    transform: scale(1.02);
+}
+
+.JugadorVerMas:active {
+    transform: scale(0.98);
+}
+
+.Nombre {
     text-align: center;
     align-items: center;
-    padding: 0px;
-    gap: 20px;
-    margin-bottom: 10px;
-    width: 410px;
-    height: 50px;
-    
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+    width: 100%;
+    height: fit-content;
 }
 
-#sec{
-    width: 174.75px;
-    height: 40px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-    /* or 100% */
-    
-    letter-spacing: 1px;
-    
-    /* Grayscale / Off-white */
-    
-    color: #FCFCFC;
-    
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 1;
-    flex-grow: 1;
+.JugadorSepHor {
+    background-color: white;
+    height: 1px;
+    width: 98%;
+}
+
+.JugadorDisplay{
+    display: none;
 }

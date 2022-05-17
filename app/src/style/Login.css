@@ -1,0 +1,73 @@
+.Login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+    height: 500px;
+    margin: 50px;
+}
+.ConLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 25px;
+    width: 100%;
+    height: 90%;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.SinLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #FFFFFF;
+    width: 100%;
+    height: 10%;
+    text-decoration: underline;
+}
+
+.LoginTitle{
+    color: black;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50p
+}
+
+.CentralLogin{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.InputLogin{
+    padding: 10px;
+    width: 90%;
+    border: grey 1px solid; 
+    border-radius: 10px;
+}
+
+.LoginButton{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    width: 90%;
+    background: #33354A;
+    border-radius: 10px;
+}
+
+.OlvContra{
+    height: 50px;
+}
