@@ -42,12 +42,13 @@
 }
 
 .SubtituloFooter:hover{
-    transform: scale(1.05);
+    transform: scale(0.98);
 }
 
 .SubtituloFooter:active{
     transform: scale(0.95);
 }
+
 
 .FooterSecond{
     display: flex;
@@ -62,9 +63,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 108%;
+    width: 100%;
     height: 150px;
-    margin: 0px 0px 0px 4%;
+    margin-left: 8%;
 }
 
 .TienesAlgun{

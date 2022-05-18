@@ -10,7 +10,7 @@ export default function Miniatura() {
                 alt="Noticia"
             />
             <h4 className="TituloMini">
-                Los 3 Mejores Puntos Femeninos 2022 del Circus Brussels...
+                Los 3 Mejores Puntos Femeninos 2022 del Circus Brussels Padel Open 2022
             </h4>
         </div>
     );
