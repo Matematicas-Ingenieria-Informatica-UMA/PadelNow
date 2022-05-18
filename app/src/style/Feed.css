@@ -1,18 +1,28 @@
-.Feed{
-    height: 600px;
+.Feed {
+  height: fit-content;
 }
 
-.MiniaturasRow{
-    display: flex;
-    flex-direction: row;
-    height: 250px;
-    margin: 0px 65px;
+.MiniaturasRow {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.VerMas{
-    padding: 20px 0;
-    margin-left: 20px;
-    display: flex;
-    align-items: flex-end;
-    text-decoration: underline;
+.VerMas {
+  margin: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: underline;
+}
+
+.VerMas:hover {
+  transform: scale(1.02);
+}
+
+.VerMas:active {
+  transform: scale(0.98);
 }

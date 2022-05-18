@@ -33,8 +33,9 @@
 .Navigate {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 20px;
   min-width: min-content;
+  margin-right: 20px;
 }
 
 .Search {

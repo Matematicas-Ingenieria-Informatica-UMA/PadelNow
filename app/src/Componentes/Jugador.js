@@ -10,28 +10,47 @@ export default function Jugador() {
   return (
     <>
       <div className="Jugador">
-        <div className="Imagen"></div>
-        <div className="Datos">
+        <img
+          src="https://www.worldpadeltour.com/media-content/2022/05/alejandra-salazar-bengoechea-c50aaf0cc5-220x260.JPG"
+          className="Imagen"
+        />
+        <div>
           <div className="JugadorSepHor"></div>
           <h1 className="Nombre">ALEJANDRA SALAZAR BENGOECHEA</h1>
           <div className="JugadorSepHor"></div>
           <div className={clase}>
-            <h4>Fecha de Nacimiento</h4>
-            <h3>31 de diciembre de 1985</h3>
-            <h4>Nacionalidad</h4>
-            <h3>Española</h3>
-            <h4>Ciudad</h4>
-            <h3>Madrid</h3>
-            <h4>Ranking</h4>
-            <h3>1</h3>
-            <h4>Brazo Dominante</h4>
-            <h3>Diestra</h3>
-            <h4>Compañerx</h4>
-            <h3>Gemma Triay</h3>
-            <h4>Altura</h4>
-            <h3>1'68</h3>
-            <h4>Posición</h4>
-            <h3>Revés</h3>
+            <div className="keyValue">
+              <h4>Nacimiento</h4>
+              <h3>31/12/1985</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Nacionalidad</h4>
+              <h3>Española</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Ciudad</h4>
+              <h3>Madrid</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Ranking</h4>
+              <h3>1</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Brazo Dominante</h4>
+              <h3>Diestra</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Compañerx</h4>
+              <h3>Gemma Triay</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Altura</h4>
+              <h3>1'68</h3>
+            </div>
+            <div className="keyValue">
+              <h4>Posición</h4>
+              <h3>Revés</h3>
+            </div>
             <button
               className="JugadorVerMas JugadorFont"
               onClick={() => {
@@ -45,7 +64,7 @@ export default function Jugador() {
           <button
             className={boton}
             onClick={() => {
-              setClase("Tabla JugadorFont");
+              setClase("JugadorFont");
               setBoton("JugadorNoDisplay");
             }}
           >

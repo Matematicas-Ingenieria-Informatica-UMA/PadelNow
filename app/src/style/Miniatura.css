@@ -1,6 +1,6 @@
 .Miniatura{
     width: 300px;
-    height: 220px;
+    height: fit-content;
     padding: 15px;
     border: 15px;
 }
@@ -12,4 +12,5 @@
 
 .TituloMini{
     text-decoration: underline;
+    overflow: hidden;
 }
