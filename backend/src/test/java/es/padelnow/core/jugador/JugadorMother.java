@@ -15,6 +15,6 @@ public final class JugadorMother {
     }
 
     public static Jugador random() {
-        return new Jugador("Alejandro", "Galán Romo", Sexo.MASCULINO, Pais.SPAIN);
+        return new Jugador("Alejandro", "Galán Romo", Sexo.MASCULINO, Pais.ES);
     }
 }
