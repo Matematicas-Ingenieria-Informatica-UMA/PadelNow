@@ -1,7 +1,9 @@
 package es.padelnow.core.noticia;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,8 +12,12 @@ import java.util.List;
 public interface NoticiaRepository extends JpaRepository<Noticia, Long> {
 
     @Query("SELECT n FROM Noticia n WHERE"
-            + " LOWER(n.titulo) LIKE LOWER('%?1%')"
-            + " OR LOWER(n.cuerpo) LIKE LOWER('%?1%')")
-    List<Noticia> search(String Keyword);
+            + " LOWER(n.titulo) LIKE LOWER('%:keyword%')"
+            + " OR LOWER(n.cuerpo) LIKE LOWER('%:keyword%')")
+    List<Noticia> search(@Param(value="keyword") String Keyword);
+
+    @Modifying
+    @Query("UPDATE Noticia n set n.titulo = :titulo where n.id = :id")
+    void updateTitulo(@Param(value="id")Long id, @Param(value="titulo") String titulo);
 
 }
