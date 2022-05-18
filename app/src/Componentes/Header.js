@@ -19,7 +19,9 @@ export default function Header() {
                 </Link>
                 <div className="Navigate">
                     <div className="Search">
-                        <img src="/lense.svg" alt="Search" />
+                        <Link to="/admin">
+                            <img src="/lense.svg" alt="Search" />
+                        </Link>
                         <input
                             type="text"
                             id="Search"

@@ -14,6 +14,9 @@ export default function Recursos() {
                 <Link to={`${location}/pareja`}>
                     <button className="RecursosButton">Pareja</button>
                 </Link>
+                <Link to={`${location}/partido`}>
+                    <button className="RecursosButton">Partido</button>
+                </Link>
                 <Link to={`${location}/noticia`}>
                     <button className="RecursosButton">Noticia</button>
                 </Link>
