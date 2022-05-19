@@ -12,6 +12,7 @@ import Jugadores from "./Vistas/Jugadores";
 import Parejas from "./Vistas/Parejas";
 import Partidos from "./Vistas/Partidos";
 import EnviarIncidencia from "./Vistas/EnviarIncidencia";
+import Circuitos from "./Vistas/Circuitos";
 import Error from "./Vistas/Error";
 
 import "./style/App.css";
@@ -84,6 +85,9 @@ function App() {
                     <Partidos />
                 </Route>
                 <Route path="/torneos" exact></Route>
+                <Route path="/circuitos" exact>
+                    <Circuitos />
+                </Route>
                 <Route>
                     <div className="AdminBackground">
                         <h1 className="TituloAdmin">PadelNow</h1>

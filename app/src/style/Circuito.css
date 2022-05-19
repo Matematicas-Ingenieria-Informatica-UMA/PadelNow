@@ -1,0 +1,141 @@
+.Circuito{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 0px 50px 30px;
+    left: 30px;
+    margin: 60px;
+
+    position: relative;
+    width: 40%;
+    height: 490px;
+    /*overflow-y: scroll;*/
+
+    background: linear-gradient(196.7deg, #455981 9.47%, #33354A 70.61%);
+    border-radius: 20px;
+}
+
+.NombreCircuito{
+    width: 603px;
+    height: 105px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.NombreCircuitoTexto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 497px;
+    height: 48px;
+    left: calc(50% - 497px/2 - 53px);
+    top: calc(15% - 48px/2);
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    /* or 125% */
+
+    letter-spacing: 1px;
+
+    color: #FFFFFF;
+}
+
+.logoCircuito{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 87px;
+    height: 87px;
+
+
+    border-radius: 90px;
+
+}
+
+.TorneoCircuito{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 1px 0px;
+    gap: 30px;
+    
+
+    width: 510px;
+    height: 75px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.TituloCircuito{
+    
+    width: 70%;
+    text-align: left;
+}
+
+.TituloCircuitoTexto{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 50px;
+    /* identical to box height, or 139% */
+
+    letter-spacing: 1px;
+
+    /* Grayscale / Off-white */
+
+    color: #FCFCFC;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.ContenidoCircuito{
+    width: 30%;
+
+
+
+}
+
+.ContenidoCircuitoTexto{
+    /* Contenido */
+
+
+    width: 200px;
+    height: 50px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+    /* identical to box height, or 139% */
+
+    letter-spacing: 1px;
+
+    /* Grayscale / Off-white */
+
+    color: #FCFCFC;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
