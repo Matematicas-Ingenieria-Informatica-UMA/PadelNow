@@ -6,6 +6,7 @@ import Login from "./Componentes/Login";
 import Crud from "./Componentes/Crud";
 import Generos from "./Componentes/Generos";
 import Recursos from "./Componentes/Recursos";
+import CrearJugador from "./Componentes/CrearJugador";
 
 import Feed from "./Vistas/Feed";
 import Jugadores from "./Vistas/Jugadores";
@@ -45,6 +46,14 @@ function App() {
                             PadelNow - CREAR RECURSO
                         </h1>
                         <Recursos></Recursos>
+                    </div>
+                </Route>
+                <Route path="/admin/crud/create/jugador" exact>
+                    <div className="AdminBackground">
+                        <h1 className="TituloAdmin">
+                            PadelNow - CREAR JUGADOR
+                        </h1>
+                        <CrearJugador></CrearJugador>
                     </div>
                 </Route>
                 <Route path="/admin/crud/modify" exact>
