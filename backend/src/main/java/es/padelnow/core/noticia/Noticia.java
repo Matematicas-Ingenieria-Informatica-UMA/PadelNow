@@ -17,6 +17,7 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Noticia {
     @Id

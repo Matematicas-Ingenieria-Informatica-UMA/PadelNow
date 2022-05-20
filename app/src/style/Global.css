@@ -46,7 +46,7 @@ h4 {
 
 /* TEXTO */
 
-p{
+p {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 100;
@@ -54,11 +54,15 @@ p{
   color: black;
 }
 
-.LeftAlign{
+.TinyText {
+  font-size: 0.5em;
+}
+
+.LeftAlign {
   text-align: left;
 }
 
-.CenterAlign{
+.CenterAlign {
   text-align: center;
 }
 
@@ -70,7 +74,7 @@ p{
   color: white;
 }
 
-.TextColorGrey{
+.TextColorGrey {
   color: grey;
 }
 
@@ -99,6 +103,14 @@ input {
   padding: 0 5px;
 }
 
+.DateInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-size: 0.8em;
+  align-items: flex-start;
+}
+
 /*BOTONES*/
 
 button {
@@ -106,15 +118,15 @@ button {
   border: none;
 }
 
-button:hover{
+button:hover {
   transform: scale(1.05);
 }
 
-button:active{
+button:active {
   transform: scale(0.95);
 }
 
-.SimpleButton{
+.SimpleButton {
   color: white;
   text-decoration: underline;
   font-family: "Poppins";
@@ -146,4 +158,14 @@ button:active{
 
 .noDisplay {
   display: none;
+}
+
+/* MARGENES */
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.m-0{
+  margin: 0;
 }

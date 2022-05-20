@@ -19,7 +19,7 @@ final class JugadorPostControllerTest extends ApplicationTestCase {
     @Test
     void creaUnCursoValido() throws Exception {
 
-        Jugador jugador = new Jugador("Juan", "Lebron", Sexo.MASCULINO, Pais.SPAIN);
+        Jugador jugador = new Jugador("Juan", "Lebron", Sexo.MASCULINO, Pais.ES);
 
         assertRequestWithBody(
                 "POST",

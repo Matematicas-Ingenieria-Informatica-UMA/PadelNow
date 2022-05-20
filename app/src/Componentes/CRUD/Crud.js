@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 
-import "../style/Crud.css";
+import "../../style/CRUD/Crud.css";
 
 export default function Crud() {
     return (
