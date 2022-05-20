@@ -57,6 +57,7 @@ function App() {
                 <Route path="/admin/recursos/jugadores" exact>
                     <div className="AdminBackground">
                         <h1 className="TituloAdmin">PadelNow - Jugadores</h1>
+                        <Generos></Generos>
                         <JugadorAdmin />
                     </div>
                 </Route>
