@@ -10,7 +10,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Collection;
 
-@AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
@@ -18,6 +17,7 @@ import java.util.Collection;
 public class Pareja {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     private int temporadas_activo;
@@ -29,4 +29,11 @@ public class Pareja {
 
     @OneToMany(mappedBy = "pareja")
     private Collection<Jugador> jugadores;
+
+    public Pareja(int temporadas_activo, String entrenador, Collection<Partido> partidos, Collection<Jugador> jugadores){
+        this.temporadas_activo = temporadas_activo;
+        this.entrenador = entrenador;
+        this.partidos = partidos;
+        this.jugadores = jugadores;
+    }
 }
