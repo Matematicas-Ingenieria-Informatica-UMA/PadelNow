@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "wouter";
 
-import "../../../style/CRUD/Create/CrearRecurso.css";
-import "../../../style/Global.css";
+import "../../style/CrearRecurso.css";
+import "../../../user/style/Global.css";
 
 export default function CrearJugador() {
   return (
@@ -52,23 +52,40 @@ export default function CrearJugador() {
         </div>
       </div>
       <div className="IncidenciaTop">
+        <select name="Dominant" id="Dominant" className="DesplegableRecurso">
+          <option disabled selected>
+            Selecciona el brazo dominante
+          </option>
+
+          <option>Diestro</option>
+
+          <option>Zurdo</option>
+        </select>
         <div className="InputStyle DataInput">
-          <input type="text" id="Dominant" placeholder="Brazo dominante" />
-        </div>
-        <div className="InputStyle DataInput">
-          <input required type="text" id="PhotoURL" placeholder="URL de la foto" />
+          <input
+            required
+            type="text"
+            id="PhotoURL"
+            placeholder="URL de la foto"
+          />
         </div>
       </div>
       <div className="IncidenciaTop">
         <div className="InputStyle DataInput">
           <input required type="text" id="Mean" placeholder="Media" />
         </div>
-        <div className="InputStyle DataInput">
-          <input type="text" id="Position" placeholder="Posicion" />
-        </div>
+        <select name="Position" id="Position" className="DesplegableRecurso">
+          <option disabled selected>
+            Selecciona la posición
+          </option>
+
+          <option>Revés</option>
+
+          <option>Derecha</option>
+        </select>
       </div>
       <button className="BotonConFondo">Crear Jugador</button>
-      <Link to="/admin/crud">
+      <Link to="/admin/recursos/jugadores">
         <button className="SimpleButton">Cancelar</button>
       </Link>
     </div>

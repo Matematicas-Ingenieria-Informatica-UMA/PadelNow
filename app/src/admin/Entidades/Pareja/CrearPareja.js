@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "wouter";
 
-import "../../../style/CRUD/Create/CrearRecurso.css";
-import "../../../style/Global.css";
+import "../../style/CrearRecurso.css";
+import "../../../user/style/Global.css";
 
 export default function CrearPareja() {
   return (
@@ -39,7 +39,7 @@ export default function CrearPareja() {
         </select>
       </div>
       <button className="mt-15 BotonConFondo">Crear Pareja</button>
-      <Link to="/admin/crud">
+      <Link to="/admin/recursos/parejas">
         <button className="SimpleButton">Cancelar</button>
       </Link>
     </div>

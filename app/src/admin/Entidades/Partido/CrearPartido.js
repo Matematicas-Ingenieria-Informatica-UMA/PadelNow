@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "wouter";
 
-import "../../../style/CRUD/Create/CrearRecurso.css";
-import "../../../style/Global.css";
+import "../../style/CrearRecurso.css";
+import "../../../user/style/Global.css";
 
 export default function CrearPartido() {
   return (
@@ -96,7 +96,7 @@ export default function CrearPartido() {
         </div>
       </div>
       <button className="BotonConFondo">Crear Partido</button>
-      <Link to="/admin/crud">
+      <Link to="/admin/recursos/partidos">
         <button className="SimpleButton">Cancelar</button>
       </Link>
     </div>
