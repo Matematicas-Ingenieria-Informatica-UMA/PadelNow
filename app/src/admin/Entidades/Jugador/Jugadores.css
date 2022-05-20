@@ -1,84 +1,110 @@
 .Jugador {
-    display: flex;
-    flex-direction: row;
-  
-    justify-content: center;
-    align-items: center;
-  
-    width: 100%;
-    height: fit-content;
-  
-    gap: 20px;
-  
-    padding: 10px;
-  
-    background: linear-gradient(56.62deg, #33364b 0%, #43567c 100%);
-    border-radius: 20px;
-  }
-  
-  @media screen and (max-width: 850px) {
-    .Jugador {
-      flex-wrap: wrap;
-    }
-  }
-  
-  .Imagen {
-    min-width: 150px;
-    height: 200px;
-    background: linear-gradient(
-      16.33deg,
-      #c4c4c4 0%,
-      rgba(196, 196, 196, 0) 121.02%
-    );
-  }
-  
-  .keyValue{
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: fit-content;
+
+  gap: 20px;
+
+  padding: 10px;
+
+  background: linear-gradient(56.62deg, #33364b 0%, #43567c 100%);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .Jugador {
     flex-wrap: wrap;
-  
-    width: 95%;
-    margin: auto;
-  
-    justify-content: space-between;
-    align-items: flex-end;
   }
-  
-  .JugadorFont {
-    font-size: 15px;
-    text-align: left;
+}
+
+.Imagen {
+  min-width: 150px;
+  height: 200px;
+  background: linear-gradient(
+    16.33deg,
+    #c4c4c4 0%,
+    rgba(196, 196, 196, 0) 121.02%
+  );
+}
+
+.keyValue {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 95%;
+  margin: auto;
+
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.JugadorFont {
+  font-size: 15px;
+  text-align: left;
+}
+
+.JugadorVerMas {
+  width: 100%;
+  text-align: right;
+  font-family: "Poppins";
+  color: #fcfcfc;
+  text-decoration: underline;
+}
+
+.JugadorVerMas:hover {
+  transform: scale(1.02);
+}
+
+.JugadorVerMas:active {
+  transform: scale(0.98);
+}
+
+.Nombre {
+  text-align: center;
+  width: 95%;
+  margin: auto;
+  height: fit-content;
+}
+
+.JugadorSepHor {
+  background-color: white;
+  height: 1px;
+  width: 98%;
+}
+
+.JugadorNoDisplay {
+  display: none;
+}
+
+.CRUDNoDisplay {
+  display: none;
+}
+
+.CRUDElements {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+@media screen and (max-width: 580px) {
+  .CRUDElements {
+    flex-direction: row;
   }
-  
-  .JugadorVerMas {
-    width: 100%;
-    text-align: right;
-    font-family: "Poppins";
-    color: #fcfcfc;
-    text-decoration: underline;
-  }
-  
-  .JugadorVerMas:hover {
-    transform: scale(1.02);
-  }
-  
-  .JugadorVerMas:active {
-    transform: scale(0.98);
-  }
-  
-  .Nombre {
-    text-align: center;
-    width: 95%;
-    margin: auto;
-    height: fit-content;
-  }
-  
-  .JugadorSepHor {
-    background-color: white;
-    height: 1px;
-    width: 98%;
-  }
-  
-  .JugadorNoDisplay {
-    display: none;
-  }
-  
+}
+
+.ButtonPlayer:hover {
+  transform: scale(1.1);
+}
+
+.ButtonPlayer:active {
+  transform: scale(0.9);
+}
