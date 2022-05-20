@@ -16,9 +16,9 @@ public final class JugadorCreator {
     }
 
 
-    public Jugador create(CreateJugadorRequest request) {
+    public void create(CreateJugadorRequest request) {
         Jugador jugador = new Jugador(request.getNombre(), request.getApellidos(), request.getSexo(), request.getPais());
 
-        return repository.save(jugador);
+        repository.save(jugador);
     }
 }

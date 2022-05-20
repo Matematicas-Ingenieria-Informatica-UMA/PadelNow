@@ -10,7 +10,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Collection;
 
-@AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,5 +30,12 @@ public class Torneo {
 
     @OneToMany(mappedBy = "torneo")
     private Collection<Partido> partidos;
+
+    public Torneo(String nombre, String fase_inicial, Circuito circuito, Collection<Partido> partidos){
+        this.nombre = nombre;
+        this.fase_inicial = fase_inicial;
+        this.circuito = circuito;
+        this.partidos = partidos;
+    }
 
 }

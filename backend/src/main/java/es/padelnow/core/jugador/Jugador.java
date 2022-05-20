@@ -6,10 +6,7 @@ import es.padelnow.core.jugador.enums.PosicionDeJuego;
 import es.padelnow.core.jugador.enums.Sexo;
 import es.padelnow.core.pareja.Pareja;
 import es.padelnow.core.posicion.Posicion;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.net.URL;
@@ -21,6 +18,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @EqualsAndHashCode
+@ToString
 public class Jugador {
 
     public Jugador(String nombre, String apellidos, Sexo sexo, Pais pais) {
@@ -39,14 +37,14 @@ public class Jugador {
 
     @Column(nullable = false)
     private String apellidos;
-    
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Sexo sexo;
 
     private URL foto;
 
-    private float altura;
+    private Float altura;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
