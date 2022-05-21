@@ -22,6 +22,7 @@ import CrearNoticia from "./admin/Entidades/Noticia/CrearNoticia";
 import CrearCircuito from "./admin/Entidades/Circuito/CrearCircuito";
 import CrearInstitucion from "./admin/Entidades/Institucion/CrearInstitucion";
 import CrearTorneo from "./admin/Entidades/Torneo/CrearTorneo";
+import ModificarJugador from "./admin/Entidades/Jugador/ModificarJugador";
 import JugadorAdmin from "./admin/Entidades/Jugador/JugadorAdmin";
 import PartidoAdmin from "./admin/Entidades/Partido/PartidoAdmin";
 import ParejaAdmin from "./admin/Entidades/Pareja/ParejaAdmin";
@@ -67,6 +68,14 @@ function App() {
                             PadelNow - CREAR JUGADOR
                         </h1>
                         <CrearJugador />
+                    </div>
+                </Route>
+                <Route path="/admin/recursos/jugadores/modificar/:id" exact>
+                    <div className="AdminBackground">
+                        <h1 className="TituloAdmin">
+                            PadelNow - MODIFICAR JUGADOR
+                        </h1>
+                        <ModificarJugador />
                     </div>
                 </Route>
                 <Route path="/admin/recursos/parejas" exact>

@@ -1,91 +1,112 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 import "./Jugadores.css";
 
 export default function JugadorCRUD() {
-  const [clase, setClase] = useState("JugadorNoDisplay");
-  const [eliminar, setEliminar] = useState("Jugador");
-  const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
-
-  return (
-    <>
-      <div className={eliminar}>
-        <div className="CRUDElements">
-          <img
-            onClick={() => setEliminar("CRUDNoDisplay")}
-            src="/Delete.svg"
-            alt="Delete"
-            className="ButtonPlayer"
-          />
-          <Link to="/admin/recursos/jugadores/crear">
-            <img src="/Edit.svg" alt="Delete" className="ButtonPlayer" />
-          </Link>
-        </div>
-        <img
-          src="https://www.worldpadeltour.com/media-content/2022/05/alejandra-salazar-bengoechea-c50aaf0cc5-220x260.JPG"
-          className="Imagen"
-          alt="ProfilePhoto"
-        />
-        <div>
-          <div className="JugadorSepHor"></div>
-          <h1 className="Nombre">ALEJANDRA SALAZAR BENGOECHEA</h1>
-          <div className="JugadorSepHor"></div>
-          <div className={clase}>
-            <div className="keyValue">
-              <h4>Nacimiento</h4>
-              <h3>31/12/1985</h3>
+    const [clase, setClase] = useState("JugadorNoDisplay");
+    const [eliminar, setEliminar] = useState("Jugador");
+    const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
+    const [location, setLocation] = useLocation();
+    const datos = {
+        id: 1,
+        nombre: "Alejandra",
+        apellidos: "Salazar Bengoechea",
+        nacimiento: "31/12/1985",
+        nacionalidad: "España",
+        ciudad: "Madrid",
+        ranking: 1,
+        brazodominante: "Diestro",
+        compañerx: "Gemma Triay",
+        altura: 1.68,
+        posicion: "Revés",
+    };
+    return (
+        <>
+            <div className={eliminar}>
+                <div className="CRUDElements">
+                    <img
+                        onClick={() => setEliminar("CRUDNoDisplay")}
+                        src="/Delete.svg"
+                        alt="Delete"
+                        className="ButtonPlayer"
+                    />
+                    <Link to={`${location}/modificar/${datos.id}`}>
+                        <img
+                            src="/Edit.svg"
+                            alt="Delete"
+                            className="ButtonPlayer"
+                        />
+                    </Link>
+                </div>
+                <img
+                    src="https://www.worldpadeltour.com/media-content/2022/05/alejandra-salazar-bengoechea-c50aaf0cc5-220x260.JPG"
+                    className="Imagen"
+                    alt="ProfilePhoto"
+                />
+                <div>
+                    <div className="JugadorSepHor"></div>
+                    <h1 className="Nombre">
+                        {datos.nombre.toUpperCase() +
+                            " " +
+                            datos.apellidos.toUpperCase()}
+                    </h1>
+                    <div className="JugadorSepHor"></div>
+                    <div className={clase}>
+                        <div className="keyValue">
+                            <h4>Nacimiento</h4>
+                            <h3>{datos.nacimiento}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Nacionalidad</h4>
+                            <h3>{datos.nacionalidad}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Ciudad</h4>
+                            <h3>{datos.ciudad}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Ranking</h4>
+                            <h3>{datos.ranking}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Brazo Dominante</h4>
+                            <h3>{datos.brazodominante}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Compañerx</h4>
+                            <h3>{datos.compañerx}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Altura</h4>
+                            <h3>{datos.altura}</h3>
+                        </div>
+                        <div className="keyValue">
+                            <h4>Posición</h4>
+                            <h3>{datos.posicion}</h3>
+                        </div>
+                        <button
+                            className="JugadorVerMas JugadorFont"
+                            onClick={() => {
+                                setClase("JugadorNoDisplay");
+                                setBoton("JugadorVerMas JugadorFont");
+                            }}
+                        >
+                            Ver Menos
+                        </button>
+                    </div>
+                    <button
+                        className={boton}
+                        onClick={() => {
+                            setClase("JugadorFont");
+                            setBoton("JugadorNoDisplay");
+                        }}
+                    >
+                        Ver Más
+                    </button>
+                </div>
             </div>
-            <div className="keyValue">
-              <h4>Nacionalidad</h4>
-              <h3>Española</h3>
-            </div>
-            <div className="keyValue">
-              <h4>Ciudad</h4>
-              <h3>Madrid</h3>
-            </div>
-            <div className="keyValue">
-              <h4>Ranking</h4>
-              <h3>1</h3>
-            </div>
-            <div className="keyValue">
-              <h4>Brazo Dominante</h4>
-              <h3>Diestra</h3>
-            </div>
-            <div className="keyValue">
-              <h4>Compañerx</h4>
-              <h3>Gemma Triay</h3>
-            </div>
-            <div className="keyValue">
-              <h4>Altura</h4>
-              <h3>1'68</h3>
-            </div>
-            <div className="keyValue">
-              <h4>Posición</h4>
-              <h3>Revés</h3>
-            </div>
-            <button
-              className="JugadorVerMas JugadorFont"
-              onClick={() => {
-                setClase("JugadorNoDisplay");
-                setBoton("JugadorVerMas JugadorFont");
-              }}
-            >
-              Ver Menos
-            </button>
-          </div>
-          <button
-            className={boton}
-            onClick={() => {
-              setClase("JugadorFont");
-              setBoton("JugadorNoDisplay");
-            }}
-          >
-            Ver Más
-          </button>
-        </div>
-      </div>
-    </>
-  );
+        </>
+    );
 }
