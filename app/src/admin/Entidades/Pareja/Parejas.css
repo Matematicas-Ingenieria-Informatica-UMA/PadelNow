@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    height: 325px;
+    height: min-content;
     background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
     margin: 40px;
     border-radius: 10px;
@@ -112,11 +112,4 @@
   
 .CRUDNoDisplay {
     display: none;
-}
-  
-.CRUDElements {
-    display: flex;
-    flex-direction: row;
-  
-    gap: 10px;
 }

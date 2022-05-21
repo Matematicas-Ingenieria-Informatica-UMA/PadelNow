@@ -56,3 +56,12 @@
     transform: scale(0.95);
   }
   
+  .CRUDElements{
+    display: flex;
+    flex-direction: row;
+
+    width: 40%;
+    margin: auto;
+
+    justify-content: space-around;
+  }

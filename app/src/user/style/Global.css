@@ -98,7 +98,7 @@ input {
   align-items: center;
   background-color: #eff0f7;
   width: 100%;
-  min-width: max-content;
+  min-width: fit-content;
   gap: 10px;
   padding: 0 5px;
 }
@@ -164,6 +164,10 @@ button:active {
 
 .mt-15 {
   margin-top: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 50px;
 }
 
 .m-0{

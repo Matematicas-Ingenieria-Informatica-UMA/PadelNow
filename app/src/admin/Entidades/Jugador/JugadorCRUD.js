@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 
 import "./Jugadores.css";
+import "../../style/Recursos.css"
 
 export default function JugadorCRUD() {
     const [clase, setClase] = useState("JugadorNoDisplay");
@@ -21,6 +22,7 @@ export default function JugadorCRUD() {
         compañerx: "Gemma Triay",
         altura: 1.68,
         posicion: "Revés",
+        URL: "https://www.worldpadeltour.com/media-content/2022/05/alejandra-salazar-bengoechea-c50aaf0cc5-220x260.JPG"
     };
     return (
         <>
@@ -41,18 +43,18 @@ export default function JugadorCRUD() {
                     </Link>
                 </div>
                 <img
-                    src="https://www.worldpadeltour.com/media-content/2022/05/alejandra-salazar-bengoechea-c50aaf0cc5-220x260.JPG"
+                    src={`${datos.URL}`}
                     className="Imagen"
                     alt="ProfilePhoto"
                 />
                 <div>
-                    <div className="JugadorSepHor"></div>
+                    <div className="mt-15 JugadorSepHor"></div>
                     <h1 className="Nombre">
                         {datos.nombre.toUpperCase() +
                             " " +
                             datos.apellidos.toUpperCase()}
                     </h1>
-                    <div className="JugadorSepHor"></div>
+                    <div className="mb-15 JugadorSepHor"></div>
                     <div className={clase}>
                         <div className="keyValue">
                             <h4>Nacimiento</h4>

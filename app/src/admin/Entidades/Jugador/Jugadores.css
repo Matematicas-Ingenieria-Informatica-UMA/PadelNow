@@ -1,8 +1,6 @@
 .Jugador {
   display: flex;
-  flex-direction: row;
-
-  flex-wrap: wrap;
+  flex-direction: column;
 
   justify-content: center;
   align-items: center;
@@ -16,12 +14,6 @@
 
   background: linear-gradient(56.62deg, #33364b 0%, #43567c 100%);
   border-radius: 20px;
-}
-
-@media screen and (max-width: 850px) {
-  .Jugador {
-    flex-wrap: wrap;
-  }
 }
 
 .Imagen {
@@ -86,13 +78,6 @@
 
 .CRUDNoDisplay {
   display: none;
-}
-
-.CRUDElements {
-  display: flex;
-  flex-direction: column;
-
-  gap: 10px;
 }
 
 @media screen and (max-width: 580px) {
