@@ -72,6 +72,7 @@ function App() {
                 <Route path="/admin/recursos/parejas" exact>
                     <div className="AdminBackground">
                         <h1 className="TituloAdmin">PadelNow - Parejas</h1>
+                        <Generos></Generos>
                         <ParejaAdmin />
                     </div>
                 </Route>
@@ -84,6 +85,7 @@ function App() {
                 <Route path="/admin/recursos/partidos" exact>
                     <div className="AdminBackground">
                         <h1 className="TituloAdmin">PadelNow - Partidos</h1>
+                        <Generos></Generos>
                         <PartidoAdmin />
                     </div>
                 </Route>

@@ -1,9 +1,24 @@
 import React from "react";
+import { useState } from "react";
+import { Link } from "wouter";
 import "./Parejas.css";
 
 export default function ParejaCRUD() {
+    const [clase, setClase] = useState("ParejaNoDisplay");
+    const [eliminar, setEliminar] = useState("ParejaCRUD");
     return (
-        <div className="ParejaCRUD">
+        <div className={eliminar}>
+            <div className="CRUDElements">
+                <img
+                    onClick={() => setEliminar("CRUDNoDisplay")}
+                    src="/Delete.svg"
+                    alt="Delete"
+                    className="ButtonPlayer"
+                 />
+                <Link to="/admin/recursos/parejas/crear">
+                    <img src="/Edit.svg" alt="Delete" className="ButtonPlayer" />
+                </Link>
+            </div>
             <div className="ParejaUp">
                 <div className="PJugador1">
                     <div className="PFoto"></div>

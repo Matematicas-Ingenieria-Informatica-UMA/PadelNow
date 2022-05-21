@@ -1,5 +1,5 @@
 import React from "react";
-import ParejaCRUD from "./ParejaCRUD";
+import ParejaCRUD from "./ParejaCRUD.js";
 import "./Parejas.css";
 
 export default function ParejaAdmin() {
