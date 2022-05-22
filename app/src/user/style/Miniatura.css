@@ -13,4 +13,5 @@
 .TituloMini{
     text-decoration: underline;
     overflow: hidden;
+    text-align: center;
 }
