@@ -2,7 +2,7 @@ import React from "react";
 
 import JugadorCRUD from "./JugadorCRUD";
 import Generos from "../../../user/Componentes/Generos";
-import { datos } from "../../../BBDD/JugadoresBBDD";
+import { jugadores } from "../../../BBDD/JugadoresBBDD";
 
 import "./Jugadores.css";
 import { Link, useLocation } from "wouter";
@@ -24,14 +24,14 @@ export default function JugadorAdmin() {
             </div>
             <div className="Jugadores">
                 <div className="JugadoresGenero">
-                    {datos.map((x) => {
+                    {jugadores.map((x) => {
                         if (x.genero === "Masculino") {
                             return <JugadorCRUD ID={x.id}></JugadorCRUD>;
                         }
                     })}
                 </div>
                 <div className="JugadoresGenero">
-                    {datos.map((x) => {
+                    {jugadores.map((x) => {
                         if (x.genero === "Femenino") {
                             return <JugadorCRUD ID={x.id}></JugadorCRUD>;
                         }

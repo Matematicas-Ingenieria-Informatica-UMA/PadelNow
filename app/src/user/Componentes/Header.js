@@ -69,11 +69,6 @@ export default function Header() {
                             Ver Parejas
                         </button>
                     </Link>
-                    <Link to="/circuitos">
-                        <button className="DesplegableTitles">
-                            Ver Circuitos
-                        </button>
-                    </Link>
                     <Link to="/torneos">
                         <button className="DesplegableTitles">
                             Ver Torneos

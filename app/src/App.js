@@ -79,9 +79,7 @@ function App() {
                         <h1 className="TituloAdmin">
                             PadelNow - MODIFICAR JUGADOR
                         </h1>
-                        <ModificarJugador
-                            ID={useLocation()[0].split("/").pop()}
-                        ></ModificarJugador>
+                        <ModificarJugador/>
                     </div>
                 </Route>
                 <Route path="/admin/recursos/parejas" exact>
@@ -195,7 +193,6 @@ function App() {
                     <Jugadores />
                 </Route>
                 <Route path="/parejas" exact>
-                    <Generos />
                     <Parejas />
                 </Route>
                 <Route path="/enviarincidencia" exact>
@@ -219,9 +216,6 @@ function App() {
                 <Route path="/torneos" exact>
                     <Generos></Generos>
                     <Torneos></Torneos>
-                </Route>
-                <Route path="/circuitos" exact>
-                    <Circuitos />
                 </Route>
                 <Route>
                     <div className="AdminBackground">
