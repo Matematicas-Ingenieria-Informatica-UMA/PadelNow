@@ -3,11 +3,12 @@ import { Link } from "wouter";
 import Miniatura from "../Componentes/Miniatura";
 import Noticia from "../Componentes/Noticia";
 import "../style/Feed.css";
+import { noticias } from "../../BBDD/NoticiasBBDD";
 
 export default function Feed() {
     return (
         <>
-            <Noticia></Noticia>
+            <Noticia ID="3"></Noticia>
             <div className="NoticiaSepHor"></div>
             <div className="MiniaturasRow">
                 <Miniatura></Miniatura>
