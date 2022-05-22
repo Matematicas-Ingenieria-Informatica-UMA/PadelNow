@@ -1,4 +1,4 @@
-package es.padelnow.core.circuito.useCases;
+package es.padelnow.core.circuito.useCases.create;
 
 import es.padelnow.core.circuito.Circuito;
 import es.padelnow.core.circuito.Genero;

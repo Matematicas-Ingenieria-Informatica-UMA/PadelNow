@@ -4,6 +4,7 @@ import es.padelnow.core.noticia.Noticia;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import es.padelnow.core.noticia.NoticiaRepository;
@@ -18,18 +19,18 @@ public class NoticiaUpdater {
     private final NoticiaRepository repository;
 
     @Autowired
-    public NoticiaUpdater(NoticiaRepository repository){
+    public NoticiaUpdater(NoticiaRepository repository) {
         this.repository = repository;
     }
 
-    public void update(Long id, @RequestBody String request){
+    public void update(Long id, @RequestBody String request) {
         Noticia n = repository.getById(id);
         try {
             JSONObject json = new JSONObject(request);
-            Iterator<String> it = json.sortedKeys();
-            while (it.hasNext()){
+            Iterator<String> it = json.keys();
+            while (it.hasNext()) {
                 String key = it.next();
-                switch (key){
+                switch (key) {
                     case "titulo":
                         n.setTitulo(json.getString(key));
                         break;

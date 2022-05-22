@@ -12,11 +12,5 @@ import java.util.Optional;
 @Repository
 @Transactional(readOnly = true)
 public interface UserRepository extends JpaRepository<User, Long> {
-
-    Optional<User> findByEmail(String email);
-
-    @Transactional
-    @Modifying
-    @Query("UPDATE User a SET a.enabled = true WHERE a.email = ?1")
-    void enableAppUser(String email);
+    Optional<User> findByUsername(String username);
 }

@@ -18,7 +18,8 @@ import java.util.Collection;
 @Entity
 public class Institucion {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
 
     @Column(nullable = false)
@@ -33,4 +34,10 @@ public class Institucion {
     @OneToMany(mappedBy = "institucion")
     private Collection<Circuito> circuitos;
 
+    public Institucion(String nombre, URL foto, Collection<Circuito> circuitos, Collection<Posicion> posiciones) {
+        this.nombre = nombre;
+        this.foto = foto;
+        this.circuitos = circuitos;
+        this.posiciones = posiciones;
+    }
 }

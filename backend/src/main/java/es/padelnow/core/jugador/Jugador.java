@@ -13,12 +13,9 @@ import java.net.URL;
 import java.util.Collection;
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @Entity
-@EqualsAndHashCode
-@ToString
 public class Jugador {
 
     public Jugador(String nombre, String apellidos, Sexo sexo, Pais pais) {

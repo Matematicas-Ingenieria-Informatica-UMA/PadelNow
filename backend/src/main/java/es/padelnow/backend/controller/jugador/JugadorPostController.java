@@ -12,17 +12,16 @@ import org.springframework.web.bind.annotation.*;
 public class JugadorPostController {
     JugadorCreator creator;
 
-
     @Autowired
     public JugadorPostController(JugadorCreator creator) {
         this.creator = creator;
     }
 
     @PostMapping("/jugador")
-    public ResponseEntity create(@RequestBody CreateJugadorRequest request) {
-        creator.create(request);
+    public ResponseEntity<Jugador> create(@RequestBody CreateJugadorRequest request) {
+        Jugador jugador = creator.create(request);
 
-        return new ResponseEntity(HttpStatus.CREATED);
+        return new ResponseEntity(jugador, HttpStatus.CREATED);
     }
 }
 
