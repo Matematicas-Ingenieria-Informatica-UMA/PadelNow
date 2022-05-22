@@ -1,0 +1,121 @@
+.ParejaCRUD {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: min-content;
+  background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
+  margin: 40px;
+  border-radius: 10px;
+}
+.Pareja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 95%;
+  height: fit-content;
+  margin: auto;
+  border-radius: 10px;
+
+  padding: 10px 0;
+  background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
+}
+
+.ParejaUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .ParejaUp {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.PosyEntrenador {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.PRanking {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: max-content;
+  height: fit-content;
+}
+.Almohadilla {
+  margin-top: 120px;
+  font-size: 210%;
+  width: 35px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Posicion {
+  display: flex;
+  align-items: center;
+  font-size: 200px;
+  max-height: 180px;
+  height: fit-content;
+  font-weight: 700;
+}
+
+.PSepHor {
+  background-color: white;
+  height: 1px;
+  width: 90%;
+}
+
+.PFoto {
+  width: fit-content;
+  max-width: 200px;
+  height: fit-content;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.PNombre {
+  display: flex;
+  justify-content: center;
+}
+
+.Entrenador {
+  height: fit-content;
+  font-weight: 100;
+  text-align: center;
+}
+
+.PEntrenadorNombre {
+  justify-content: center;
+  margin: 0px;
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.ParejaPuntos {
+  font-style: normal;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  margin: 10px;
+}
+
+.ParejaNoDisplay {
+  display: none;
+}
+
+.CRUDNoDisplay {
+  display: none;
+}

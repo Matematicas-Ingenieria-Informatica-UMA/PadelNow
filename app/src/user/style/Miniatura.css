@@ -1,0 +1,26 @@
+.Miniatura{
+    width: 300px;
+    height: fit-content;
+    align-items: center;
+    padding: 15px;
+    border: 15px;
+}
+
+.FotoMini{
+    height: 170px;
+    justify-content: center;
+    width: fit-content;
+}
+
+.FotoMini:hover{
+    transform: scale(1.05);
+}
+
+.FotoMini:active{
+    transform: scale(0.95);
+}
+
+.TituloMini{
+    text-decoration: underline;
+    overflow: hidden;
+}

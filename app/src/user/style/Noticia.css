@@ -1,0 +1,56 @@
+.Noticia {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+  text-align: justify;
+  width: 90%;
+  height: fit-content;
+  align-content: center;
+}
+
+.NoticiaTitle {
+  margin-top: 20px;
+  color: white;
+  font-size: 3em;
+}
+
+.Subtitle {
+  font-size: 1.5em;
+}
+
+.Date {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+
+  gap: 10px;
+}
+
+.Calendar {
+  height: 20px;
+  width: 20px;
+}
+
+.Content {
+  font-size: 1.5em;
+}
+
+.NoticiaSepHor {
+  height: 1px;
+  width: 100%;
+  justify-content: center;
+  background: white;
+}
+
+.VideoNoticia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.Nada {
+  width: 0px;
+}

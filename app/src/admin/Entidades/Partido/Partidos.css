@@ -1,0 +1,101 @@
+.Partidos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+}
+
+.PartidosGenero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PartidoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+  
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: fit-content;
+    align-self: center;
+  
+    background: linear-gradient(180deg, #44577e 0%, #33354a 100%);
+    border-radius: 20px;
+    margin: 20px;
+  }
+  
+  .Titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .Round {
+    width: 60%;
+    margin-left: 10px;
+  }
+  
+  .Sets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    text-align: center;
+    width: 40%;
+    height: fit-content;
+    margin-right: 10px;
+  }
+  
+  .PartidoSection {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .ParejaPartido {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+  }
+  
+  .JugadorPartido {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  
+  .Resultados {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30%;
+    align-items: center;
+    width: 40%;
+    margin-right: 10px;
+  }
+  
+  .Subtitles {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 10px;
+  }
+  
+  .SepHor {
+    background-color: #6281bf;
+    height: 0.5px;
+    width: 100%;
+  }
+  .CRUDNoDisplay {
+    display: none;
+}
