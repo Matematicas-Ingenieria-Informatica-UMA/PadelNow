@@ -154,6 +154,7 @@ button:active {
   border-radius: 8px;
 }
 
+
 /*NO DISPLAY*/
 
 .noDisplay {
@@ -163,7 +164,7 @@ button:active {
 /* MARGENES */
 
 .mt-15 {
-  margin-top: 15px;
+  margin: 15px 30px 0px 30px;
 }
 
 .mb-15 {
@@ -173,3 +174,4 @@ button:active {
 .m-0{
   margin: 0;
 }
+

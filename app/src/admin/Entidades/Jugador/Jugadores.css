@@ -93,3 +93,9 @@
 .ButtonPlayer:active {
   transform: scale(0.9);
 }
+
+.BotonesAdmin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

@@ -1,29 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
+import { datos } from "../../../BBDD/JugadoresBBDD";
 
 import "./Jugadores.css";
-import "../../style/Recursos.css"
+import "../../style/Recursos.css";
 
-export default function JugadorCRUD() {
+export default function JugadorCRUD(props) {
+    const playerID = parseInt(props.ID);
     const [clase, setClase] = useState("JugadorNoDisplay");
     const [eliminar, setEliminar] = useState("Jugador");
     const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
     const [location, setLocation] = useLocation();
-    const datos = {
-        id: 1,
-        nombre: "Alejandra",
-        apellidos: "Salazar Bengoechea",
-        nacimiento: "31/12/1985",
-        nacionalidad: "España",
-        ciudad: "Madrid",
-        ranking: 1,
-        brazodominante: "Diestro",
-        compañerx: "Gemma Triay",
-        altura: 1.68,
-        posicion: "Revés",
-        URL: "https://www.worldpadeltour.com/media-content/2022/05/alejandra-salazar-bengoechea-c50aaf0cc5-220x260.JPG"
-    };
+
     return (
         <>
             <div className={eliminar}>
@@ -34,7 +23,7 @@ export default function JugadorCRUD() {
                         alt="Delete"
                         className="ButtonPlayer"
                     />
-                    <Link to={`${location}/modificar/${datos.id}`}>
+                    <Link to={`${location}/modificar/${datos[playerID].id}`}>
                         <img
                             src="/Edit.svg"
                             alt="Delete"
@@ -43,50 +32,50 @@ export default function JugadorCRUD() {
                     </Link>
                 </div>
                 <img
-                    src={`${datos.URL}`}
+                    src={`${datos[playerID].URL}`}
                     className="Imagen"
                     alt="ProfilePhoto"
                 />
                 <div>
                     <div className="mt-15 JugadorSepHor"></div>
                     <h1 className="Nombre">
-                        {datos.nombre.toUpperCase() +
+                        {datos[playerID].nombre.toUpperCase() +
                             " " +
-                            datos.apellidos.toUpperCase()}
+                            datos[playerID].apellidos.toUpperCase()}
                     </h1>
                     <div className="mb-15 JugadorSepHor"></div>
                     <div className={clase}>
                         <div className="keyValue">
                             <h4>Nacimiento</h4>
-                            <h3>{datos.nacimiento}</h3>
+                            <h3>{datos[playerID].nacimiento}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Nacionalidad</h4>
-                            <h3>{datos.nacionalidad}</h3>
+                            <h3>{datos[playerID].nacionalidad}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Ciudad</h4>
-                            <h3>{datos.ciudad}</h3>
+                            <h3>{datos[playerID].ciudad}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Ranking</h4>
-                            <h3>{datos.ranking}</h3>
+                            <h3>{datos[playerID].ranking}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Brazo Dominante</h4>
-                            <h3>{datos.brazodominante}</h3>
+                            <h3>{datos[playerID].brazodominante}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Compañerx</h4>
-                            <h3>{datos.compañerx}</h3>
+                            <h3>{datos[playerID].compañerx}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Altura</h4>
-                            <h3>{datos.altura}</h3>
+                            <h3>{datos[playerID].altura}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Posición</h4>
-                            <h3>{datos.posicion}</h3>
+                            <h3>{datos[playerID].posicion}</h3>
                         </div>
                         <button
                             className="JugadorVerMas JugadorFont"
