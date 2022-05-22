@@ -19,10 +19,10 @@
   text-decoration: underline;
 }
 
-.VerMas:hover {
-  transform: scale(1.02);
+.VerMasBoton:hover {
+  transform: scale(1.03);
 }
 
-.VerMas:active {
-  transform: scale(0.98);
+.VerMasBoton:active {
+  transform: scale(0.97);
 }

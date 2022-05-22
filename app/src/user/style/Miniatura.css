@@ -1,17 +1,18 @@
 .Miniatura{
     width: 300px;
     height: fit-content;
+    align-items: center;
     padding: 15px;
     border: 15px;
 }
 
 .FotoMini{
-    height: fit-content;
-    width: 300px;
+    height: 170px;
+    justify-content: center;
+    width: fit-content;
 }
 
 .TituloMini{
     text-decoration: underline;
     overflow: hidden;
-    text-align: center;
 }
