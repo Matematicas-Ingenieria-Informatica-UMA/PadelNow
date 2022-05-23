@@ -1,16 +1,29 @@
-.Parejas{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+.Parejas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.ParejasGenero{
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    margin: 30px 0;
-    flex-direction: column;
-    width: 100%;
-    height: fit-content;
+.ParejasGenero {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 30px 0;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+.ParejasResposive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 95%;
+  margin: 20px auto;
+  height: fit-content;
+  min-height: 100vh;
+  gap: 20px;
 }

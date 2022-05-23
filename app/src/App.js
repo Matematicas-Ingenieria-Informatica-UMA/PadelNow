@@ -189,7 +189,6 @@ function App() {
                     </div>
                 </Route>
                 <Route path="/jugadores" exact>
-                    <Generos />
                     <Jugadores />
                 </Route>
                 <Route path="/parejas" exact>
@@ -199,7 +198,6 @@ function App() {
                     <EnviarIncidencia />
                 </Route>
                 <Route path="/partidos" exact>
-                    <Generos />
                     <Partidos />
                 </Route>
                 <Route path="/noticias" exact>

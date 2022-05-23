@@ -154,8 +154,40 @@ button:active {
   border-radius: 8px;
 }
 
+.BotonConFondo:hover {
+  background: #5c7097;
+}
 
-/*NO DISPLAY*/
+.BotonGenero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+
+  padding: 10px 20px;
+  height: fit-content;
+  width: 80%;
+  max-width: 500px;
+
+  background: #455981;
+  border-radius: 8px;
+}
+
+.BotonGenero:hover {
+  background: #4d6492;
+}
+
+/*DISPLAY*/
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
 
 .noDisplay {
   display: none;
@@ -171,7 +203,6 @@ button:active {
   margin-bottom: 50px;
 }
 
-.m-0{
+.m-0 {
   margin: 0;
 }
-

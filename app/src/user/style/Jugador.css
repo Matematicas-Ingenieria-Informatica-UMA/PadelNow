@@ -1,6 +1,6 @@
 .Jugador {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   justify-content: center;
   align-items: center;
@@ -16,11 +16,6 @@
   border-radius: 20px;
 }
 
-@media screen and (max-width: 850px) {
-  .Jugador {
-    flex-wrap: wrap;
-  }
-}
 
 .Imagen {
   min-width: 150px;
