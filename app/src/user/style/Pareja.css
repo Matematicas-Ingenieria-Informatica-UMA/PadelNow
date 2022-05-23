@@ -8,6 +8,7 @@
   height: fit-content;
   margin: auto;
   border-radius: 10px;
+  gap: 10px;
 
   padding: 10px 0;
   background: linear-gradient(196.7deg, #455981 9.47%, #33354a 73.79%);
@@ -24,6 +25,7 @@
 @media screen and (max-width: 1200px) {
   .ParejaUp {
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
   }
 }
@@ -68,10 +70,17 @@
 
 .PFoto {
   width: fit-content;
+  height: fit-content;
+}
+
+.Imagen {
+  width: fit-content;
   max-width: 200px;
   height: fit-content;
   max-height: 200px;
   overflow: hidden;
+
+  border-radius: 20px;
 }
 
 .PNombre {
