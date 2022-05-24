@@ -23,6 +23,8 @@ public class CircuitoCreator {
     }
 
 
-    public void create(String nombre, Date ano, Genero genero) {
+    public Circuito create(CreateCircuitoRequest request) {
+        Circuito circuito = new Circuito(request.getNombre(), request.getAno(), request.getGenero(), request.getInstitucion());
+        return repository.save(circuito);
     }
 }

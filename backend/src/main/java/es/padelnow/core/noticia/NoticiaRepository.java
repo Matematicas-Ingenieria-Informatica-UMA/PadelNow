@@ -13,6 +13,8 @@ public interface NoticiaRepository extends JpaRepository<Noticia, Long> {
 
     @Query("SELECT n FROM Noticia n WHERE"
             + " LOWER(n.titulo) LIKE LOWER('%:keyword%')"
-            + " OR LOWER(n.cuerpo) LIKE LOWER('%:keyword%')")
+            + " OR LOWER(n.cuerpo) LIKE LOWER('%:keyword%')"
+            + " OR LOWER(n.subtitulo) LIKE LOWER('%:keyword%')"
+            + " LIMIT 3")
     List<Noticia> search(@Param(value = "keyword") String Keyword);
 }

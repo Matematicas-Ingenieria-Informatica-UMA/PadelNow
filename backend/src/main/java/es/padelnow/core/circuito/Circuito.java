@@ -35,4 +35,11 @@ public class Circuito {
     @OneToMany(mappedBy = "circuito")
     private Collection<Torneo> torneos;
 
+    public Circuito (String nombre, Date ano, Genero genero, Institucion institucion){
+        this.nombre = nombre;
+        this.ano = ano;
+        this.genero = genero;
+        this.institucion = institucion;
+    }
+
 }

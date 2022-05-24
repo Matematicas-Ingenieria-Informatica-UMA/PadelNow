@@ -11,8 +11,11 @@ import java.util.Optional;
 
 @Repository
 public interface CircuitoRepository extends JpaRepository<Circuito, Long> {
+
     @Query("SELECT c FROM Circuito c WHERE"
-            + " LOWER(c.nombre) LIKE LOWER('%:keyword%')")
+            + " LOWER(c.nombre) LIKE LOWER('%:keyword%')"
+            + " LIMIT 3")
+
     List<Circuito> search(@Param(value = "keyword") String Keyword);
 
 }

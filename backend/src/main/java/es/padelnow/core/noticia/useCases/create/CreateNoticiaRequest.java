@@ -1,14 +1,19 @@
 package es.padelnow.core.noticia.useCases.create;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.net.URL;
 
+
+@Data
+@AllArgsConstructor
 public class CreateNoticiaRequest {
     private String titulo;
     private String cuerpo;
     private String autor;
-    private Date fecha;
+    private String subtitulo;
+    private URL foto;
 }
