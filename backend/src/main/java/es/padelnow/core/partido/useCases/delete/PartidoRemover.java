@@ -3,16 +3,16 @@ package es.padelnow.core.partido.useCases.delete;
 import es.padelnow.core.partido.PartidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class PartidoDeleter {
+public class PartidoRemover {
 
     private final PartidoRepository repository;
 
     @Autowired
-    public PartidoDeleter(PartidoRepository repository){
+    public PartidoRemover(PartidoRepository repository){
         this.repository = repository;
     }
 
-    public void delete(Long id){
+    public void remove(Long id){
         this.repository.deleteById(id);
     }
 }

@@ -18,7 +18,7 @@ public class JugadorRemover {
     public void remove(Long id) {
         boolean exists = repository.existsById(id);
         if (!exists) {
-            throw new IllegalStateException("Jugador with id " + id + " does not exists");
+            throw new IllegalStateException("Jugador with id " + id + " does not exist");
         } else {
             repository.deleteById(id);
         }

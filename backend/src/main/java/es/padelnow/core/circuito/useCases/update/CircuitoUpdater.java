@@ -26,7 +26,7 @@ public class CircuitoUpdater {
             //TODO: Merge the request and the database data
             repository.save(circuito);
         }else {
-            throw new IllegalStateException("Circuito with id " + id + " does not exists");
+            throw new IllegalStateException("Circuito with id " + id + " does not exist");
         }
 
     }

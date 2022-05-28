@@ -3,16 +3,16 @@ package es.padelnow.core.pareja.useCases.delete;
 import es.padelnow.core.pareja.ParejaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class ParejaDeleter {
+public class ParejaRemover {
 
     private final ParejaRepository repository;
 
     @Autowired
-    ParejaDeleter(ParejaRepository repository){
+    ParejaRemover(ParejaRepository repository){
         this.repository = repository;
     }
 
-    public void delete(Long id){
+    public void remove(Long id){
         this.repository.deleteById(id);
     }
 }

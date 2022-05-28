@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final static String USER_NOT_FOUND_MSG =
-            "User with username %s does not exists";
+            "User with username %s does not exist";
     private final UserRepository repository;
 
     @Override

@@ -13,7 +13,7 @@ public class NoticiaRemover {
         this.repository = repository;
     }
 
-    public void delete(Long Id){
+    public void remove(Long Id){
         this.repository.deleteById(Id);
     }
 
