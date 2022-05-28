@@ -1,0 +1,27 @@
+package es.padelnow.backend.controller.partido;
+
+import es.padelnow.core.partido.Partido;
+import es.padelnow.core.partido.useCases.find.PartidoFinder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class PartidoGetController {
+    private final PartidoFinder finder;
+
+    @Autowired
+    public PartidoGetController(PartidoFinder finder){
+        this.finder = finder;
+    }
+
+    @GetMapping("/partido/{id}")
+    public Partido find(@PathVariable Long id){ return finder.find(id); }
+
+    @GetMapping("/partido")
+    public List<Partido> findAll() {return finder.findAll();}
+
+}
