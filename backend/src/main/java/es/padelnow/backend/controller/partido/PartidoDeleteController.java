@@ -1,6 +1,6 @@
 package es.padelnow.backend.controller.partido;
 
-import es.padelnow.core.partido.useCases.delete.PartidoRemover;
+import es.padelnow.core.partido.useCases.remove.PartidoRemover;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,12 +13,12 @@ public class PartidoDeleteController {
     private final PartidoRemover remover;
 
     @Autowired
-    public PartidoDeleteController(PartidoRemover remover){
+    public PartidoDeleteController(PartidoRemover remover) {
         this.remover = remover;
     }
 
     @DeleteMapping("/partido/{id}")
-    public ResponseEntity delete (@PathVariable Long id){
+    public ResponseEntity delete(@PathVariable Long id) {
         remover.remove(id);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }

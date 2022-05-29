@@ -1,24 +1,23 @@
-package es.padelnow.core.institucion.useCases.delete;
+package es.padelnow.core.circuito.useCases.remove;
 
-
-import es.padelnow.core.institucion.InstitucionRepository;
+import es.padelnow.core.circuito.CircuitoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class InstitucionRemover {
-    private final InstitucionRepository repository;
+public class CircuitoRemover {
+
+    private final CircuitoRepository repository;
 
     @Autowired
-    public InstitucionRemover(InstitucionRepository repository) {
+    public CircuitoRemover(CircuitoRepository repository) {
         this.repository = repository;
     }
-
 
     public void remove(Long id) {
         boolean exists = repository.existsById(id);
         if (!exists) {
-            throw new IllegalStateException("Institucion with id " + id + " does not exist");
+            throw new IllegalStateException("Jugador with id " + id + " does not exist");
         } else {
             repository.deleteById(id);
         }

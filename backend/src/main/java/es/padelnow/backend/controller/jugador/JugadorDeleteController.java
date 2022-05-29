@@ -1,6 +1,6 @@
 package es.padelnow.backend.controller.jugador;
 
-import es.padelnow.core.jugador.useCases.delete.JugadorRemover;
+import es.padelnow.core.jugador.useCases.remove.JugadorRemover;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

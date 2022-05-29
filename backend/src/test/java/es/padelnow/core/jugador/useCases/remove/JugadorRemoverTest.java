@@ -1,8 +1,7 @@
-package es.padelnow.core.jugador.useCases.delete;
+package es.padelnow.core.jugador.useCases.remove;
 
 import es.padelnow.core.jugador.JugadorRepository;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class JugadorRemoverTest {
-
     private final JugadorRepository jugadorRepository = mock(JugadorRepository.class);
     private final JugadorRemover jugadorRemover = new JugadorRemover(jugadorRepository);
     Long id = 99L;
@@ -20,9 +18,7 @@ class JugadorRemoverTest {
     @DisplayName("Debe eliminar un jugador si este existe")
     void shouldDeleteJugadorById() {
         when(jugadorRepository.existsById(id)).thenReturn(true);
-
         jugadorRemover.remove(id);
-
         verify(jugadorRepository, atLeastOnce()).deleteById(id);
     }
 
@@ -30,7 +26,6 @@ class JugadorRemoverTest {
     @DisplayName("Debe elevar un excepcion si el jugador no existe")
     void shouldThrowAnExceptionIfJugadorDoesNotExists() {
         when(jugadorRepository.existsById(id)).thenReturn(false);
-
         assertThrows(IllegalStateException.class, () -> {
             jugadorRemover.remove(id);
         });

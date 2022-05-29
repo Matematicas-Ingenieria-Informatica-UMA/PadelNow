@@ -1,4 +1,4 @@
-package es.padelnow.core.noticia.useCases.delete;
+package es.padelnow.core.noticia.useCases.remove;
 
 import es.padelnow.core.noticia.NoticiaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class NoticiaRemover {
         this.repository = repository;
     }
 
-    public void remove(Long Id){
+    public void remove(Long Id) {
         this.repository.deleteById(Id);
     }
 

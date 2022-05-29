@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 public class JugadorCreatorTest {
-
     JugadorRepository repository = mock(JugadorRepository.class);
     JugadorCreator creator = new JugadorCreator(repository);
 
@@ -17,11 +16,8 @@ public class JugadorCreatorTest {
     @DisplayName("El test deberia invocar de forma correcta el metodo save del repositorio")
     void guardaUnJugadorValido() {
         CreateJugadorRequest request = CreateJugadorRequestMother.random();
-
         Jugador jugador = JugadorMother.createFromRequest(request);
-
         creator.create(request);
-
         verify(repository, atLeastOnce()).save(jugador);
     }
 }
