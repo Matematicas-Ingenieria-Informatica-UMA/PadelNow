@@ -1,7 +1,5 @@
 package es.padelnow.core.circuito.useCases.update;
 
-import es.padelnow.core.circuito.Circuito;
-import es.padelnow.core.circuito.CircuitoRepository;
 import es.padelnow.core.circuito.Genero;
 import es.padelnow.core.institucion.Institucion;
 import es.padelnow.core.torneo.Torneo;

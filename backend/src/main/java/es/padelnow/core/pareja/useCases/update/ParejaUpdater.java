@@ -20,7 +20,7 @@ public class ParejaUpdater {
         Optional<Pareja> busquedaPareja = repository.findById(id);
         if(busquedaPareja.isPresent()){
             Pareja pareja = busquedaPareja.get();
-            // TODO
+            //TODO: Merge the request and the database data
             repository.save(pareja);
         } else {
             throw new IllegalStateException("Pareja with id " + id + " does not exist");

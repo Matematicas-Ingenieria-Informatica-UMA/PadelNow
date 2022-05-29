@@ -1,27 +1,25 @@
-package es.padelnow.backend.controller.pareja;
+package es.padelnow.backend.controller.torneo;
 
-import es.padelnow.core.pareja.useCases.update.ParejaUpdater;
-import es.padelnow.core.pareja.useCases.update.UpdateParejaRequest;
+
+import es.padelnow.core.torneo.useCases.update.TorneoUpdater;
+import es.padelnow.core.torneo.useCases.update.UpdateTorneoRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class ParejaPutController {
-
-    private final ParejaUpdater updater;
+public class TorneoPutController {
+    private final TorneoUpdater updater;
 
     @Autowired
-    public ParejaPutController(ParejaUpdater updater){
+    public TorneoPutController(TorneoUpdater updater){
         this.updater = updater;
     }
 
-    @PutMapping("/pareja/{id}")
-    public ResponseEntity update (@PathVariable Long id, @RequestBody UpdateParejaRequest request){
+    @PutMapping("/torneo/{id}")
+    public ResponseEntity update(@PathVariable Long id, @RequestBody UpdateTorneoRequest request){
         System.out.println(request.toString());
         updater.update(id, request);
         return new ResponseEntity(HttpStatus.ACCEPTED);

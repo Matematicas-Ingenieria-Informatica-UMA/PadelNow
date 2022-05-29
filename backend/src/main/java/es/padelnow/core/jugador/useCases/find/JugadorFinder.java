@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public final class JugadorFinder {
+public class JugadorFinder {
 
     private final JugadorRepository repository;
 

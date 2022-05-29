@@ -1,7 +1,7 @@
-package es.padelnow.backend.controller.pareja;
+package es.padelnow.backend.controller.partido;
 
-import es.padelnow.core.pareja.useCases.update.ParejaUpdater;
-import es.padelnow.core.pareja.useCases.update.UpdateParejaRequest;
+import es.padelnow.core.partido.useCases.update.PartidoUpdater;
+import es.padelnow.core.partido.useCases.update.UpdatePartidoRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,17 +11,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ParejaPutController {
-
-    private final ParejaUpdater updater;
+public class PartidoPutController {
+    private final PartidoUpdater updater;
 
     @Autowired
-    public ParejaPutController(ParejaUpdater updater){
+    public PartidoPutController(PartidoUpdater updater){
         this.updater = updater;
     }
 
-    @PutMapping("/pareja/{id}")
-    public ResponseEntity update (@PathVariable Long id, @RequestBody UpdateParejaRequest request){
+    @PutMapping("/partido/{id}")
+    public ResponseEntity update (@PathVariable Long id, @RequestBody UpdatePartidoRequest request){
         System.out.println(request.toString());
         updater.update(id, request);
         return new ResponseEntity(HttpStatus.ACCEPTED);
