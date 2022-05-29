@@ -4,6 +4,8 @@ import Generos from "../Componentes/Generos.js";
 import BotonGenero from "../Componentes/BotonGenero.js";
 import "../style/Partidos.css";
 
+import { partidos } from "../../BBDD/PartidosBBDD.js";
+
 export default function Partidos() {
   const [width, setWidth] = useState(0);
   const [gender, setGender] = useState("Masc");
@@ -22,16 +24,18 @@ export default function Partidos() {
         <Generos />
         <div className="Partidos">
           <div className="PartidosGenero">
-            <Partido></Partido>
-            <Partido></Partido>
-            <Partido></Partido>
-            <Partido></Partido>
+            {partidos.map((match) => {
+              if (match.genero === "Masculino") {
+                return <Partido ID={match.id} />;
+              }
+            })}
           </div>
           <div className="PartidosGenero">
-            <Partido></Partido>
-            <Partido></Partido>
-            <Partido></Partido>
-            <Partido></Partido>
+          {partidos.map((match) => {
+              if (match.genero === "Femenino") {
+                return <Partido ID={match.id} />;
+              }
+            })}
           </div>
         </div>
       </>
@@ -39,7 +43,7 @@ export default function Partidos() {
   } else {
     return (
       <>
-        <div className="ParejasResposive">
+        <div className="PartidosResposive">
           <button
             className="BotonGenero"
             onClick={() => {
@@ -52,10 +56,10 @@ export default function Partidos() {
           >
             <BotonGenero clase={gender} />
           </button>
-          {jugadores.map((pareja) => {
+          {partidos.map((match) => {
             let control = gender === "Masc" ? "Masculino" : "Femenino";
-            if (pareja.Genero === control) {
-              return <Pareja ID={pareja.id} />;
+            if (match.genero === control) {
+              return <Partido ID={match.id} />;
             }
           })}
         </div>

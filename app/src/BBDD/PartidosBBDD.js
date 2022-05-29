@@ -1,7 +1,7 @@
 export const partidos = [
   {
     id: "1",
-    nombre: "Brussel Padel Open",
+    torneoID: "1",
     fase: "Cuartos de Final",
     pareja1: { Jugador1: "Juan Lebrón", Jugador2: "Alejandro Galán" },
     pareja2: {
@@ -21,7 +21,7 @@ export const partidos = [
   },
   {
     id: "2",
-    nombre: "Piso Naxetee Open",
+    torneoID: "2",
     fase: "Final",
     pareja1: {
       Jugador1: "Nacho Ávila",
@@ -44,7 +44,7 @@ export const partidos = [
   },
   {
     id: "3",
-    nombre: "WPT Master Final",
+    torneoID: "3",
     fase: "Final",
     pareja1: { Jugador1: "Julia Pérez", Jugador2: "María José García" },
     pareja2: { Jugador1: "Alejandra Salazar", Jugador2: "Gemma Triay" },
@@ -61,7 +61,7 @@ export const partidos = [
   },
   {
     id: "4",
-    nombre: "WPT Master Final",
+    torneoID: "3",
     fase: "Semifinales",
     pareja1: { Jugador1: "Julia Pérez", Jugador2: "María José García" },
     pareja2: { Jugador1: "Pepita", Jugador2: "Jaimita" },

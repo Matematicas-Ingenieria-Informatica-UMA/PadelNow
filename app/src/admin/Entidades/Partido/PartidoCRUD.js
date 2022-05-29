@@ -75,7 +75,7 @@ export default function PartidoCRUD(props) {
         <div className="SepHor"></div>
         <div className="Subtitles">
           <h4>Duración</h4>
-          <h3>03:04:12</h3>
+          <h3>{datos.tiempo}</h3>
 
           <h4>Fecha</h4>
           <h4>{datos.fecha}</h4>

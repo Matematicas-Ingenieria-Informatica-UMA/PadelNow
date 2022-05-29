@@ -25,7 +25,7 @@ export default function JugadorCRUD(props) {
             className="ButtonPlayer"
           />
           <Link to={`${location}/modificar/${jugador.id}`}>
-            <img src="/Edit.svg" alt="Delete" className="ButtonPlayer" />
+            <img src="/Edit.svg" alt="Edit" className="ButtonPlayer" />
           </Link>
         </div>
         <img

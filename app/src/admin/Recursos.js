@@ -23,12 +23,6 @@ export default function Recursos() {
                 <Link to={`${location}/torneos`}>
                     <button className="RecursosButton">Torneo</button>
                 </Link>
-                <Link to={`${location}/circuitos`}>
-                    <button className="RecursosButton">Circuito</button>
-                </Link>
-                <Link to={`${location}/instituciones`}>
-                    <button className="RecursosButton">Institución</button>
-                </Link>
                 <Link to="/admin">
                     <button className="RecursosNoButton">Volver</button>
                 </Link>

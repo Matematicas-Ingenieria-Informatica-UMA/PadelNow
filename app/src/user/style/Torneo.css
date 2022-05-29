@@ -1,81 +1,72 @@
-.Torneoampliar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 30px;
-    gap: 12px;
-    width: 60%;
-    height: 150px;
-    margin: 20px 15%;
-    background: linear-gradient(196.7deg, #455981 9.47%, #33354A 70.61%);
-    border-radius: 15px;
-}
+.Torneo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 
-.Torneodisminuir{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 30px;
-    gap: 12px;
-    width: 60%;
-    height: 360px;
-    margin: 20px 15%;
-    background: linear-gradient(196.7deg, #455981 9.47%, #33354A 70.61%);
-    border-radius: 15px;
+  width: fit-content;
+  max-width: 500px;
+  height: fit-content;
+  padding: 20px;
+
+  background: linear-gradient(196.7deg, #455981 9.47%, #33354a 70.61%);
+  border-radius: 15px;
 }
 
 .TorneoDiv1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.FotoTorneo{
-    border-radius: 50%;
-    width: 11%;
+.FotoTorneo {
+  border-radius: 50%;
+  width: 11%;
 }
 
-.NombreTorneo{
-    height: 30px;
+.NombreTorneo {
+  height: 30px;
 }
 
-.InstitucionCircuito{
-    font-size: 12px;
+.InstitucionCircuito {
+  font-size: 12px;
 }
 
-.KeyValueDiv{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+.KeyValueDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.KeyTorneo{
-    font-weight: 100;
+.KeyTorneo {
+  font-weight: 100;
 }
 
-.DivAmpliar{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    height: 25px;
+.DivAmpliar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  height: 25px;
 }
 
 .AmpliarTorneo {
-    height: 100%
+  height: 100%;
 }
 
-.Vacio{
-    display: flex;
-    position: absolute;
-    height: 0px;
-    opacity: 0;
+.Vacio {
+  display: flex;
+  position: absolute;
+  height: 0px;
+  opacity: 0;
 }
 
 .InstitucionTorneo {
-    justify-content: flex-start;
-    width: 100%;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.moreInfo {
+  width: 100%;
 }

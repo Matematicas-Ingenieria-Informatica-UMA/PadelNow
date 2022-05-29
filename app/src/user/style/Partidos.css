@@ -12,3 +12,16 @@
     flex-direction: column;
     width: 100%;
 }
+
+.PartidosResposive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 95%;
+    margin: 20px auto;
+    height: fit-content;
+    min-height: 100vh;
+    gap: 20px;
+  }

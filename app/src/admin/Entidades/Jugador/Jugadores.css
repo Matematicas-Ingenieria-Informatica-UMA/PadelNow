@@ -86,6 +86,10 @@
   }
 }
 
+.ButtonPlayer{
+  height: 50px;
+}
+
 .ButtonPlayer:hover {
   transform: scale(1.1);
 }
