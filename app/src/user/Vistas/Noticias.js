@@ -1,6 +1,6 @@
 import React from "react";
 import Miniatura from "../Componentes/Miniatura";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { noticias } from "../../BBDD/NoticiasBBDD";
 
 export default function Noticias() {

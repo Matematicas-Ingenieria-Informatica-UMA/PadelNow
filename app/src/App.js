@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, Route, Switch, useLocation } from "wouter";
 
 import Header from "./user/Componentes/Header";
@@ -177,7 +178,7 @@ function App() {
                     <Noticias />
                 </Route>
                 <Route path="/noticias/ver/:id" exact>
-                    <Noticia ID={useLocation()[0].split("/").pop()}></Noticia>
+                    <Noticia ID={location.split("/").pop()} />
                     <Link to="/noticias">
                         <button className="mt-15 mb-15 SimpleButton">
                             Volver

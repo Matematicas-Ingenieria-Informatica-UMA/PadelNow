@@ -1,15 +1,16 @@
 .Miniatura{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 300px;
     height: fit-content;
-    align-items: center;
-    padding: 15px;
-    border: 15px;
 }
 
 .FotoMini{
     height: 170px;
-    justify-content: center;
     width: fit-content;
+    margin: auto;
 }
 
 .FotoMini:hover{
@@ -22,5 +23,6 @@
 
 .TituloMini{
     text-decoration: underline;
+    text-align: center;
     overflow: hidden;
 }

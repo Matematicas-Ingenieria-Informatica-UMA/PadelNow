@@ -52,6 +52,16 @@
   text-decoration: underline;
 }
 
+.BanderaPerfil{
+  height: 20px;
+  margin-right: 5px;
+}
+.NacionalidadPerfil{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .JugadorVerMas:hover {
   transform: scale(1.02);
 }

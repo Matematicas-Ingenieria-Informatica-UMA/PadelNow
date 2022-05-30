@@ -12,7 +12,12 @@ export default function Jugador(props) {
     return (
         <>
             <div className="Jugador">
-                <img src={jugador.URL} className="Imagen" alt="ProfilePhoto" />
+                <img
+                    src={jugador.URL}
+                    className="Imagen"
+                    alt="ProfilePhoto"
+                ></img>
+
                 <div>
                     <div className="JugadorSepHor"></div>
                     <h1 className="Nombre">
@@ -28,7 +33,14 @@ export default function Jugador(props) {
                         </div>
                         <div className="keyValue">
                             <h4>Nacionalidad</h4>
-                            <h3>{paises[jugador.nacionalidad]}</h3>
+                            <div className="NacionalidadPerfil">
+                                <img
+                                    src={`https://flagcdn.com/256x192/${jugador.nacionalidad}.png`}
+                                    className="BanderaPerfil"
+                                    alt="Bandera País"
+                                ></img>
+                                <h3>{paises[jugador.nacionalidad]}</h3>
+                            </div>
                         </div>
                         <div className="keyValue">
                             <h4>Ciudad</h4>
