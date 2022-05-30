@@ -29,6 +29,11 @@
   margin-left: 10px;
 }
 
+.BanderaPais{
+  width: 30px;
+  height: 23px;
+}
+
 .Sets {
   display: flex;
   flex-direction: row;

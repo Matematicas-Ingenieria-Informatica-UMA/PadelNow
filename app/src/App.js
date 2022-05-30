@@ -38,7 +38,7 @@ function App() {
 
     return (
         <div className="App">
-            {location.startsWith("/admin") ? <></> : <Header />}
+            {!location.startsWith("/admin") && <Header />}
             <Switch>
                 <Route path="/" exact>
                     <Feed />
@@ -74,7 +74,7 @@ function App() {
                         <h1 className="TituloAdmin">
                             PadelNow - MODIFICAR JUGADOR
                         </h1>
-                        <ModificarJugador/>
+                        <ModificarJugador />
                     </div>
                 </Route>
                 <Route path="/admin/recursos/parejas" exact>
@@ -194,7 +194,7 @@ function App() {
                     </div>
                 </Route>
             </Switch>
-            {location.startsWith("/admin") ? <></> : <Footer />}
+            {!location.startsWith("/admin") && <Footer />}
         </div>
     );
 }

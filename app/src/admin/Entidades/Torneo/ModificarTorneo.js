@@ -8,20 +8,21 @@ import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
 
 export default function ModificarTorneo() {
-    const currentID = parseInt(useLocation()[0].split("/").pop());
-    let currentTorneo = 0;
-    for (let i = 0; i < torneos.length; i++) {
-        if (torneos[i].id == currentID) {
-            currentTorneo = torneos[i];
-        }
-    }
+    const currentID = useLocation()[0].split("/").pop();
+    let currentTorneo = torneos.find((x) => x.id === currentID);
     return (
         <div className="CreaRecursoCard">
-            <h1 className="CenterAlign">
-                Rellene unicamente los datos a modificar del torneo
-            </h1>
+            <h1 className="CenterAlign">Modifique los datos del torneo</h1>
 
             <div className="IncidenciaTop">
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="id"
+                        placeholder={currentID}
+                    />
+                </div>
                 <div className="InputStyle DataInput">
                     <input
                         required
@@ -30,17 +31,9 @@ export default function ModificarTorneo() {
                         placeholder={currentTorneo.nombre}
                     />
                 </div>
-                <div className="InputStyle DataInput">
-                    <input
-                        required
-                        type="text"
-                        id="Institution"
-                        placeholder={currentTorneo.institucion}
-                    />
-                </div>
             </div>
             <div className="IncidenciaTop">
-                <div className="InputStyle DateInput">
+                <div className="InputStyle">
                     <input
                         required
                         type="text"
@@ -55,7 +48,7 @@ export default function ModificarTorneo() {
                     className="DesplegableRecurso"
                 >
                     <option disabled selected>
-                        {currentTorneo.categoria}
+                        Selecciona la categoría: {currentTorneo.categoria}
                     </option>
 
                     <option>Masculino</option>
@@ -71,35 +64,96 @@ export default function ModificarTorneo() {
                         placeholder={currentTorneo.anio}
                     />
                 </div>
-                <div className="InputStyle DataInput">
-                    <input
-                        required
-                        type="text"
-                        id="PhotoURL"
-                        placeholder={currentTorneo.foto}
-                    />
-                </div>
-            </div>
-            <div className="IncidenciaTop">
-                <select required id="Player1" name="Jugador1" className="mb-15">
+                <select
+                    required
+                    id="Player1"
+                    name="Jugador1"
+                    className="DesplegableRecurso"
+                >
                     <option disabled selected>
-                        {currentTorneo.ganadores.jugador1 +
-                            " y " +
-                            currentTorneo.ganadores.jugador2}
+                        Selecciona la pareja ganadora:{" "}
+                        {currentTorneo.ganadores.jugador1} y{" "}
+                        {currentTorneo.ganadores.jugador2}
                     </option>
                     {parejas.map((x) => {
                         return (
                             <option>
-                                {jugadores[parseInt(x.IDjugador1) - 1].nombre + //Esto obviamente no es así pero con la peticion findbyID se hace muy facil
+                                {jugadores
+                                    .find((y) => x.IDjugador1 === y.id)
+                                    .apellidos.split(" ")[0] +
                                     " y " +
-                                    jugadores[parseInt(x.IDjugador2) - 1]
-                                        .nombre}
+                                    jugadores
+                                        .find((y) => x.IDjugador2 === y.id)
+                                        .apellidos.split(" ")[0]}
                             </option>
                         );
                     })}
                 </select>
             </div>
-            <button className="BotonConFondo">Crear Jugador</button>
+            <h1 className="CenterAlign">
+                Modifique los datos de la institucion
+            </h1>
+            <div className="IncidenciaTop">
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="institucionNombre"
+                        placeholder={currentTorneo.institucion.nombre}
+                    />
+                </div>
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="institucionOrg"
+                        placeholder={currentTorneo.institucion.organizador}
+                    />
+                </div>
+            </div>
+            <div className="IncidenciaTop">
+                <div className="InputStyle">
+                    <input
+                        required
+                        type="text"
+                        id="sede"
+                        placeholder={currentTorneo.institucion.sede}
+                    />
+                </div>
+                <select
+                    required
+                    id="international"
+                    className="DesplegableRecurso"
+                >
+                    <option disabled selected>
+                        ¿Es internacional?:{" "}
+                        {currentTorneo.institucion.internacional}
+                    </option>
+
+                    <option>Sí</option>
+
+                    <option>No</option>
+                </select>
+            </div>
+            <div className="IncidenciaTop">
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="anioFundacion"
+                        placeholder={currentTorneo.institucion.anioFundacion}
+                    />
+                </div>
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="URLPhoto"
+                        placeholder={currentTorneo.institucion.foto}
+                    />
+                </div>
+            </div>
+            <button className="BotonConFondo">Modificar Torneo</button>
             <Link to="/admin/recursos/torneos">
                 <button className="SimpleButton">Cancelar</button>
             </Link>

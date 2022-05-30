@@ -70,10 +70,11 @@
     justify-content: center;
     color: white;
     font-weight: 600;
-    padding: 10px 15px;
+    padding: 15px;
     width: 90%;
     background: #33354A;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .LoginButton:hover{

@@ -13,6 +13,9 @@ export default function CrearTorneo() {
 
             <div className="IncidenciaTop">
                 <div className="InputStyle DataInput">
+                    <input required type="text" id="id" placeholder="ID" />
+                </div>
+                <div className="InputStyle DataInput">
                     <input
                         required
                         type="text"
@@ -20,17 +23,9 @@ export default function CrearTorneo() {
                         placeholder="Nombre"
                     />
                 </div>
-                <div className="InputStyle DataInput">
-                    <input
-                        required
-                        type="text"
-                        id="Institution"
-                        placeholder="Institución"
-                    />
-                </div>
             </div>
             <div className="IncidenciaTop">
-                <div className="InputStyle DateInput">
+                <div className="InputStyle">
                     <input
                         required
                         type="text"
@@ -57,33 +52,84 @@ export default function CrearTorneo() {
                 <div className="InputStyle DataInput">
                     <input type="number" id="Year" placeholder="Año" />
                 </div>
-                <div className="InputStyle DataInput">
-                    <input
-                        required
-                        type="text"
-                        id="PhotoURL"
-                        placeholder="URL de la foto"
-                    />
-                </div>
-            </div>
-            <div className="IncidenciaTop">
-                <select required id="Player1" name="Jugador1" className="mb-15">
+                <select
+                    required
+                    id="Player1"
+                    name="Jugador1"
+                    className="DesplegableRecurso"
+                >
                     <option disabled selected>
                         Selecciona la pareja ganadora{" "}
                     </option>
                     {parejas.map((x) => {
                         return (
                             <option>
-                                {jugadores[parseInt(x.IDjugador1) - 1].nombre + //Esto obviamente no es así pero con la peticion findbyID se hace muy facil
+                                {jugadores.find((y) => x.IDjugador1 === y.id)
+                                    .nombre +
                                     " y " +
-                                    jugadores[parseInt(x.IDjugador2) - 1]
+                                    jugadores.find((y) => x.IDjugador2 === y.id)
                                         .nombre}
                             </option>
                         );
                     })}
                 </select>
             </div>
-            <button className="BotonConFondo">Crear Jugador</button>
+            <h1 className="CenterAlign">Rellene los datos de la institucion</h1>
+            <div className="IncidenciaTop">
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="institucionNombre"
+                        placeholder="Nombre"
+                    />
+                </div>
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="institucionOrg"
+                        placeholder="Organizador"
+                    />
+                </div>
+            </div>
+            <div className="IncidenciaTop">
+                <div className="InputStyle">
+                    <input required type="text" id="sede" placeholder="Sede" />
+                </div>
+                <select
+                    required
+                    id="international"
+                    className="DesplegableRecurso"
+                >
+                    <option disabled selected>
+                        ¿Es internacional?
+                    </option>
+
+                    <option>Sí</option>
+
+                    <option>No</option>
+                </select>
+            </div>
+            <div className="IncidenciaTop">
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="anioFundacion"
+                        placeholder="Año de fundación"
+                    />
+                </div>
+                <div className="InputStyle DataInput">
+                    <input
+                        required
+                        type="text"
+                        id="URLPhoto"
+                        placeholder="URL de la foto"
+                    />
+                </div>
+            </div>
+            <button className="BotonConFondo">Crear Torneo</button>
             <Link to="/admin/recursos/torneos">
                 <button className="SimpleButton">Cancelar</button>
             </Link>

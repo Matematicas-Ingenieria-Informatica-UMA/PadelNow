@@ -28,12 +28,12 @@ export default function TorneoCRUD(props) {
                 <div className="CITorneo">
                     <h1 className="NombreTorneo">{datos.nombre}</h1>
                     <h4 className="InstitucionCircuito">
-                        {datos.institucion} - {datos.anio}
+                        {datos.institucion.nombre} - {datos.anio}
                     </h4>
                 </div>
                 <img
                     className="FotoTorneo"
-                    src={datos.foto}
+                    src={datos.institucion.foto}
                     alt="LogoInstitución"
                 ></img>
             </div>
@@ -54,22 +54,28 @@ export default function TorneoCRUD(props) {
 
                 <div className="KeyValueDiv">
                     <h3 className="KeyTorneo">Organizador</h3>
-                    <h3 className="ValueTorneo">Damm</h3>
+                    <h3 className="ValueTorneo">
+                        {datos.institucion.organizador}
+                    </h3>
                 </div>
 
                 <div className="KeyValueDiv">
                     <h3 className="KeyTorneo">Internacional</h3>
-                    <h3 className="ValueTorneo">No</h3>
+                    <h3 className="ValueTorneo">
+                        {datos.institucion.internacional}
+                    </h3>
                 </div>
 
                 <div className="KeyValueDiv">
                     <h3 className="KeyTorneo">Sede</h3>
-                    <h3 className="ValueTorneo">Madrid, España</h3>
+                    <h3 className="ValueTorneo">{datos.institucion.sede}</h3>
                 </div>
 
                 <div className="KeyValueDiv">
                     <h3 className="KeyTorneo">Fundación</h3>
-                    <h3 className="ValueTorneo">2013</h3>
+                    <h3 className="ValueTorneo">
+                        {datos.institucion.anioFundacion}
+                    </h3>
                 </div>
             </div>
 
