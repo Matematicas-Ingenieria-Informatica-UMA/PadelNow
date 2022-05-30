@@ -1,90 +1,109 @@
 .Footer {
-    display: flex;
-    flex-direction: row;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  bottom: 0;
+  background: linear-gradient(264.07deg, #455981 12.07%, #39334a 100.91%);
+}
+
+.LogoBlue {
+  height: 100px;
+}
+
+.TituloAzul {
+  background: linear-gradient(180deg, #6281bf 0%, #455981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.FooterFirst {
+  margin: 20px 8%;
+}
+
+.SobreNosotros {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  height: 50px;
+}
+
+.SubtituloFooter {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  height: 30px;
+}
+
+.SubtituloFooter:hover {
+  transform: scale(0.98);
+}
+
+.SubtituloFooter:active {
+  transform: scale(0.95);
+}
+
+.FooterSecond {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+  justify-content: left;
+  margin-left: 8%;
+}
+
+.FooterThird {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  margin-left: 8%;
+}
+
+.TienesAlgun {
+  width: 100%;
+  height: 50px;
+  margin: 0px;
+}
+
+.Copyright {
+  margin: 0px;
+  font-style: italic;
+  font-weight: 1;
+  font-size: 20px;
+  height: 30px;
+  width: 100%;
+}
+
+.FooterSepVert {
+  background: #6281bf;
+  width: 1px;
+  height: 150px;
+}
+
+@media screen and (max-width: 920px) {
+  .FooterSepVert {
+    width: 80%;
+    height: 1px;
+  }
+  .Footer {
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    height: 180px;
-    bottom: 0;
-    background: linear-gradient(264.07deg, #455981 12.07%, #39334A 100.91%);
-}
-
-.LogoBlue{
-    height: 100px;
-}
-
-.TituloAzul{
-    background: linear-gradient(180deg, #6281BF 0%, #455981 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0
-}
-
-.FooterFirst{
-    margin: 20px 8%;
-}
-
-.SobreNosotros{
-    display: flex;
-    justify-content: left;
-    width: 120%;
-    height: 50px;
-    margin: 15px 0px 5px 0px;
-}
-
-.SubtituloFooter{
-    margin: 0px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    height: 30px;
-}
-
-.SubtituloFooter:hover{
-    transform: scale(0.98);
-}
-
-.SubtituloFooter:active{
-    transform: scale(0.95);
-}
-
-
-.FooterSecond{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 90%;
-    justify-content: left;
-    margin-left: 8%;
-}
-
-.FooterThird{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 150px;
-    margin-left: 8%;
-}
-
-.TienesAlgun{
-    width: 100%;
-    height: 50px;
-    margin: 0px;
-}
-
-.Copyright{
-    margin: 0px;
-    font-style: italic;
-    font-weight: 1;
-    font-size: 20px;
-    height: 30px;
-    width: 100%;
-}
-
-.FooterSepVert{
-    background: #6281BF;
-    width: 1px;
-    height: 150px;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+  .FooterSecond{
+      width: fit-content;
+      text-align: center;
+  }
+  .FooterThird{
+    width: fit-content;
+    text-align: center;
+  }
 }

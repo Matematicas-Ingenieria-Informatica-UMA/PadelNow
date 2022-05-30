@@ -1,21 +1,21 @@
 .Login{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 360px;
+    width: 90%;
+    max-width: 400px;
     height: 500px;
-    margin: 50px;
+    margin: auto;
 }
 .ConLogin{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
-    gap: 25px;
-    width: 100%;
-    height: 90%;
+    width: 95%;
+    height: 100%;
+    padding: 20px;
 
     background: #FFFFFF;
     border-radius: 20px;
