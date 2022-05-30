@@ -22,7 +22,8 @@
 
 .FotoTorneo {
   border-radius: 50%;
-  width: 11%;
+  width: 12%;
+  height: fit-content;
 }
 
 .NombreTorneo {

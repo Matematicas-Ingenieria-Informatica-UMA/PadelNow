@@ -12,7 +12,6 @@ export default function Feed() {
     }
     return (
         <>
-            {console.log(ultNoticias)}
             <Noticia ID={ultNoticias[0] + 1}></Noticia>
             <div className="NoticiaSepHor"></div>
             <div className="MiniaturasRow">
