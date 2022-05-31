@@ -1,29 +1,34 @@
 .Feed {
-  height: fit-content;
+    height: fit-content;
 }
 
 .MiniaturasRow {
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 30px;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .VerMas {
-  margin: 20px;
-  margin-left: 20px;
-  display: flex;
-  align-items: flex-end;
-  text-decoration: underline;
+    margin: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: underline;
+}
+
+.VerMasBoton {
+    color: white;
+    text-decoration: none;
 }
 
 .VerMasBoton:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .VerMasBoton:active {
-  transform: scale(0.97);
+    transform: scale(0.97);
 }

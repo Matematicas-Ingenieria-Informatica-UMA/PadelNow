@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "wouter";
+import {Link} from "react-router-dom";
 import "../style/Incidencia.css";
 import "../style/Global.css";
 
@@ -10,11 +10,11 @@ export default function Incidencia() {
 
             <div className="IncidenciaTop">
                 <div className="InputStyle DataInput">
-                    <img src="/Mail.svg" alt="Email" />
-                    <input type="text" id="Email" placeholder="Email" />
+                    <img src="/Mail.svg" alt="Email"/>
+                    <input type="text" id="Email" placeholder="Email"/>
                 </div>
                 <div className="InputStyle DataInput">
-                    <img src="/Profile.svg" alt="Profile" />
+                    <img src="/Profile.svg" alt="Profile"/>
                     <input
                         type="text"
                         id="NameSurnames"
@@ -35,8 +35,7 @@ export default function Incidencia() {
             </div>
 
             <button className="BotonConFondo">Enviar Incidencia</button>
-            <Link to="/">
-                <button className="SimpleButton">Cancelar</button>
+            <Link to="/" className="SimpleButton">
             </Link>
         </div>
     );

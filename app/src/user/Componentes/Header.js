@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Route, Switch, Link } from "wouter";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
 import "../style/Header.css";
 import "../style/Global.css";
@@ -11,16 +11,14 @@ export default function Header() {
     return (
         <>
             <div className="Header">
-                <Link to="/">
-                    <div className="TitleHeader">
-                        <Logo></Logo>
-                        <h2 className="Title">PadelNow</h2>
-                    </div>
+                <Link className="TitleHeader" to="/">
+                    <Logo></Logo>
+                    <h2 className="Title">PadelNow</h2>
                 </Link>
                 <div className="Navigate">
                     <div className="Search">
                         <Link to="/admin">
-                            <img src="/lense.svg" alt="Search" />
+                            <img src="/lense.svg" alt="Search"/>
                         </Link>
                         <input
                             type="text"
@@ -54,39 +52,27 @@ export default function Header() {
                 onMouseLeave={() => setClase("noDisplay")}
             >
                 <div className="DesplegableTop">
-                    <Link to="/partidos">
-                        <button className="DesplegableTitles">
-                            Últimos Partidos
-                        </button>
+                    <Link to="/partidos" className="DesplegableTitles">
+                        Últimos Partidos
                     </Link>
-                    <Link to="/jugadores">
-                        <button className="DesplegableTitles">
-                            Ver Jugadores
-                        </button>
+                    <Link to="/jugadores" className="DesplegableTitles">
+                        Ver Jugadores
                     </Link>
-                    <Link to="/parejas">
-                        <button className="DesplegableTitles">
-                            Ver Parejas
-                        </button>
+                    <Link to="/parejas" className="DesplegableTitles">
+                        Ver Parejas
                     </Link>
-                    <Link to="/torneos">
-                        <button className="DesplegableTitles">
-                            Ver Torneos
-                        </button>
+                    <Link to="/torneos" className="DesplegableTitles">
+                        Ver Torneos
                     </Link>
-                    <Link to="/noticias">
-                        <button className="DesplegableTitles">
-                            Todas las Noticias
-                        </button>
+                    <Link to="/noticias" className="DesplegableTitles">
+                        Todas las Noticias
                     </Link>
                 </div>
                 <div className="HeaderSepHor"></div>
                 <div className="DesplegableBottom">
                     <button className="DesplegableTitles">Modo Claro</button>
-                    <Link to="/enviarincidencia">
-                        <button className="DesplegableTitles">
-                            Enviar Incidencia
-                        </button>
+                    <Link to="/enviarincidencia" className="DesplegableTitles">
+                        Enviar Incidencia
                     </Link>
                 </div>
             </div>

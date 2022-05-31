@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from "wouter";
+import {Link} from "react-router-dom";
 import "../style/Footer.css";
 import "../style/Global.css";
 
@@ -28,8 +28,8 @@ export default function Footer() {
 
             <div className="FooterThird">
                 <h1 className="TienesAlgun">¿Tienes algún problema?</h1>
-                <Link to="/enviarincidencia">
-                    <h4 className="SubtituloFooter">Enviar Incidencia</h4>
+                <Link to="/enviarincidencia" className="SubtituloFooter">
+                    Enviar Incidencia
                 </Link>
                 <h4 className="Copyright">© Derechos reservados</h4>
             </div>

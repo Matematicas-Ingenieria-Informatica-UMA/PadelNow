@@ -1,71 +1,65 @@
-.Login{
+.Login {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     width: 90%;
     max-width: 400px;
-    height: 500px;
     margin: auto;
 }
-.ConLogin{
+
+.ConLogin {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    height: 100%;
     padding: 20px;
-
     background: #FFFFFF;
     border-radius: 20px;
 }
 
-.SinLogin{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.SinLogin {
+    text-align: center;
     font-weight: 600;
     color: #FFFFFF;
     width: 100%;
     height: 10%;
     text-decoration: underline;
+    margin-top: 1rem;
 }
 
-.SinLogin:hover{
+.SinLogin:hover {
     transform: scale(1.05);
 }
 
-.SinLogin:active{
+.SinLogin:active {
     transform: scale(0.95);
 }
 
-.LoginTitle{
+.LoginTitle {
     color: black;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
-    line-height: 50p
 }
 
-.CentralLogin{
+.CentralLogin {
     display: flex;
-    height: 50%;
     width: 100%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
-.InputLogin{
+.InputLogin {
     padding: 10px;
     width: 90%;
-    border: grey 1px solid; 
+    margin-top: 2rem;
+    border: grey 1px solid;
     border-radius: 10px;
 }
 
-.LoginButton{
+.LoginButton {
     display: flex;
     justify-content: center;
     color: white;
@@ -77,22 +71,16 @@
     cursor: pointer;
 }
 
-.LoginButton:hover{
+.LoginButton:hover {
     transform: scale(1.05);
 }
 
-.LoginButton:active{
+.LoginButton:active {
     transform: scale(0.95);
 }
 
-.OlvContra{
-    height: 50px;
-}
-
-.OlvContra:hover{
-    transform: scale(1.05);
-}
-
-.OlvContra:active{
-    transform: scale(0.95);
+.ErrorMessage {
+    width: 95%;
+    text-align: center;
+    color: #ff3232;
 }

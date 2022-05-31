@@ -1,8 +1,19 @@
 import AuthContext from "./AuthContext";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
-export default function AuthProvider({ children }) {
+export default function AuthProvider({children}) {
     const [logged, setLogged] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    return <AuthContext.Provider>{children}</AuthContext.Provider>;
+    useEffect(() => {
+        const accessToken = localStorage.getItem("accessToken");
+        if (accessToken) {
+            setLogged(true);
+        }
+        setLoading(false);
+    }, [])
+
+    if (loading) return null;
+
+    return <AuthContext.Provider value={{logged, setLogged}}>{children}</AuthContext.Provider>;
 }

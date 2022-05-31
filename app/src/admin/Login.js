@@ -1,21 +1,39 @@
-import React, { useState } from "react";
-import { Link } from "wouter";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import "./style/Login.css";
+import api from "../api";
+import useAuth from "./hooks/useAuth";
 
 export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState(false);
+    const {logged, setLogged} = useAuth();
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
-        console.log(username, password);
+        try {
+            const {data} = await api.post("/login", {
+                username, password
+            }, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                }
+            });
+            const {accessToken} = data;
+            localStorage.setItem("accessToken", accessToken);
+            setLogged(true);
+        } catch (e) {
+            setError(true);
+        }
+
     };
 
     return (
         <div className="Login">
             <form className="ConLogin">
-                <h2 className="LoginTitle">Login</h2>
                 <div className="CentralLogin">
+                    <h2 className="LoginTitle">Login</h2>
                     <input
                         type="text"
                         placeholder="Username"
@@ -30,7 +48,7 @@ export default function Login() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <div className="OlvContra">¿Olvidaste la contraseña?</div>
+                    <p className="ErrorMessage">{error && "Error al iniciar sesión, verifique sus credenciales"}</p>
                 </div>
                 <button
                     type="submit"
@@ -40,8 +58,8 @@ export default function Login() {
                     Iniciar sesión
                 </button>
             </form>
-            <Link to="/">
-                <div className="SinLogin">Acceder sin iniciar sesión</div>
+            <Link to="/" className="SinLogin">
+                Acceder sin iniciar sesión
             </Link>
         </div>
     );

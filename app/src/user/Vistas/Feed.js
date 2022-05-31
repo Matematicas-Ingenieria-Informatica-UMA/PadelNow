@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "wouter";
+import {Link} from "react-router-dom";
 import Miniatura from "../Componentes/Miniatura";
 import Noticia from "../Componentes/Noticia";
 import "../style/Feed.css";
-import { noticias } from "../../BBDD/NoticiasBBDD";
+import {noticias} from "../../BBDD/NoticiasBBDD";
 
 export default function Feed() {
     var ultNoticias = [];
@@ -12,15 +12,15 @@ export default function Feed() {
     }
     return (
         <>
-            <Noticia ID={ultNoticias[0] + 1}></Noticia>
+            <Noticia ID={ultNoticias[0] + 1}/>
             <div className="NoticiaSepHor"></div>
             <div className="MiniaturasRow">
                 {ultNoticias.map((x) => {
-                    return <Miniatura ID={x}></Miniatura>;
+                    return <Miniatura ID={x}/>;
                 })}
                 <div className="VerMas">
-                    <Link to="/noticias">
-                        <h4 className="VerMasBoton">Ver más...</h4>
+                    <Link to="/noticias" className="VerMasBoton">
+                        Ver más...
                     </Link>
                 </div>
             </div>

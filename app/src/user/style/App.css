@@ -9,21 +9,39 @@
 }
 
 .AdminBackground {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  background: linear-gradient(72.44deg, #33354A 0%, #455981 100%);
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background: linear-gradient(72.44deg, #33354A 0%, #455981 100%);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
 }
-.TituloAdmin{
-  display: flex;
-  align-items: flex-start;
-  width: 95%;
-  margin: 20px;
+
+.AdminHeader {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
+
+.TituloAdmin {
+    display: flex;
+    align-items: flex-start;
+    width: 95%;
+    margin: 20px;
+}
+
+.LogoutButton {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 25%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 /*
 .App-logo {
   height: 40vmin;
