@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "react-router-dom";
 import { jugadores } from "../../../BBDD/JugadoresBBDD";
 
 import "./Jugadores.css";
@@ -10,7 +10,6 @@ export default function JugadorCRUD(props) {
   const [clase, setClase] = useState("JugadorNoDisplay");
   const [eliminar, setEliminar] = useState("Jugador");
   const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
-  const [location, setLocation] = useLocation();
 
   const jugador = jugadores.find((x) => x.id === props.ID);
 
@@ -24,15 +23,11 @@ export default function JugadorCRUD(props) {
             alt="Delete"
             className="ButtonPlayer"
           />
-          <Link to={`${location}/modificar/${jugador.id}`}>
+          <Link to={`modificar/${jugador.id}`}>
             <img src="/Edit.svg" alt="Edit" className="ButtonPlayer" />
           </Link>
         </div>
-        <img
-          src={`${jugador.URL}`}
-          className="Imagen"
-          alt="ProfilePhoto"
-        />
+        <img src={`${jugador.URL}`} className="Imagen" alt="ProfilePhoto" />
         <div>
           <div className="mt-15 JugadorSepHor"></div>
           <h1 className="Nombre">

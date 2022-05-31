@@ -86,7 +86,7 @@
   }
 }
 
-.ButtonPlayer{
+.ButtonPlayer {
   height: 50px;
 }
 
@@ -98,8 +98,9 @@
   transform: scale(0.9);
 }
 
-.BotonesAdmin{
+.BotonesAdmin {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  text-decoration: none;
 }

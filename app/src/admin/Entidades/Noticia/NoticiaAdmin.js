@@ -1,32 +1,29 @@
 import React from "react";
 import MiniaturaCRUD from "./MiniaturaCRUD";
-import { Link, useLocation } from "wouter";
+import { Link } from "react-router-dom";
 import { noticias } from "../../../BBDD/NoticiasBBDD";
 import "./Noticias.css";
 
 export default function NoticiaAdmin() {
-    const [location, setLocation] = useLocation();
-
-    return (
-        <>
-            <div className="BotonesAdmin">
-                <Link to={`${location}/crear`}>
-                    <button className="mt-15 BotonConFondo">
-                        Nueva Noticia
-                    </button>
-                </Link>
-                <Link to="/admin/recursos">
-                    <button className="mt-15 BotonConFondo">Volver</button>
-                </Link>
-            </div>
-            <div className="NoticiaAdmin">
-                {noticias.map((x) => {
-                    return <MiniaturaCRUD ID={x.id} />;
-                })}
-            </div>
-            <Link to="/admin/recursos">
-                <button className="mt-15 mb-15 SimpleButton">Volver</button>
-            </Link>
-        </>
-    );
+  return (
+    <>
+      <h1 className="TituloAdmin">PadelNow - Noticias</h1>
+      <div className="BotonesAdmin">
+        <Link to="crear" className="mt-15 BotonConFondo">
+          Nueva Noticia
+        </Link>
+        <Link to="/admin/recursos" className="mt-15 BotonConFondo">
+          Volver
+        </Link>
+      </div>
+      <div className="NoticiaAdmin">
+        {noticias.map((x) => {
+          return <MiniaturaCRUD ID={x.id} />;
+        })}
+      </div>
+      <Link to="/admin/recursos" className="mt-15 mb-15 SimpleButton">
+        Volver
+      </Link>
+    </>
+  );
 }

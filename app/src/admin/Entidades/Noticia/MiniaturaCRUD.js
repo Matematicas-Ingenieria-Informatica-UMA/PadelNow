@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "react-router-dom";
 import Miniatura from "../../../user/Componentes/Miniatura";
 
 export default function MiniaturaCRUD(props) {
   const [eliminar, setEliminar] = useState("Miniatura");
-  const [location, setLocation] = useLocation();
 
   return (
     <div className={eliminar}>
@@ -15,7 +14,7 @@ export default function MiniaturaCRUD(props) {
           alt="Delete"
           className="ButtonPlayer"
         />
-        <Link to={`${location}/modificar/${props.ID}`}>
+        <Link to={`modificar/${props.ID}`}>
           <img src="/Edit.svg" alt="Delete" className="ButtonPlayer" />
         </Link>
       </div>

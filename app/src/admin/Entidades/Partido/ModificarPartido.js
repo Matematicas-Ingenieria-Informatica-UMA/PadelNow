@@ -15,112 +15,115 @@ export default function ModificarPartido() {
   const [dia, mes, anyo] = datos.fecha.split("/");
 
   return (
-    <div className="CreaRecursoCard">
-      <h1 className="CenterAlign">Rellene los datos del partido</h1>
-      <div className="IncidenciaTop">
-        <select
-          required
-          id="Couple1"
-          name="Pareja1"
-          className="DesplegableRecurso"
-        >
-          <option disabled selected>
-            Selecciona una pareja ({datos.pareja1.Jugador1}-
-            {datos.pareja1.Jugador2})
-          </option>
+    <>
+      <h1 className="TituloAdmin">PadelNow - MODIFICAR PARTIDO</h1>
+      <div className="CreaRecursoCard">
+        <h1 className="CenterAlign">Rellene los datos del partido</h1>
+        <div className="IncidenciaTop">
+          <select
+            required
+            id="Couple1"
+            name="Pareja1"
+            className="DesplegableRecurso"
+          >
+            <option disabled selected>
+              Selecciona una pareja ({datos.pareja1.Jugador1}-
+              {datos.pareja1.Jugador2})
+            </option>
 
-          <option>Lebrón-Galán</option>
-        </select>
-        <select
-          required
-          id="Couple2"
-          name="Pareja2"
-          className="DesplegableRecurso"
-        >
-          <option disabled selected>
-            Selecciona una pareja ({datos.pareja1.Jugador1}-
-            {datos.pareja1.Jugador2})
-          </option>
+            <option>Lebrón-Galán</option>
+          </select>
+          <select
+            required
+            id="Couple2"
+            name="Pareja2"
+            className="DesplegableRecurso"
+          >
+            <option disabled selected>
+              Selecciona una pareja ({datos.pareja1.Jugador1}-
+              {datos.pareja1.Jugador2})
+            </option>
 
-          <option>Triay-Salazar</option>
-        </select>
+            <option>Triay-Salazar</option>
+          </select>
+        </div>
+        <div className="IncidenciaTop">
+          <div className="InputStyle DateInput">
+            <p className="m-0">Fecha</p>
+            <input
+              required
+              type="date"
+              id="Date"
+              value={`${anyo}-${mes}-${dia}`}
+            />
+          </div>
+          <div className="InputStyle ">
+            <input
+              className="InputStyle"
+              required
+              type="text"
+              id="Result"
+              placeholder={datos.resultado}
+            />
+          </div>
+        </div>
+        <div className="IncidenciaTop">
+          <div className="InputStyle ">
+            <input required type="text" id="Winners" placeholder="Winners" />
+          </div>
+          <div className="InputStyle DataInput">
+            <input
+              required
+              type="text"
+              id="Errors"
+              placeholder="Errores No Forzados"
+            />
+          </div>
+        </div>
+        <div className="IncidenciaTop">
+          <div className="InputStyle ">
+            <input
+              required
+              type="text"
+              id="Breaks"
+              placeholder="Bolas de Break"
+            />
+          </div>
+          <div className="InputStyle ">
+            <input required type="text" id="Smashes" placeholder="Smashes" />
+          </div>
+        </div>
+        <div className="IncidenciaTop">
+          <div className="InputStyle ">
+            <input
+              required
+              type="text"
+              id="Referee"
+              placeholder="Juez de Silla"
+            />
+          </div>
+          <div className="InputStyle ">
+            <input
+              required
+              type="text"
+              id="GoldBalls"
+              placeholder="Bolas de Oro"
+            />
+          </div>
+        </div>
+        <div className="IncidenciaTop">
+          <div className="InputStyle DataInput">
+            <input required type="text" id="Stage" placeholder={datos.fase} />
+          </div>
+          <div className="InputStyle DataInput">
+            <input required type="text" id="Time" placeholder={datos.tiempo} />
+          </div>
+        </div>
+        <button className="BotonConFondo">Modificar Partido</button>
+        <Link to="/admin/recursos/partidos">
+          <button className="SimpleButton">Cancelar</button>
+        </Link>
       </div>
-      <div className="IncidenciaTop">
-        <div className="InputStyle DateInput">
-          <p className="m-0">Fecha</p>
-          <input
-            required
-            type="date"
-            id="Date"
-            value={`${anyo}-${mes}-${dia}`}
-          />
-        </div>
-        <div className="InputStyle ">
-          <input
-            className="InputStyle"
-            required
-            type="text"
-            id="Result"
-            placeholder={datos.resultado}
-          />
-        </div>
-      </div>
-      <div className="IncidenciaTop">
-        <div className="InputStyle ">
-          <input required type="text" id="Winners" placeholder="Winners" />
-        </div>
-        <div className="InputStyle DataInput">
-          <input
-            required
-            type="text"
-            id="Errors"
-            placeholder="Errores No Forzados"
-          />
-        </div>
-      </div>
-      <div className="IncidenciaTop">
-        <div className="InputStyle ">
-          <input
-            required
-            type="text"
-            id="Breaks"
-            placeholder="Bolas de Break"
-          />
-        </div>
-        <div className="InputStyle ">
-          <input required type="text" id="Smashes" placeholder="Smashes" />
-        </div>
-      </div>
-      <div className="IncidenciaTop">
-        <div className="InputStyle ">
-          <input
-            required
-            type="text"
-            id="Referee"
-            placeholder="Juez de Silla"
-          />
-        </div>
-        <div className="InputStyle ">
-          <input
-            required
-            type="text"
-            id="GoldBalls"
-            placeholder="Bolas de Oro"
-          />
-        </div>
-      </div>
-      <div className="IncidenciaTop">
-        <div className="InputStyle DataInput">
-          <input required type="text" id="Stage" placeholder={datos.fase} />
-        </div>
-        <div className="InputStyle DataInput">
-          <input required type="text" id="Time" placeholder={datos.tiempo} />
-        </div>
-      </div>
-      <button className="BotonConFondo">Modificar Partido</button>
-      <Link to="/admin/recursos/partidos">
-        <button className="SimpleButton">Cancelar</button>
-      </Link>
-    </div>
+    </>
   );
 }
