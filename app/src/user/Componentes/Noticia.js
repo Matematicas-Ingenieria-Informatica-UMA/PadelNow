@@ -1,13 +1,12 @@
 import React from "react";
 import "../style/Noticia.css";
-import {noticias} from "../../BBDD/NoticiasBBDD";
-import {useParams} from "react-router-dom";
+import { noticias } from "../../BBDD/NoticiasBBDD";
 
 export default function Noticia(props) {
     const {id: paramId} = useParams();
     const id = paramId || props.ID
     const videoClassName = noticias[id].video === "" ? "Nada" : "VideoNoticia"
-    const {titulo, subtitulo, fecha, imagen, video, texto} = noticias[id];
+    const {titulo, subtitulo, fecha, imagen, video, parrafos} = noticias[id];
     return (
         <div className="Noticia">
             <h1 className="NoticiaTitle TextColorWhite">
@@ -27,9 +26,9 @@ export default function Noticia(props) {
                 </h4>
             </div>
             <img src={imagen} alt="Noticia"/>
-            <p className="Content TextColorWhite">
-                {texto}
-            </p>
+            {parrafos.map((x) => {
+                return <p className="Content TextColorWhite">{x}</p>;
+            })}
 
             <div className={videoClassName}>
                 <iframe
