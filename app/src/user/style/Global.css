@@ -133,6 +133,15 @@ button:active {
   font-weight: 300;
   font-size: 15px;
   color: white;
+  text-align: center;
+}
+
+.SimpleButton:hover {
+  transform: scaley(1.1);
+}
+
+.SimpleButton:active {
+  transform: scaley((0.9));
 }
 
 .BotonConFondo {

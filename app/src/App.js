@@ -30,6 +30,7 @@ import ModificarNoticia from "./admin/Entidades/Noticia/ModificarNoticia";
 import TorneoAdmin from "./admin/Entidades/Torneo/TorneoAdmin";
 import CrearTorneo from "./admin/Entidades/Torneo/CrearTorneo";
 import ModificarTorneo from "./admin/Entidades/Torneo/ModificarTorneo";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -93,7 +94,17 @@ function App() {
 
           <Route path="noticias" element={<Noticias />} />
 
-          <Route path="noticias/:id" element={<Noticia />} />
+          <Route
+            path="noticias/:id"
+            element={
+              <>
+                <Noticia />
+                <Link to="/" className="mt-15 mb-15 SimpleButton">
+                  Volver
+                </Link>
+              </>
+            }
+          />
 
           <Route path="torneos" element={<Torneos />} />
         </Route>

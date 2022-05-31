@@ -13,7 +13,7 @@ export default function Feed() {
     return (
         <>
             <Noticia ID={ultNoticias[0] + 1}/>
-            <div className="NoticiaSepHor"></div>
+            <div className="NoticiaSepHor mb-15"></div>
             <div className="MiniaturasRow">
                 {ultNoticias.map((x) => {
                     return <Miniatura ID={x}/>;
