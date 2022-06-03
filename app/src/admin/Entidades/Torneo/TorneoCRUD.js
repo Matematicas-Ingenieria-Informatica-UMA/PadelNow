@@ -1,6 +1,6 @@
-import { React, useState } from "react";
-import { Link, useLocation } from "wouter";
-import { torneos } from "../../../BBDD/TorneosBBDD";
+import {React, useState} from "react";
+import {Link} from "react-router-dom";
+import {torneos} from "../../../BBDD/TorneosBBDD";
 import "../../../user/style/Torneo.css";
 import "../Jugador/Jugadores.css";
 
@@ -9,7 +9,6 @@ export default function TorneoCRUD(props) {
     const modo = ["ampliar", "disminuir"];
     const [boton, setBoton] = useState(0);
     const [eliminar, setEliminar] = useState("Torneo");
-    const [location, setLocation] = useLocation();
 
     return (
         <div className={eliminar}>
@@ -18,10 +17,10 @@ export default function TorneoCRUD(props) {
                     className="ButtonPlayer"
                     onClick={() => setEliminar("CRUDNoDisplay")}
                 >
-                    <img src="/Delete.svg" alt="Delete" />
+                    <img src="/Delete.svg" alt="Delete"/>
                 </button>
-                <Link to={`${location}/modificar/${props.ID}`}>
-                    <img src="/Edit.svg" alt="Edit" className="ButtonPlayer" />
+                <Link to={`modificar/${props.ID}`}>
+                    <img src="/Edit.svg" alt="Edit" className="ButtonPlayer"/>
                 </Link>
             </div>
             <div className="TorneoDiv1">

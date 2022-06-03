@@ -1,12 +1,13 @@
 import React from "react";
-import { useState } from "react";
-import { jugadores } from "../../BBDD/JugadoresBBDD";
-import { paises } from "../../assets/paises";
+import {useState} from "react";
+import {paises} from "../../assets/paises";
 import "../style/Jugador.css";
+import useJugador from "../../shared/Jugador/useJugador";
 
 export default function Jugador(props) {
     const [clase, setClase] = useState("JugadorNoDisplay");
     const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
+    const {jugadores} = useJugador();
     const jugador = jugadores.find((x) => x.id === props.ID);
 
     return (
