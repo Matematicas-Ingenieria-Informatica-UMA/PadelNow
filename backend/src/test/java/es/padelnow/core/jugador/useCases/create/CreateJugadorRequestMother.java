@@ -1,15 +1,15 @@
 package es.padelnow.core.jugador.useCases.create;
 
-import es.padelnow.core.jugador.enums.Pais;
-import es.padelnow.core.jugador.enums.Sexo;
+import es.padelnow.jugador.enums.Sexo;
+import es.padelnow.jugador.useCases.create.CreateJugadorRequest;
 
 public final class CreateJugadorRequestMother {
 
-    public static CreateJugadorRequest create(String nombre, String apellido, Sexo sexo, Pais pais) {
+    public static CreateJugadorRequest create(String nombre, String apellido, Sexo sexo, String pais) {
         return new CreateJugadorRequest(nombre, apellido, sexo, pais);
     }
 
     public static CreateJugadorRequest random() {
-        return new CreateJugadorRequest("Juan", "Lebron Chincoa", Sexo.MASCULINO, Pais.ES);
+        return new CreateJugadorRequest("Juan", "Lebron Chincoa", Sexo.MASCULINO, "es");
     }
 }

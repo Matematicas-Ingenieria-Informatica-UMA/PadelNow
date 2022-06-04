@@ -1,7 +1,7 @@
 package es.padelnow.backend.controller.jugador;
 
-import es.padelnow.core.jugador.JugadorRepository;
-import es.padelnow.core.jugador.useCases.find.JugadorFinder;
+import es.padelnow.jugador.JugadorRepository;
+import es.padelnow.jugador.useCases.find.JugadorFinder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

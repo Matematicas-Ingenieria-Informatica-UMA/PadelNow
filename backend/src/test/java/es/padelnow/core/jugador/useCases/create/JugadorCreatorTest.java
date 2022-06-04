@@ -1,8 +1,10 @@
 package es.padelnow.core.jugador.useCases.create;
 
-import es.padelnow.core.jugador.Jugador;
+import es.padelnow.jugador.Jugador;
 import es.padelnow.core.jugador.JugadorMother;
-import es.padelnow.core.jugador.JugadorRepository;
+import es.padelnow.jugador.JugadorRepository;
+import es.padelnow.jugador.useCases.create.CreateJugadorRequest;
+import es.padelnow.jugador.useCases.create.JugadorCreator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

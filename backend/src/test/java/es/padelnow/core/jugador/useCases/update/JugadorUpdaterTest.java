@@ -1,9 +1,9 @@
 package es.padelnow.core.jugador.useCases.update;
 
-import es.padelnow.core.jugador.Jugador;
+import es.padelnow.jugador.Jugador;
 import es.padelnow.core.jugador.JugadorMother;
-import es.padelnow.core.jugador.JugadorRepository;
-import es.padelnow.core.jugador.useCases.find.JugadorFinder;
+import es.padelnow.jugador.JugadorRepository;
+import es.padelnow.jugador.useCases.update.JugadorUpdater;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -32,7 +32,7 @@ class JugadorUpdaterTest {
         when(repository.existsById(id)).thenReturn(false);
 
         assertThrows(IllegalStateException.class, () -> {
-            
+
         });
 
     }

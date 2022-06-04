@@ -1,10 +1,10 @@
 package es.padelnow.core.jugador.useCases.find;
 
-import es.padelnow.core.jugador.Jugador;
+import es.padelnow.jugador.Jugador;
 import es.padelnow.core.jugador.JugadorMother;
-import es.padelnow.core.jugador.JugadorRepository;
-import es.padelnow.core.jugador.enums.Pais;
-import es.padelnow.core.jugador.enums.Sexo;
+import es.padelnow.jugador.JugadorRepository;
+import es.padelnow.jugador.enums.Sexo;
+import es.padelnow.jugador.useCases.find.JugadorFinder;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -38,9 +38,9 @@ class JugadorFinderTest {
     @Test
     void shouldReturnAllJugadores() {
         List<Jugador> jugadores = Arrays.asList(
-                JugadorMother.create("Arturo", "Aguilera", Sexo.MASCULINO, Pais.ES),
+                JugadorMother.create("Arturo", "Aguilera", Sexo.MASCULINO, "ES"),
                 JugadorMother.create("Maria Jose", "Garcia Tobaruela",
-                        Sexo.FEMENINO, Pais.ES),
+                        Sexo.FEMENINO, "ES"),
                 JugadorMother.random()
         );
         when(repository.findAll()).thenReturn(jugadores);

@@ -1,7 +1,8 @@
 package es.padelnow.core.jugador.useCases.remove;
 
-import es.padelnow.core.jugador.JugadorRepository;
+import es.padelnow.jugador.JugadorRepository;
 
+import es.padelnow.jugador.useCases.remove.JugadorRemover;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
