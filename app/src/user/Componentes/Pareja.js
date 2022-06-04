@@ -1,20 +1,29 @@
 import React from "react";
-
-import { jugadores } from "../../BBDD/JugadoresBBDD";
-import { parejas } from "../../BBDD/ParejasBBDD";
+import useJugador from "../../shared/Jugador/useJugador";
+import usePareja from "../../shared/Pareja/usePareja";
 
 import "../style/Pareja.css";
 
 export default function Pareja(props) {
-  const pareja = parejas.find((x) => x.id == props.ID);
-  const jugador1 = jugadores.find((x) => x.id == pareja.IDjugador1);
-  const jugador2 = jugadores.find((x) => x.id == pareja.IDjugador2);
+  const { jugadores } = useJugador();
+  const { parejas } = usePareja();
+  const pareja = parejas.find((x) => x.id === props.ID);
+  const jugador1 = jugadores.find((x) => x.id === pareja.IDjugador1);
+  const jugador2 = jugadores.find((x) => x.id === pareja.IDjugador2);
+
+  console.log(jugador1, jugador2);
 
   return (
     <div className="Pareja">
       <div className="ParejaUp">
-        <div className="PFoto">
-          <img src={`${jugador1.URL}`} className="Imagen" alt="ProfilePhoto" />
+        <div className="PJugador1">
+          <div className="PFoto">
+            <img
+              src={`${jugador1.URL}`}
+              className="Imagen"
+              alt="ProfilePhoto"
+            />
+          </div>
           <h1 className="PNombre">
             {jugador1.apellidos.split(" ")[0].toUpperCase()}
           </h1>
@@ -30,8 +39,14 @@ export default function Pareja(props) {
           <h2 className="PEntrenadorNombre">{pareja.Entrenador}</h2>
         </div>
 
-        <div className="PFoto">
-          <img src={`${jugador2.URL}`} className="Imagen" alt="ProfilePhoto" />
+        <div className="PJugador2">
+          <div className="PFoto">
+            <img
+              src={`${jugador2.URL}`}
+              className="Imagen"
+              alt="ProfilePhoto"
+            />
+          </div>
           <h1 className="PNombre">
             {jugador2.apellidos.split(" ")[0].toUpperCase()}
           </h1>
