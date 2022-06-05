@@ -1,6 +1,6 @@
-const posicionDeJuego = {
+const PosicionDeJuego = {
     REVES: "Revés",
     DERECHA: "Derecha",
 };
 
-export default posicionDeJuego;
+export default PosicionDeJuego;

@@ -40,7 +40,14 @@ public class Torneo {
 
     private Fase faseInicial;
 
+    @Enumerated(EnumType.STRING)
     private Sexo genero;
+
+    private String pais = "es";
+
+    private String foto = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfSXWMgwcnCtlREONx9MboF7enNJAxZ8tqSWZzcBlox-VN6iRWNSPJeeWM3Af9h-RAVco&usqp=CAU";
+
+    private String institucion = "WPT";
 
     @OneToMany(mappedBy = "torneo", cascade = CascadeType.ALL)
     private Collection<Partido> partidos = new ArrayList<>();
