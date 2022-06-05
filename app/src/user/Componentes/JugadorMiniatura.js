@@ -1,23 +1,30 @@
 import React from "react";
-import {useState} from "react";
-import {paises} from "../../assets/paises";
+import { useState } from "react";
+import { paises } from "../../assets/paises";
 import "../style/Jugador.css";
 import useJugador from "../../shared/Jugador/useJugador";
+import usePareja from "../../shared/Pareja/usePareja";
+import { Link } from "react-router-dom";
 
-export default function Jugador(props) {
+export default function JugadorMiniatura(props) {
     const [clase, setClase] = useState("JugadorNoDisplay");
     const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
-    const {jugadores} = useJugador();
+    const { parejas } = usePareja();
+    const { jugadores } = useJugador();
     const jugador = jugadores.find((x) => x.id === props.ID);
 
     return (
         <>
             <div className="Jugador">
-                <img
-                    src={jugador.URL}
-                    className="Imagen"
-                    alt="ProfilePhoto"
-                ></img>
+                <button>
+                    <Link to={jugador.id}>
+                        <img
+                            src={jugador.URL}
+                            className="Imagen"
+                            alt="ProfilePhoto"
+                        ></img>
+                    </Link>
+                </button>
 
                 <div>
                     <div className="JugadorSepHor"></div>

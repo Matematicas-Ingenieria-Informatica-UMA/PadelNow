@@ -1,0 +1,108 @@
+.ResultadoPartido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.PistaPadel{
+    width: 100%;
+    height: 700px;
+    background-color: #21346C;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ColumnaFoto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 30px 0px 30px;
+}
+
+.Columna2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.ColumnaDatos{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+    background: rgba(10, 11, 11, 0.7);
+    border-radius: 20px;
+}
+.TituloDatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ResultadoTotal{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    
+    align-items: center;
+    flex-direction: column;
+}
+.SepHorDatos{
+    background-color: white;
+    height: 0.5px;
+    width: 80%;
+}
+.Set{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.EstadisticaDato{
+    display: flex;
+    padding: 3px;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.reloj{
+    width: 25px;
+}
+.JuegosPartido{
+    font-size: 50px;
+    padding: 0px 15px 0px 15px;
+}
+.PelotaResultado{
+    height: 25px;
+    margin: 0px 10px 0px 10px;
+}
+.ResultadoPartido{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    padding-top: 50px;
+}
+.FotoJugador{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.LineaVer{
+    width: 15px;
+    height: 100%;
+    background-color: white;
+}
+
+.LineaHor{
+    height: 15px;
+    width: 40%;
+    background-color: white;
+}
+
+.LineaExtra{
+    height: 15px;
+    width: 1%;
+    background-color: white;
+}

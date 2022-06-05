@@ -6,18 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 import AuthProvider from "./admin/contexts/AuthProvider";
 import JugadorProvider from "./shared/Jugador/JugadorProvider";
 import ParejaProvider from "./shared/Pareja/ParejaProvider";
+import Partido from "./user/Componentes/Partido";
+import PartidoProvider from "./shared/Partido/PartidoProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <JugadorProvider>
-      <ParejaProvider>
-        <AuthProvider>
-          <App />
-        </AuthProvider>
-      </ParejaProvider>
-    </JugadorProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <JugadorProvider>
+            <ParejaProvider>
+                <PartidoProvider>
+                    <AuthProvider>
+                        <App />
+                    </AuthProvider>
+                </PartidoProvider>
+            </ParejaProvider>
+        </JugadorProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

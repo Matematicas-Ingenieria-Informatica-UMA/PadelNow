@@ -6,6 +6,7 @@
   height: 50px;
   background-color: #455981;
   width: 100%;
+  z-index: 1;
 }
 
 .TitleHeader {
