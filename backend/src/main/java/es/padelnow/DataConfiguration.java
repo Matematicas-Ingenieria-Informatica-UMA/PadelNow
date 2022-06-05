@@ -55,14 +55,26 @@ public class DataConfiguration {
             Jugador jugador4 = new Jugador(
                     "Manuel", "Castillo Sancho", Sexo.MASCULINO, 1.85, "br",
                     dateFormat.parse("1985-12-31"), BrazoDominante.DIESTRO, PosicionDeJuego.REVES);
-
-            jugadorRepository.saveAll(List.of(jugador1, jugador2, jugador3, jugador4));
-
+            Jugador jugador5 = new Jugador(
+                    "Alejandro", "Galán Romo", Sexo.MASCULINO, 1.90, "es",
+                    dateFormat.parse("1985-12-31"), BrazoDominante.DIESTRO, PosicionDeJuego.REVES);
+            Jugador jugador6 = new Jugador(
+                    "Ignacio", "Ávila Reyes", Sexo.MASCULINO, 1.75, "br",
+                    dateFormat.parse("2001-12-31"), BrazoDominante.DIESTRO, PosicionDeJuego.DERECHA);
+            
             //PAREJAS
-            Pareja pareja1 = new Pareja("Carlos Pozzoni", List.of(jugador1, jugador2));
-            Pareja pareja2 = new Pareja("Jorge Martinez", List.of(jugador3, jugador4));
+            Pareja pareja1 = new Pareja("Carlos Pozzoni", Sexo.MASCULINO);
+            Pareja pareja2 = new Pareja("Jorge Martinez", Sexo.MASCULINO);
 
             parejaRepository.saveAll(List.of(pareja1, pareja2));
+
+            jugador1.setPareja(pareja1);
+            jugador2.setPareja(pareja1);
+            jugador3.setPareja(pareja2);
+            jugador4.setPareja(pareja2);
+
+            jugadorRepository.saveAll(List.of(jugador1, jugador2, jugador3, jugador4, jugador5, jugador6));
+
 
             // TORNEOS
             Torneo torneo = new Torneo("Cervezas Victoria Marbella Master 2022",
