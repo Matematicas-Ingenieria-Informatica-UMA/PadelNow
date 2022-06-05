@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/noticias")
 public class NoticiaPostController {
     private final NoticiaCreator creator;
 
@@ -17,7 +18,7 @@ public class NoticiaPostController {
         this.creator = creator;
     }
 
-    @PostMapping("/noticia")
+    @PostMapping
     public ResponseEntity<Noticia> create(@RequestBody CreateNoticiaRequest request) {
         Noticia noticia = creator.create(request);
 

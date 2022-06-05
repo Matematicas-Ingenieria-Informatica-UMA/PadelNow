@@ -1,5 +1,6 @@
 package es.padelnow.torneo.useCases.update;
 
+import es.padelnow.partido.enums.Fase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +20,8 @@ public class UpdateTorneoRequest {
     private Date fechaInicial;
 
     private Date fechaFinal;
+
+    private Fase faseInicial;
 
     private Collection<Long> partidos;
 

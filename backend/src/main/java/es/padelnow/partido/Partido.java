@@ -28,7 +28,8 @@ public class Partido {
     }
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name = "partido_sequence")
+    @GeneratedValue(generator = "partido_sequence")
     private long id;
 
     @Column(nullable = false)

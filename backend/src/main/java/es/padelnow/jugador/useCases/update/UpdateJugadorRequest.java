@@ -25,7 +25,7 @@ public class UpdateJugadorRequest {
 
     private Sexo sexo;
 
-    private URL foto;
+    private String foto;
 
     private Float altura;
 

@@ -1,7 +1,9 @@
 package es.padelnow.pareja;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import es.padelnow.jugador.Jugador;
 import es.padelnow.jugador.enums.Sexo;
+import es.padelnow.partido.Partido;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,9 +17,10 @@ import java.util.Collection;
 @Entity
 public class Pareja {
 
-    public Pareja(String entrenador, Sexo genero) {
+    public Pareja(String entrenador, Sexo genero, Collection<Jugador> jugadores) {
         this.entrenador = entrenador;
         this.genero = genero;
+        this.jugadores = jugadores;
     }
 
     @Id
@@ -33,6 +36,12 @@ public class Pareja {
     @Enumerated(EnumType.STRING)
     private Sexo genero;
 
-    @OneToMany(mappedBy = "pareja", cascade = CascadeType.ALL)
+    private boolean activa = true;
+
+    @ManyToMany(mappedBy = "parejas", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Collection<Partido> partidos;
+
+    @ManyToMany
     private Collection<Jugador> jugadores;
 }

@@ -8,9 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/parejas")
 public class ParejaPostController {
     private final ParejaCreator creator;
 
@@ -19,7 +21,7 @@ public class ParejaPostController {
         this.creator = creator;
     }
 
-    @PostMapping("/pareja")
+    @PostMapping
     public ResponseEntity<Pareja> create(@RequestBody CreateParejaRequest request) {
         Pareja pareja = creator.create(request);
 

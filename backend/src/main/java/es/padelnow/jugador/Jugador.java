@@ -56,8 +56,4 @@ public class Jugador {
     @Enumerated(EnumType.STRING)
     @Column(name = "posicion_de_juego")
     private PosicionDeJuego posicionDeJuego;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
-    private Pareja pareja;
 }
