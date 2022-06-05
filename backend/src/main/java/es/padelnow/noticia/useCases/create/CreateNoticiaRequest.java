@@ -13,7 +13,5 @@ import java.net.URL;
 public class CreateNoticiaRequest {
     private String titulo;
     private String cuerpo;
-    private String autor;
     private String subtitulo;
-    private String foto;
 }

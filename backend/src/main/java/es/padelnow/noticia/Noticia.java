@@ -12,7 +12,7 @@ import java.util.Date;
 @Entity
 public class Noticia {
 
-    public Noticia(String titulo, String cuerpo, String subtitulo) {
+    public Noticia(String titulo, String subtitulo, String cuerpo) {
         this.titulo = titulo;
         this.cuerpo = cuerpo;
         this.subtitulo = subtitulo;

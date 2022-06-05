@@ -15,7 +15,7 @@ public class NoticiaCreator {
     }
 
     public Noticia create(CreateNoticiaRequest request) {
-        Noticia noticia = new Noticia(request.getTitulo(), request.getCuerpo(), request.getSubtitulo());
+        Noticia noticia = new Noticia(request.getTitulo(), request.getSubtitulo(), request.getCuerpo());
         return noticiaRepository.save(noticia);
     }
 

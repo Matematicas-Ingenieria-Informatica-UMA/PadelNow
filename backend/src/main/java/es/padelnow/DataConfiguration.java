@@ -5,6 +5,8 @@ import es.padelnow.jugador.JugadorRepository;
 import es.padelnow.jugador.enums.BrazoDominante;
 import es.padelnow.jugador.enums.PosicionDeJuego;
 import es.padelnow.jugador.enums.Sexo;
+import es.padelnow.noticia.Noticia;
+import es.padelnow.noticia.NoticiaRepository;
 import es.padelnow.pareja.Pareja;
 import es.padelnow.pareja.ParejaRepository;
 import es.padelnow.partido.Partido;
@@ -26,10 +28,12 @@ import java.util.List;
 public class DataConfiguration {
 
     @Bean
-    CommandLineRunner commandLineRunner(SignUpUserService signUpUserService, JugadorRepository jugadorRepository,
+    CommandLineRunner commandLineRunner(SignUpUserService signUpUserService,
+                                        JugadorRepository jugadorRepository,
                                         ParejaRepository parejaRepository,
                                         TorneoRepository torneoRepository,
-                                        PartidoRepository partidoRepository) {
+                                        PartidoRepository partidoRepository,
+                                        NoticiaRepository noticiaRepository) {
         return args -> {
             // USERS
             signUpUserService.signUpUser(
@@ -61,7 +65,7 @@ public class DataConfiguration {
             Jugador jugador6 = new Jugador(
                     "Ignacio", "Ávila Reyes", Sexo.MASCULINO, 1.75, "br",
                     dateFormat.parse("2001-12-31"), BrazoDominante.DIESTRO, PosicionDeJuego.DERECHA);
-            
+
             //PAREJAS
             Pareja pareja1 = new Pareja("Carlos Pozzoni", Sexo.MASCULINO);
             Pareja pareja2 = new Pareja("Jorge Martinez", Sexo.MASCULINO);
@@ -93,6 +97,22 @@ public class DataConfiguration {
                     List.of(pareja1, pareja2));
 
             partidoRepository.saveAll(List.of(partido1));
+
+            // NOTICIAS
+            Noticia noticia1 = new Noticia(
+                    "Martita y Bea se coronan en Dinamarca",
+                    "Marta Ortega y Bea González vencen por 6-2 y 6-4 en la final",
+                    ""
+            );
+
+            Noticia noticia2 = new Noticia(
+                    "Arturo y Juanca, nueva pareja numero uno",
+                    "El malagueño y el ruteño se embarcan en una nueva aventura juntos y formarán pareja en la siguiente temporadal",
+                    ""
+            );
+
+            noticiaRepository.saveAll(List.of(noticia1, noticia2));
+
         };
     }
 }

@@ -21,7 +21,7 @@ public class JugadorPostController {
     public ResponseEntity<Jugador> create(@RequestBody CreateJugadorRequest request) {
         Jugador jugador = creator.create(request);
 
-        return new ResponseEntity(jugador, HttpStatus.CREATED);
+        return new ResponseEntity<>(jugador, HttpStatus.CREATED);
     }
 }
 
