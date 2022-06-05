@@ -2,6 +2,7 @@ package es.padelnow.jugador.controllers;
 
 import es.padelnow.jugador.useCases.update.JugadorUpdater;
 import es.padelnow.jugador.useCases.update.UpdateJugadorRequest;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,8 @@ public class JugadorPutController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity update(@PathVariable Long id, @RequestBody UpdateJugadorRequest request) {
+    public ResponseEntity update(@PathVariable Long id, @RequestBody String request) {
         updater.update(id, request);
-        return new ResponseEntity(HttpStatus.ACCEPTED);
+        return new ResponseEntity("DONE", HttpStatus.ACCEPTED);
     }
 }
