@@ -18,8 +18,8 @@ public class PartidoPutController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity update(@PathVariable Long id, @RequestBody UpdatePartidoRequest request) {
+    public ResponseEntity update(@PathVariable Long id, @RequestBody String request) {
         updater.update(id, request);
-        return new ResponseEntity(HttpStatus.ACCEPTED);
+        return new ResponseEntity("DONE", HttpStatus.ACCEPTED);
     }
 }

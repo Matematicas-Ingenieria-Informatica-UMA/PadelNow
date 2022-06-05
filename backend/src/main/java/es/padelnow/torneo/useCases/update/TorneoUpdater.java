@@ -27,15 +27,14 @@ public class TorneoUpdater {
         this.partidoRepository = pr;
     }
 
-    public void update(Long id, UpdateTorneoRequest request) {
+    public void update(Long id, String request) {
         Optional<Torneo> busquedaTorneo = repository.findById(id);
 
         if (busquedaTorneo.isPresent()) {
             Torneo torneo = busquedaTorneo.get();
-            //TODO: Merge the request and the database data
             if (request != null) {
 
-                JSONObject json = new JSONObject(request);
+                JSONObject json = new JSONObject(request.trim());
                 Iterator<String> it = json.keys();
                 while (it.hasNext()) {
                     String key = it.next();
@@ -44,18 +43,22 @@ public class TorneoUpdater {
                             torneo.setNombre(json.getString(key));
                             break;
                         case "fechaInicial":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 torneo.setFechaInicial(d);
-                            } catch (ParseException e){e.printStackTrace();}
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
                             break;
                         case "fechaFinal":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 torneo.setFechaFinal(d);
-                            } catch (ParseException e){e.printStackTrace();}
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
                             break;
                         case "partidos":
                             boolean ok = true;
@@ -71,7 +74,9 @@ public class TorneoUpdater {
                                     ok = false;
                                 }
                             }
-                            if(ok){torneo.setPartidos(partidos);}
+                            if (ok) {
+                                torneo.setPartidos(partidos);
+                            }
                             break;
                     }
                 }
@@ -80,7 +85,7 @@ public class TorneoUpdater {
                 throw new IllegalStateException("TorneoUpdateRequest is null");
             }
 
-        }else {
+        } else {
             throw new IllegalStateException("Torneo with id " + id + " does not exist");
         }
     }
