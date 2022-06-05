@@ -7,7 +7,7 @@ import useJugador from "../../shared/Jugador/useJugador";
 
 export default function Jugadores(props) {
     const [width, setWidth] = useState(0);
-    const [gender, setGender] = useState("Masc");
+    const [gender, setGender] = useState("Masculino");
     const { jugadores } = useJugador();
 
     useEffect(() => {
@@ -48,10 +48,10 @@ export default function Jugadores(props) {
                     <button
                         className="BotonGenero"
                         onClick={() => {
-                            if (gender === "Masc") {
-                                setGender("Fem");
+                            if (gender === "Masculino") {
+                                setGender("Femenino");
                             } else {
-                                setGender("Masc");
+                                setGender("Masculino");
                             }
                         }}
                     >
@@ -59,7 +59,7 @@ export default function Jugadores(props) {
                     </button>
                     {jugadores.map((jugador) => {
                         let control =
-                            gender === "Masc" ? "MASCULINO" : "FEMENINO";
+                            gender === "Masculino" ? "MASCULINO" : "FEMENINO";
                         if (jugador.sexo === control) {
                             return (
                                 <JugadorMiniatura

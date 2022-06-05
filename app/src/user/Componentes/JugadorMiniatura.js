@@ -17,7 +17,7 @@ export default function JugadorMiniatura({ jugador }) {
         <>
             <div className="Jugador">
                 <button>
-                    <Link to={jugador.id}>
+                    <Link to={`/jugadores/${jugador.id}`}>
                         <img
                             src={jugador.foto}
                             className="Imagen"

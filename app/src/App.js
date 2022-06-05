@@ -184,7 +184,7 @@ function App() {
                             <>
                                 <VerTorneo />
                                 <Link
-                                    to="/"
+                                    to="/torneos"
                                     className="mt-15 mb-15 SimpleButton"
                                 >
                                     Volver
