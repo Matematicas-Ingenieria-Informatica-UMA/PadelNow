@@ -19,9 +19,9 @@ public class NoticiaDeleteController {
     }
 
     @DeleteMapping("/noticia/{id}")
-    public ResponseEntity delete(@PathVariable Long id) {
+    public ResponseEntity<String> delete(@PathVariable Long id) {
         remover.remove(id);
-        return new ResponseEntity(HttpStatus.ACCEPTED);
+        return new ResponseEntity<>("DONE", HttpStatus.ACCEPTED);
     }
 
 }

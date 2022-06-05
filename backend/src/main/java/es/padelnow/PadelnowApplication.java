@@ -8,6 +8,4 @@ public class PadelnowApplication {
     public static void main(String[] args) {
         SpringApplication.run(PadelnowApplication.class, args);
     }
-
-
 }

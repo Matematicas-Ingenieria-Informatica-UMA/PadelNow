@@ -1,27 +1,26 @@
 package es.padelnow.noticia;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.net.URL;
 import java.util.Date;
 
-
-@Getter
-@Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Entity
 public class Noticia {
+
+    public Noticia(String titulo, String cuerpo, String subtitulo) {
+        this.titulo = titulo;
+        this.cuerpo = cuerpo;
+        this.subtitulo = subtitulo;
+    }
+
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name = "noticia_sequence", allocationSize = 1)
+    @GeneratedValue(generator = "noticia_sequence")
     private long id;
 
     @Column(nullable = false)
@@ -30,34 +29,10 @@ public class Noticia {
     @Column(nullable = false)
     private String cuerpo;
 
-    @Column(nullable = false)
-    private String autor;
-
-    @Column
     private String subtitulo;
 
-    @ColumnDefault(value = "CURRENT_TIMESTAMP")
     @Column(nullable = false)
-    private Date fecha;
+    private Date fecha = new Date();
 
-    @Column
-    private URL foto;
-
-    public Noticia(String titulo, String autor, Date fecha) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.fecha = fecha;
-    }
-
-    public Noticia(long id, String titulo, String autor, Date fecha) {
-        this(titulo, autor, fecha);
-        this.id = id;
-    }
-
-    public Noticia(String titulo, String cuerpo, String autor, String subtitulo, URL foto) {
-        this(titulo, autor, new Date(System.currentTimeMillis()));
-        this.cuerpo = cuerpo;
-        this.foto = foto;
-    }
-
+    private String foto = "https://nbhc.ca/sites/default/files/styles/article/public/default_images/news-default-image%402x_0.png?itok=B4jML1jF";
 }

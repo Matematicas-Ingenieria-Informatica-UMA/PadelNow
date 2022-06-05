@@ -1,7 +1,6 @@
 package es.padelnow.noticia.controllers;
 
 import es.padelnow.noticia.Noticia;
-import es.padelnow.core.noticia.useCases.create.*;
 import es.padelnow.noticia.useCases.create.CreateNoticiaRequest;
 import es.padelnow.noticia.useCases.create.NoticiaCreator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +18,10 @@ public class NoticiaPostController {
     }
 
     @PostMapping("/noticia")
-    public ResponseEntity create(@RequestBody CreateNoticiaRequest request) {
+    public ResponseEntity<Noticia> create(@RequestBody CreateNoticiaRequest request) {
         Noticia noticia = creator.create(request);
 
-        return new ResponseEntity(HttpStatus.CREATED);
+        return new ResponseEntity<>(noticia, HttpStatus.CREATED);
     }
 }
 

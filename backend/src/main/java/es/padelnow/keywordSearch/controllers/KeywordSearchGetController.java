@@ -32,7 +32,7 @@ public class KeywordSearchGetController {
         this.torneoFinder = torneoFinder;
     }
 
-    @GetMapping("search/{keyword}")
+    /*@GetMapping("search/{keyword}")
     public List<JSONObject> searchByKeyword(@PathVariable String keyword) {
         List<Jugador> jugadores = jugadorFinder.search(keyword);
         List<Noticia> noticias = noticiaFinder.search(keyword);
@@ -40,7 +40,7 @@ public class KeywordSearchGetController {
         List<Torneo> torneos = torneoFinder.search(keyword);
         JSONArray jsonA = JSONArray.fromObject(jugadores);
 
-    }
+    }*/
 
 
 }

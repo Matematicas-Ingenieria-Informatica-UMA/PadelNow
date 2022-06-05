@@ -7,22 +7,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class NoticiaCreator {
-    private final NoticiaRepository repo;
+    private final NoticiaRepository noticiaRepository;
 
     @Autowired
-    public NoticiaCreator(NoticiaRepository repo) {
-        this.repo = repo;
+    public NoticiaCreator(NoticiaRepository noticiaRepository) {
+        this.noticiaRepository = noticiaRepository;
     }
 
     public Noticia create(CreateNoticiaRequest request) {
-
-        Noticia noticia = new Noticia(request.getTitulo(),
-                request.getCuerpo(),
-                request.getAutor(),
-                request.getSubtitulo(),
-                request.getFoto());
-
-        return repo.save(noticia);
+        Noticia noticia = new Noticia(request.getTitulo(), request.getCuerpo(), request.getSubtitulo());
+        return noticiaRepository.save(noticia);
     }
 
 }

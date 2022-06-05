@@ -1,8 +1,10 @@
 package es.padelnow.jugador;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import es.padelnow.jugador.enums.BrazoDominante;
 import es.padelnow.jugador.enums.PosicionDeJuego;
 import es.padelnow.jugador.enums.Sexo;
+import es.padelnow.pareja.Pareja;
 import lombok.*;
 
 import javax.persistence.*;
@@ -36,7 +38,7 @@ public class Jugador {
     @Enumerated(EnumType.STRING)
     private Sexo sexo;
 
-    private String foto;
+    private String foto = "https://clinicaangeleslm.com/v2/images/images/PNG/user.png";
 
     private double altura;
 
@@ -55,10 +57,7 @@ public class Jugador {
     @Column(name = "posicion_de_juego")
     private PosicionDeJuego posicionDeJuego;
 
-    private int ranking;
-
-    @PrePersist
-    private void onCreate() {
-        foto = "https://clinicaangeleslm.com/v2/images/images/PNG/user.png";
-    }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Pareja pareja;
 }

@@ -1,7 +1,5 @@
 package es.padelnow.torneo;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import es.padelnow.partido.Partido;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,9 +10,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -39,11 +34,6 @@ public class Torneo {
 
     private Date fechaFinal;
 
-    @OneToMany(mappedBy = "torneo")
-    private Collection<Partido> partidos;
-
-    @PrePersist
-    private void onCreate() {
-        partidos = new ArrayList<>();
-    }
+    @OneToMany(mappedBy = "torneo", cascade = CascadeType.ALL)
+    private Collection<Partido> partidos = new ArrayList<>();
 }

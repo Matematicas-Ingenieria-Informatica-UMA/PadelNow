@@ -22,7 +22,6 @@ public class TorneoPutController {
 
     @PutMapping("/torneo/{id}")
     public ResponseEntity update(@PathVariable Long id, @RequestBody UpdateTorneoRequest request) {
-        System.out.println(request.toString());
         updater.update(id, request);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }

@@ -1,8 +1,6 @@
 package es.padelnow.partido;
 
-
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import es.padelnow.torneo.Torneo;
 import es.padelnow.pareja.Pareja;
 import es.padelnow.partido.enums.Fase;
@@ -14,9 +12,6 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -45,17 +40,17 @@ public class Partido {
     @Column(nullable = false)
     private String juezSilla;
 
-    private String bolasDeBreaks;
+    private int bolasDeBreaks = 0;
 
-    private String winners;
+    private int winners = 0;
 
-    private String smashes;
+    private int smashes = 0;
 
-    private String erroresNoForzados;
+    private int erroresNoForzados = 0;
 
-    private String bolasDeOro;
+    private int bolasDeOro = 0;
 
-    private String duracion;
+    private int duracion = 0;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -63,13 +58,9 @@ public class Partido {
 
     @ManyToOne
     @JoinColumn(name = "torneo_id")
+    @JsonIgnore
     private Torneo torneo;
 
     @ManyToMany
-    @JoinTable(
-            name = "parejas_partido",
-            joinColumns = @JoinColumn(name = "partido_id"),
-            inverseJoinColumns = @JoinColumn(name = "pareja_id")
-    )
     private Collection<Pareja> parejas;
 }

@@ -1,5 +1,6 @@
 package es.padelnow.noticia.controllers;
 
+import es.padelnow.noticia.Noticia;
 import es.padelnow.noticia.useCases.update.NoticiaUpdater;
 import es.padelnow.noticia.useCases.update.UpdateNoticiaRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +22,10 @@ public class NoticiaPutController {
     }
 
     @PutMapping("/noticia/{id}")
-    public ResponseEntity update(@PathVariable Long id, @RequestBody UpdateNoticiaRequest request) {
+    public ResponseEntity<Noticia> update(@PathVariable Long id, @RequestBody UpdateNoticiaRequest request) {
         System.out.println(request.toString());
         updater.update(id, request);
-        return new ResponseEntity(HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
 }
