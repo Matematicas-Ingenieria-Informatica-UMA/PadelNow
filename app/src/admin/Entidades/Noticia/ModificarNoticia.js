@@ -1,12 +1,14 @@
 import React from "react";
-import { noticias } from "../../../BBDD/NoticiasBBDD";
 import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
 import { Link, useParams } from "react-router-dom";
+import useNoticia from "../../../shared/Noticia/useNoticia";
 
 export default function ModificarNoticia() {
   const { id } = useParams();
-  const [dia, mes, anyo] = noticias[id].fecha.split("/");
+  const { noticias } = useNoticia();
+  const noticia = noticias.find((noticia) => noticia.id === id);
+  const [dia, mes, anyo] = noticia.fecha.split("/");
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - MODIFICAR Noticia</h1>
@@ -21,14 +23,14 @@ export default function ModificarNoticia() {
               required
               type="text"
               id="Title"
-              placeholder={`Título: ${noticias[id].titulo}`}
+              placeholder={`Título: ${noticia.titulo}`}
             />
           </div>
           <div className="InputStyle">
             <input
               type="text"
               id="Subtitle"
-              placeholder={`Título: ${noticias[id].subtitulo}`}
+              placeholder={`Título: ${noticia.subtitulo}`}
             />
           </div>
         </div>
@@ -42,7 +44,7 @@ export default function ModificarNoticia() {
           <div className="InputStyle">
             <input
               required
-              placeholder={"URL del video: " + noticias[id].video}
+              placeholder={"URL del video: " + noticia.video}
               type="text"
               id="Video"
             />
@@ -51,7 +53,7 @@ export default function ModificarNoticia() {
             <input
               type="text"
               id="PhotoURL"
-              placeholder={"URL de la foto: " + noticias[id].imagen}
+              placeholder={"URL de la foto: " + noticia.foto}
             />
           </div>
         </div>
@@ -61,7 +63,7 @@ export default function ModificarNoticia() {
               required
               type="text"
               id="Body"
-              placeholder={"Cuerpo de la Noticia: " + noticias[id].texto}
+              placeholder={"Cuerpo de la Noticia: " + noticia.cuerpo}
             />
           </div>
         </div>

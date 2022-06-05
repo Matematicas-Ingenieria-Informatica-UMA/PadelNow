@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { parejas } from "../../../BBDD/ParejasBBDD";
-import { jugadores } from "../../../BBDD/JugadoresBBDD";
 import { useParams } from "react-router-dom";
+import usePareja from "../../../shared/Pareja/usePareja";
 
 export default function ModificarPareja() {
   const { id } = useParams();
+  const { parejas } = usePareja();
   const pareja = parejas.find((x) => x.id === id);
-  const jugador1 = jugadores.find((x) => x.id === pareja.IDjugador1);
-  const jugador2 = jugadores.find((x) => x.id === pareja.IDjugador2);
+  const [jugador1, jugador2] = pareja.jugadores;
 
   return (
     <>
@@ -24,7 +23,7 @@ export default function ModificarPareja() {
             className="DesplegableRecurso mb-15"
           >
             <option disabled selected>
-              Selecciona el género ({pareja.Genero})
+              Selecciona el género ({pareja.genero})
             </option>
 
             <option>Masculino</option>
@@ -67,7 +66,7 @@ export default function ModificarPareja() {
                 required
                 type="text"
                 id="Entrenador"
-                placeholder={`Entrenador: ${pareja.Entrenador}`}
+                placeholder={`Entrenador: ${pareja.entrenador}`}
               />
             </div>
             <div className="InputStyle">
@@ -75,7 +74,7 @@ export default function ModificarPareja() {
                 required
                 type="text"
                 id="Puntos"
-                placeholder={`Puntos: ${pareja.Puntos}`}
+                placeholder={`Puntos: ${pareja.puntos}`}
               />
             </div>
             <div className="InputStyle">
@@ -83,15 +82,7 @@ export default function ModificarPareja() {
                 required
                 type="text"
                 id="TempActivo"
-                placeholder={`Temporadas en Activo: ${pareja.TemporadasActivo}`}
-              />
-            </div>
-            <div className="InputStyle">
-              <input
-                required
-                type="text"
-                id="TopRanking"
-                placeholder={`Top Ranking: ${pareja.TopRanking}`}
+                placeholder={`Temporadas en Activo: ${pareja.temporadasActivo}`}
               />
             </div>
           </div>

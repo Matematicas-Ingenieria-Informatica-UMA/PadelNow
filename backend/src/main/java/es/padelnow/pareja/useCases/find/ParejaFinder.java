@@ -5,6 +5,7 @@ import es.padelnow.pareja.ParejaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -22,6 +23,8 @@ public class ParejaFinder {
     }
 
     public List<Pareja> findAll() {
-        return repository.findAll();
+        List<Pareja> parejas = repository.findAll();
+        parejas.sort(null);
+        return parejas;
     }
 }

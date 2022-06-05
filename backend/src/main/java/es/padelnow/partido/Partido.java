@@ -55,6 +55,7 @@ public class Partido {
 
     private String duracion = "00:00:00";
 
+    @Enumerated(EnumType.STRING)
     private Sexo genero;
 
     @Enumerated(EnumType.STRING)

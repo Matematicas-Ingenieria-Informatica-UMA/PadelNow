@@ -71,8 +71,9 @@ public class DataConfiguration {
             //PAREJAS
             Pareja pareja1 = new Pareja("Carlos Pozzoni", Sexo.MASCULINO, List.of(jugador1, jugador2));
             Pareja pareja2 = new Pareja("Jorge Martinez", Sexo.MASCULINO, List.of(jugador3, jugador4));
+            Pareja pareja3 = new Pareja("Daniel Girela", Sexo.MASCULINO, List.of(jugador5, jugador6));
 
-            parejaRepository.saveAll(List.of(pareja1, pareja2));
+            parejaRepository.saveAll(List.of(pareja1, pareja2, pareja3));
 
 
             // TORNEOS

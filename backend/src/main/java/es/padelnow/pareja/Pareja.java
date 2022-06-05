@@ -15,7 +15,7 @@ import java.util.Collection;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Pareja {
+public class Pareja implements Comparable {
 
     public Pareja(String entrenador, Sexo genero, Collection<Jugador> jugadores) {
         this.entrenador = entrenador;
@@ -44,4 +44,12 @@ public class Pareja {
 
     @ManyToMany
     private Collection<Jugador> jugadores;
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Pareja p) {
+            return (Integer.compare(this.puntos, p.puntos));
+        } else
+            return -1;
+    }
 }

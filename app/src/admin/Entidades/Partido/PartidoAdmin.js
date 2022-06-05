@@ -18,18 +18,18 @@ export default function PartidoAdmin() {
       </Link>
       <div className="Partidos">
         <div className="PartidosGenero">
-          {partidos.map((match) => {
-            if (match.genero === "Masculino") {
-              return <PartidoCRUD ID={match.id} />;
-            }
-          })}
+          {partidos
+            .filter((p) => p.genero === "MASCULINO")
+            .map((partido) => (
+              <PartidoCRUD partido={partido} />
+            ))}
         </div>
         <div className="PartidosGenero">
-          {partidos.map((match) => {
-            if (match.genero === "Femenino") {
-              return <PartidoCRUD ID={match.id} />;
-            }
-          })}
+          {partidos
+            .filter((p) => p.genero === "FEMENINO")
+            .map((partido) => (
+              <PartidoCRUD partido={partido} />
+            ))}
         </div>
       </div>
       <Link to="/admin/recursos">

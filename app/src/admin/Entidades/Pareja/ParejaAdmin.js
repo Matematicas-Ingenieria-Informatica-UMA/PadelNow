@@ -17,19 +17,18 @@ export default function ParejaAdmin() {
       </Link>
       <div className="Parejas">
         <div className="ParejasGenero">
-          {parejas.map((pareja) => {
-            if (pareja.Genero === "Masculino") {
-              return <ParejaCRUD ID={pareja.id} />;
-            }
-          })}
-          ;
+          {parejas
+            .filter((p) => p.genero === "MASCULINO")
+            .map((pareja, index) => (
+              <ParejaCRUD pareja={pareja} ranking={index + 1} />
+            ))}
         </div>
         <div className="ParejasGenero">
-          {parejas.map((pareja) => {
-            if (pareja.Genero === "Femenino") {
-              return <ParejaCRUD ID={pareja.id} />;
-            }
-          })}
+          {parejas
+            .filter((p) => p.genero === "FEMENINO")
+            .map((pareja, index) => (
+              <ParejaCRUD pareja={pareja} ranking={index + 1} />
+            ))}
         </div>
       </div>
       <Link to="/admin/recursos" className="mt-15 mb-15 SimpleButton">

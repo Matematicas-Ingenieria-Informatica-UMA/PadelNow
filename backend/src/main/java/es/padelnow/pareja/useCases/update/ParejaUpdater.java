@@ -2,9 +2,11 @@ package es.padelnow.pareja.useCases.update;
 
 import es.padelnow.jugador.Jugador;
 import es.padelnow.jugador.JugadorRepository;
+import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.pareja.Pareja;
 import es.padelnow.pareja.ParejaRepository;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,20 +42,29 @@ public class ParejaUpdater {
                 while (it.hasNext()) {
                     String key = it.next();
                     switch (key) {
-                        case "temporadas_activo":
-                            pareja.setTemporadasActivo(json.getInt(key));
+                        case "genero":
+                            String genero = json.getString(key);
+                            switch (genero) {
+                                case "FEMENINO" -> pareja.setGenero(Sexo.FEMENINO);
+                                case "MASCULINO" -> pareja.setGenero(Sexo.MASCULINO);
+                            }
                             break;
                         case "entrenador":
                             pareja.setEntrenador(json.getString(key));
                             break;
+                        case "temporadasActivo":
+                            pareja.setTemporadasActivo(json.getInt(key));
+                            break;
+                        case "activa":
+                            pareja.setActiva(json.getBoolean(key));
                         case "jugadores":
                             boolean ok = true;
-                            Type type = new TypeToken<Collection<Long>>() {
-                            }.getType();
-                            List<Long> inpList = new Gson().fromJson(String.valueOf(json.getLong(key)), type);
+                            JSONArray ja = json.getJSONArray(key);
+                            List<Object> l = ja.toList();
                             Collection<Jugador> jugadores = new ArrayList<>();
-                            for (Long x : inpList) {
-                                Optional<Jugador> j = jugadorRepository.findById(x);
+                            for (Object o : l){
+                                Long oid = Long.valueOf(o.toString());
+                                Optional<Jugador> j = jugadorRepository.findById(oid);
                                 if (j.isPresent()) {
                                     jugadores.add(j.get());
                                 } else {
