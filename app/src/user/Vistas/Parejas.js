@@ -3,14 +3,13 @@ import ParejaMiniatura from "../Componentes/ParejaMiniatura.js";
 import Generos from "../Componentes/Generos.js";
 import BotonGenero from "../Componentes/BotonGenero.js";
 
-import { parejas } from "../../BBDD/ParejasBBDD.js";
-
 import "../style/Parejas.css";
 import { Link } from "react-router-dom";
+import usePareja from "../../shared/Pareja/usePareja.js";
 export default function Parejas() {
     const [width, setWidth] = useState(0);
     const [gender, setGender] = useState("Masc");
-
+    const { parejas } = usePareja();
     useEffect(() => {
         const updateWidth = () => {
             const x = document.body.clientWidth;
