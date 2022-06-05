@@ -2,10 +2,11 @@ import React from "react";
 import Generos from "../../../user/Componentes/Generos.js";
 import PartidoCRUD from "./PartidoCRUD.js";
 import { Link } from "react-router-dom";
-import { partidos } from "../../../BBDD/PartidosBBDD.js";
+import usePartido from "../../../shared/Partido/usePartido";
 import "./Partidos.css";
 
 export default function PartidoAdmin() {
+  const { partidos } = usePartido();
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - Partidos</h1>

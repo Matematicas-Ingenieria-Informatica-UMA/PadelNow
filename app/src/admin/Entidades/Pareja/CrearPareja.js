@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import useJugador from "../../../shared/Jugador/useJugador";
 import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
-import { jugadores } from "../../../BBDD/JugadoresBBDD";
 
 export default function CrearPareja() {
+  const { jugadores } = useJugador();
+
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - CREAR Pareja</h1>

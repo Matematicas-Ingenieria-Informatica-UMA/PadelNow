@@ -2,12 +2,12 @@ import React from "react";
 import ParejaCRUD from "./ParejaCRUD.js";
 import Generos from "../../../user/Componentes/Generos.js";
 import { Link } from "react-router-dom";
-
-import { parejas } from "../../../BBDD/ParejasBBDD.js";
+import usePareja from "../../../shared/Pareja/usePareja";
 
 import "./Parejas.css";
 
 export default function ParejaAdmin() {
+  const { parejas } = usePareja();
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - Parejas</h1>

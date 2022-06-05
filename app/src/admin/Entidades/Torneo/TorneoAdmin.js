@@ -1,10 +1,11 @@
 import React from "react";
 import Generos from "../../../user/Componentes/Generos";
-import { torneos } from "../../../BBDD/TorneosBBDD";
 import { Link } from "react-router-dom";
 import TorneoCRUD from "./TorneoCRUD";
+import useTorneo from "../../../shared/Torneo/useTorneo";
 
 export default function TorneoAdmin() {
+  const { torneos } = useTorneo();
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - Torneos</h1>

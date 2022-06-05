@@ -1,17 +1,27 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
 import useJugador from "../../../shared/Jugador/useJugador";
 import { useForm } from "react-hook-form";
 import { Paises } from "../../../assets/Paises";
+import api from "../../../api";
 
 export default function ModificarJugador() {
   const { jugadores } = useJugador();
   const { id } = useParams();
+  const navigate = useNavigate();
   const jugador = jugadores.find((x) => x.id === parseInt(id));
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      await api.put("jugadores/" + id, data);
+      navigate("/admin/recursos/jugadores");
+      window.location.reload();
+    } catch (err) {
+      alert("Error al modificar el jugador");
+    }
+  };
 
   return (
     <>
@@ -25,6 +35,7 @@ export default function ModificarJugador() {
           <div className="InputStyle DataInput">
             <img src="/Profile.svg" alt="Profile" />
             <input
+              required
               type="text"
               id="Name"
               defaultValue={jugador.nombre}
@@ -33,6 +44,7 @@ export default function ModificarJugador() {
           </div>
           <div className="InputStyle DataInput">
             <input
+              required
               type="text"
               id="Surnames"
               defaultValue={jugador.apellidos}
@@ -79,6 +91,7 @@ export default function ModificarJugador() {
 
           <div className="InputStyle DataInput">
             <input
+              required
               type="text"
               id="City"
               placeholder={`Ciudad: (${jugador.ciudad})`}

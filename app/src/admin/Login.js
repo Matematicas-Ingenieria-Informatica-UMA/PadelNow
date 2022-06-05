@@ -1,37 +1,27 @@
 import React, { useState } from "react";
-import { Link, Navigate, Redirect } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import "./style/Login.css";
 import api from "../api";
 import useAuth from "./auth/useAuth";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
+  const { register, handleSubmit } = useForm();
   const { logged, setLogged } = useAuth();
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    setLogged(true);
-    /* try {
-      const { data } = await api.post(
-        "/login",
-        {
-          username,
-          password,
+  const onSubmit = async (credentials) => {
+    try {
+      const { data } = await api.post("/login", credentials, {
+        headers: {
+          "Content-Type": "multipart/form-data",
         },
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      });
       const { accessToken } = data;
       localStorage.setItem("accessToken", accessToken);
       setLogged(true);
     } catch (e) {
-      setError(true);
-    } */
+      alert("Error al iniciar sesión");
+    }
   };
 
   if (logged) return <Navigate to={"recursos"} />;
@@ -40,28 +30,23 @@ export default function Login() {
     <>
       <h1 className="TituloAdmin">PadelNow</h1>
       <div className="Login">
-        <form className="ConLogin">
+        <form className="ConLogin" onSubmit={handleSubmit(onSubmit)}>
           <div className="CentralLogin">
             <h2 className="LoginTitle">Login</h2>
             <input
               type="text"
               placeholder="Username"
               className="InputLogin"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              {...register("username")}
             />
             <input
               type="text"
               placeholder="Contraseña"
               className="InputLogin"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              {...register("password")}
             />
-            <p className="ErrorMessage">
-              {error && "Error al iniciar sesión, verifique sus credenciales"}
-            </p>
           </div>
-          <button type="submit" onClick={onSubmit} className="LoginButton">
+          <button type="submit" className="LoginButton">
             Iniciar sesión
           </button>
         </form>

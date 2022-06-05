@@ -14,7 +14,7 @@ export default function MiniaturaCRUD({ noticia }) {
           alt="Delete"
           className="ButtonPlayer"
         />
-        <Link to={`modificar/${noticia.ID}`}>
+        <Link to={`modificar/${noticia.id}`}>
           <img src="/Edit.svg" alt="Delete" className="ButtonPlayer" />
         </Link>
       </div>

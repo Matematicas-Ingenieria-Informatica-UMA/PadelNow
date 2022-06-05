@@ -9,7 +9,6 @@ import useJugador from "../../../shared/Jugador/useJugador";
 
 export default function JugadorAdmin() {
   const { jugadores } = useJugador();
-  console.log(jugadores);
 
   return (
     <>

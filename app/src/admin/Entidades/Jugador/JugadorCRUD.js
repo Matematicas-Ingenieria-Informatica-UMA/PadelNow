@@ -5,16 +5,28 @@ import "./Jugadores.css";
 import "../../style/Recursos.css";
 import api from "../../../api";
 import useJugador from "../../../shared/Jugador/useJugador";
+import usePareja from "../../../shared/Pareja/usePareja";
 
 export default function JugadorCRUD({ jugador }) {
   const [clase, setClase] = useState("JugadorNoDisplay");
   const [eliminar, setEliminar] = useState("Jugador");
   const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
   const { setJugadores } = useJugador();
+  const { parejas } = usePareja();
 
   const formattedFecha = new Date(jugador.fechaNacimiento).toLocaleDateString(
     "es-ES"
   );
+
+  const ranking =
+    parejas
+      .filter((p) => p.genero === jugador.sexo)
+      .indexOf(
+        parejas.find(
+          (p) =>
+            p.jugadores[0].id === jugador.id || p.jugadores[1].id === jugador.id
+        )
+      ) + 1;
 
   const deleteJugador = async () => {
     try {
@@ -63,7 +75,7 @@ export default function JugadorCRUD({ jugador }) {
             </div>
             <div className="keyValue">
               <h4>Ranking</h4>
-              <h3>{jugador.ranking}</h3>
+              <h3>{ranking}</h3>
             </div>
             <div className="keyValue">
               <h4>Brazo Dominante</h4>

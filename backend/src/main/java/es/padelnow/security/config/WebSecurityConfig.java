@@ -1,5 +1,6 @@
 package es.padelnow.security.config;
 
+import es.padelnow.security.filters.CustomAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // http.authorizeRequests().antMatchers("/login").permitAll();
         // http.authorizeRequests().antMatchers("/registration").permitAll();
         // http.authorizeRequests().anyRequest().authenticated();
-        // http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
+        http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
         // http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 

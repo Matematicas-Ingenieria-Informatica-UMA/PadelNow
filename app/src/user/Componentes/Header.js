@@ -20,9 +20,7 @@ export default function Header() {
         <div className="Navigate">
           <div className="SearchWithDesplegable">
             <div className="Search">
-              <Link to="/admin">
-                <img src="/lense.svg" alt="Search" />
-              </Link>
+              <img src="/lense.svg" alt="Search" />
               <input
                 type="text"
                 id="Search"

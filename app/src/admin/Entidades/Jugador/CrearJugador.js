@@ -1,102 +1,119 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
 import { Paises } from "../../../assets/Paises";
+import api from "../../../api";
 
 export default function CrearJugador() {
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+  const onSubmit = async (data) => {
+    try {
+      await api.post("/jugadores", data);
+      navigate("/admin/recursos/jugadores");
+      window.location.reload();
+    } catch (err) {
+      alert("Error al crear el jugador");
+    }
+  };
+
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - CREAR JUGADOR</h1>
-      <div className="CreaRecursoCard">
-        <h1 className="CenterAlign">Rellene los datos del jugador</h1>
-
+      <form className="CreaRecursoCard" onSubmit={handleSubmit(onSubmit)}>
+        <h1 className="CenterAlign">Inserte los datos del nuevo jugador</h1>
         <div className="IncidenciaTop">
           <div className="InputStyle DataInput">
             <img src="/Profile.svg" alt="Profile" />
-            <input required type="text" id="Name" placeholder="Nombre" />
+            <input required type="text" id="Name" {...register("nombre")} />
           </div>
           <div className="InputStyle DataInput">
-            <input required type="text" id="Surnames" placeholder="Apellidos" />
+            <input
+              required
+              type="text"
+              id="Surnames"
+              {...register("apellidos")}
+            />
           </div>
         </div>
         <div className="IncidenciaTop">
           <div className="InputStyle DateInput">
             <p className="m-0">Fecha de Nacimiento</p>
-            <input required type="date" id="Birth" placeholder="Nacimiento" />
+            <input type="date" id="Birth" {...register("fechaNacimiento")} />
           </div>
           <select
-            required
             name="Gender"
             id="Gender"
             className="DesplegableRecurso"
+            {...register("sexo")}
           >
-            <option disabled selected>
-              Selecciona el género
-            </option>
+            <option disabled>Selecciona el género</option>
 
-            <option>Masculino</option>
+            <option>MASCULINO</option>
 
-            <option>Femenino</option>
+            <option>FEMENINO</option>
           </select>
         </div>
         <div className="IncidenciaTop">
           <select
-            required
-            name="Nationality"
-            id="Nationality"
+            type="text"
             className="DesplegableRecurso"
+            id="Nationality"
+            defaultValue={`Nacionalidad`}
+            {...register("pais")}
           >
-            <option disabled selected>
-              Nacionalidad
-            </option>
-
             {Object.entries(Paises).map(([k, v]) => (
-              <option>{v}</option>
+              <option value={k}>{v}</option>
             ))}
           </select>
-          <div className="InputStyle DataInput">
-            <input required type="text" id="City" placeholder="Ciudad" />
-          </div>
-        </div>
-        <div className="IncidenciaTop">
-          <select name="Dominant" id="Dominant" className="DesplegableRecurso">
-            <option disabled selected>
-              Selecciona el brazo dominante
-            </option>
 
-            <option>Diestro</option>
-
-            <option>Zurdo</option>
-          </select>
           <div className="InputStyle DataInput">
             <input
               required
+              placeholder="Ciudad"
               type="text"
-              id="PhotoURL"
-              placeholder="URL de la foto"
+              id="City"
+              {...register("ciudad")}
             />
           </div>
         </div>
         <div className="IncidenciaTop">
-          <div className="InputStyle DataInput">
-            <input required type="text" id="Mean" placeholder="Media" />
-          </div>
-          <select name="Position" id="Position" className="DesplegableRecurso">
-            <option disabled selected>
-              Selecciona la posición
-            </option>
+          <select
+            name="Dominant"
+            id="Dominant"
+            className="DesplegableRecurso"
+            {...register("brazoDominante")}
+          >
+            <option disabled>Selecciona el brazo dominante</option>
 
-            <option>Revés</option>
+            <option>DIESTRO</option>
 
-            <option>Derecha</option>
+            <option>ZURDO</option>
           </select>
         </div>
-        <button className="BotonConFondo">Crear Jugador</button>
+        <div className="IncidenciaTop">
+          <select
+            name="Position"
+            id="Position"
+            className="DesplegableRecurso"
+            {...register("posicionDeJuego")}
+          >
+            <option disabled>Selecciona la posición</option>
+
+            <option>REVES</option>
+
+            <option>DERECHA</option>
+          </select>
+        </div>
+        <button type="submit" className="BotonConFondo">
+          Crear Jugador
+        </button>
         <Link to="/admin/recursos/jugadores" className="SimpleButton">
           Cancelar
         </Link>
-      </div>
+      </form>
     </>
   );
 }
