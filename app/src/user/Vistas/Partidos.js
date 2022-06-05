@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Partido from "../Componentes/Partido.js";
 import Generos from "../Componentes/Generos.js";
 import BotonGenero from "../Componentes/BotonGenero.js";

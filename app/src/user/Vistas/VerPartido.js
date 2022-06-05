@@ -1,30 +1,44 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import "../style/VerPartido.css";
-import { paises } from "../../assets/Paises";
-import usePareja from "../../shared/Pareja/usePareja.js";
-import useJugador from "../../shared/Jugador/useJugador.js";
+import { Paises } from "../../assets/Paises";
 import usePartido from "../../shared/Partido/usePartido.js";
-import Partido from "../Componentes/Partido";
+import useTorneo from "../../shared/Torneo/useTorneo";
 
 export default function VerPartido(props) {
     const { id: paramId } = useParams();
     const id = paramId || props.ID;
     const { partidos } = usePartido();
-    const partido = partidos.find((x) => x.id === id);
+    const partido = partidos.find((x) => x.id == id);
+    console.log(id, partido);
+    const {
+        parejas,
+        duracion,
+        fase,
+        resultado,
+        juezSilla,
+        bolasDeBreaks,
+        winners,
+        smashes,
+        erroresNoForzados,
+        bolasDeOro,
+    } = partido;
+    const fecha = new Date(partido.fecha).toLocaleDateString("es-ES");
+    const [pareja1, pareja2] = parejas;
+    const [jugador1p1, jugador2p1] = pareja1.jugadores;
+    const [jugador1p2, jugador2p2] = pareja2.jugadores;
 
-    const { parejas } = usePareja();
-    const pareja1 = parejas.find((x) => x.id === partido.idPareja1);
-    const pareja2 = parejas.find((x) => x.id === partido.idPareja2);
+    const resultados = resultado.split(/[/ ]+/);
+    const breaks = bolasDeBreaks.split(" ");
+    const winnersT = winners.split(" ");
+    const smashesT = smashes.split(" ");
+    const errors = erroresNoForzados.split(" ");
+    const gold = bolasDeOro.split(" ");
 
-    const { jugadores } = useJugador();
-    const jugador1p1 = jugadores.find((x) => pareja1.IDjugador1 === x.id);
-    const jugador2p1 = jugadores.find((x) => pareja1.IDjugador2 === x.id);
-
-    const jugador1p2 = jugadores.find((x) => pareja2.IDjugador1 === x.id);
-    const jugador2p2 = jugadores.find((x) => pareja2.IDjugador2 === x.id);
-
-    const resultado = partido.resultado.split("/");
+    const { torneos } = useTorneo();
+    const torneo = torneos.find((t) => {
+        return t.partidos.find((p) => p === partido.id) !== null;
+    });
 
     return (
         <>
@@ -42,7 +56,7 @@ export default function VerPartido(props) {
                     <button>
                         <Link to={"/jugadores/" + jugador1p1.id}>
                             <img
-                                src={jugador1p1.URL}
+                                src={jugador1p1.foto}
                                 alt="FotoJugador"
                                 className="FotoJugador"
                             ></img>{" "}
@@ -52,7 +66,7 @@ export default function VerPartido(props) {
                     <button>
                         <Link to={"/jugadores/" + jugador2p1.id}>
                             <img
-                                src={jugador2p1.URL}
+                                src={jugador2p1.foto}
                                 alt="FotoJugador"
                                 className="FotoJugador"
                             ></img>{" "}
@@ -61,6 +75,10 @@ export default function VerPartido(props) {
                 </div>
                 <div className="Columna2">
                     <div className="ColumnaDatos">
+                        <div className="FechayFase">
+                            <h4>{fecha}</h4>
+                            <h4>{fase}</h4>
+                        </div>
                         <div className="TituloDatos">
                             <img
                                 src="https://assets.stickpng.com/images/580b585b2edbce24c47b2b90.png"
@@ -78,62 +96,62 @@ export default function VerPartido(props) {
                         <div className="ResultadoTotal">
                             <div className="Set">
                                 <h1 className="JuegosPartido">
-                                    {resultado[0]}
+                                    {resultados[0]}
                                 </h1>
 
                                 <h1>SET 1</h1>
                                 <h1 className="JuegosPartido">
-                                    {resultado[1]}
+                                    {resultados[1]}
                                 </h1>
                             </div>
                             <div className="Set">
                                 <h1 className="JuegosPartido">
-                                    {resultado[2]}
+                                    {resultados[2]}
                                 </h1>
                                 <h1>SET 2</h1>
                                 <h1 className="JuegosPartido">
-                                    {resultado[3]}
+                                    {resultados[3]}
                                 </h1>
                             </div>
                             <div className="Set">
                                 <h1 className="JuegosPartido">
-                                    {resultado[4]}
+                                    {resultados[4]}
                                 </h1>
                                 <h1>SET 3</h1>
                                 <h1 className="JuegosPartido">
-                                    {resultado[5]}
+                                    {resultados[5]}
                                 </h1>
                             </div>
                         </div>
                         <div className="SepHorDatos"></div>
                         <div className="EstadisticaDato">
-                            <h2>{partido.breaks[0]}</h2>
+                            <h2>{breaks[0]}</h2>
                             <h2>BREAK POINTS</h2>
-                            <h2>{partido.breaks[1]}</h2>
+                            <h2>{breaks[1]}</h2>
                         </div>
                         <div className="SepHorDatos"></div>
                         <div className="EstadisticaDato">
-                            <h2>{partido.winners[0]}</h2>
+                            <h2>{winnersT[0]}</h2>
                             <h2>WINNERS</h2>
-                            <h2>{partido.winners[1]}</h2>
+                            <h2>{winnersT[1]}</h2>
                         </div>
                         <div className="SepHorDatos"></div>
                         <div className="EstadisticaDato">
-                            <h2>{partido.smashes[0]}</h2>
+                            <h2>{smashesT[0]}</h2>
                             <h2>SMASHES</h2>
-                            <h2>{partido.smashes[1]}</h2>
+                            <h2>{smashesT[1]}</h2>
                         </div>
                         <div className="SepHorDatos"></div>
                         <div className="EstadisticaDato">
-                            <h2>{partido.errors[0]}</h2>
+                            <h2>{errors[0]}</h2>
                             <h2>UNFORCED ERRORS</h2>
-                            <h2>{partido.errors[1]}</h2>
+                            <h2>{errors[1]}</h2>
                         </div>
                         <div className="SepHorDatos"></div>
                         <div className="EstadisticaDato">
-                            <h2>{partido.gold[0]}</h2>
+                            <h2>{gold[0]}</h2>
                             <h2>GOLD POINTS</h2>
-                            <h2>{partido.gold[1]}</h2>
+                            <h2>{gold[1]}</h2>
                         </div>
                         <div className="SepHorDatos"></div>
                         <div className="EstadisticaDato">
@@ -142,7 +160,7 @@ export default function VerPartido(props) {
                                 src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/23f0.png"
                                 alt="reloj"
                             ></img>
-                            <h2>{partido.tiempo}</h2>
+                            <h2>{duracion}</h2>
                             <img
                                 className="reloj"
                                 src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/23f0.png"
@@ -150,17 +168,15 @@ export default function VerPartido(props) {
                             ></img>
                         </div>
 
-                        <h3 className="Fase">{partido.fase}</h3>
-                        <h3 className="Juez">
-                            Juez de silla: {partido.juezSilla}
-                        </h3>
+                        <h3 className="Fase">{fase}</h3>
+                        <h3 className="Juez">Juez de silla: {juezSilla}</h3>
                     </div>
                 </div>
                 <div className="ColumnaFoto">
                     <button>
                         <Link to={"/jugadores/" + jugador2p2.id}>
                             <img
-                                src={jugador2p2.URL}
+                                src={jugador2p2.foto}
                                 alt="FotoJugador"
                                 className="FotoJugador"
                             ></img>{" "}
@@ -169,7 +185,7 @@ export default function VerPartido(props) {
                     <button>
                         <Link to={"/jugadores/" + jugador1p2.id}>
                             <img
-                                src={jugador1p2.URL}
+                                src={jugador1p2.foto}
                                 alt="FotoJugador"
                                 className="FotoJugador"
                             ></img>{" "}
