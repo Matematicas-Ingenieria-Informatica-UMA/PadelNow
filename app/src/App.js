@@ -34,6 +34,7 @@ import TorneoAdmin from "./admin/Entidades/Torneo/TorneoAdmin";
 import CrearTorneo from "./admin/Entidades/Torneo/CrearTorneo";
 import ModificarTorneo from "./admin/Entidades/Torneo/ModificarTorneo";
 import { Link } from "react-router-dom";
+import VerTorneo from "./user/Vistas/VerTorneo";
 
 function App() {
     return (
@@ -176,6 +177,21 @@ function App() {
                     />
 
                     <Route path="torneos" element={<Torneos />} />
+
+                    <Route
+                        path="torneos/:id"
+                        element={
+                            <>
+                                <VerTorneo />
+                                <Link
+                                    to="/"
+                                    className="mt-15 mb-15 SimpleButton"
+                                >
+                                    Volver
+                                </Link>
+                            </>
+                        }
+                    />
                 </Route>
                 <Route path="*" element={<Error />} />
             </Routes>

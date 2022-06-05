@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import useJugador from "../../shared/Jugador/useJugador.js";
 import "../style/VerPareja.css";
-import { paises } from "../../assets/paises";
+import Paises from "../../assets/Paises";
 import usePareja from "../../shared/Pareja/usePareja.js";
 import usePartido from "../../shared/Partido/usePartido.js";
 import Partido from "../Componentes/Partido";
@@ -32,13 +32,13 @@ export default function VerPareja(props) {
                         className="FotoyBandera"
                     >
                         <img
-                            src={jugador1.URL}
+                            src={jugador1.foto}
                             alt="ImagenJugador"
                             className="VerFotoJugador"
                         ></img>
                         <img
                             className="VerBanderaJugador"
-                            src={`https://flagcdn.com/256x192/${jugador1.nacionalidad}.png`}
+                            src={`https://flagcdn.com/256x192/${jugador1.pais}.png`}
                             alt="Bandera"
                         ></img>
                     </Link>
@@ -58,13 +58,13 @@ export default function VerPareja(props) {
                         className="FotoyBandera"
                     >
                         <img
-                            src={jugador2.URL}
+                            src={jugador2.foto}
                             alt="ImagenJugador"
                             className="VerFotoJugador"
                         ></img>
                         <img
                             className="VerBanderaJugador"
-                            src={`https://flagcdn.com/256x192/${jugador2.nacionalidad}.png`}
+                            src={`https://flagcdn.com/256x192/${jugador2.pais}.png`}
                             alt="Bandera"
                         ></img>
                     </Link>

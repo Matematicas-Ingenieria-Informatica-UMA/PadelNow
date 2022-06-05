@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
-import {paises} from "../../../assets/paises";
+import { Paises } from "../../../assets/Paises";
 
 export default function CrearJugador() {
     return (
@@ -14,17 +14,32 @@ export default function CrearJugador() {
 
                 <div className="IncidenciaTop">
                     <div className="InputStyle DataInput">
-                        <img src="/Profile.svg" alt="Profile"/>
-                        <input required type="text" id="Name" placeholder="Nombre"/>
+                        <img src="/Profile.svg" alt="Profile" />
+                        <input
+                            required
+                            type="text"
+                            id="Name"
+                            placeholder="Nombre"
+                        />
                     </div>
                     <div className="InputStyle DataInput">
-                        <input required type="text" id="Surnames" placeholder="Apellidos"/>
+                        <input
+                            required
+                            type="text"
+                            id="Surnames"
+                            placeholder="Apellidos"
+                        />
                     </div>
                 </div>
                 <div className="IncidenciaTop">
                     <div className="InputStyle DateInput">
                         <p className="m-0">Fecha de Nacimiento</p>
-                        <input required type="date" id="Birth" placeholder="Nacimiento"/>
+                        <input
+                            required
+                            type="date"
+                            id="Birth"
+                            placeholder="Nacimiento"
+                        />
                     </div>
                     <select
                         required
@@ -52,16 +67,25 @@ export default function CrearJugador() {
                             Nacionalidad
                         </option>
 
-                        {Object.entries(paises).map(([k, v]) =>
+                        {Object.entries(Paises).map(([k, v]) => (
                             <option>{v}</option>
-                        )}
+                        ))}
                     </select>
                     <div className="InputStyle DataInput">
-                        <input required type="text" id="City" placeholder="Ciudad"/>
+                        <input
+                            required
+                            type="text"
+                            id="City"
+                            placeholder="Ciudad"
+                        />
                     </div>
                 </div>
                 <div className="IncidenciaTop">
-                    <select name="Dominant" id="Dominant" className="DesplegableRecurso">
+                    <select
+                        name="Dominant"
+                        id="Dominant"
+                        className="DesplegableRecurso"
+                    >
                         <option disabled selected>
                             Selecciona el brazo dominante
                         </option>
@@ -81,9 +105,18 @@ export default function CrearJugador() {
                 </div>
                 <div className="IncidenciaTop">
                     <div className="InputStyle DataInput">
-                        <input required type="text" id="Mean" placeholder="Media"/>
+                        <input
+                            required
+                            type="text"
+                            id="Mean"
+                            placeholder="Media"
+                        />
                     </div>
-                    <select name="Position" id="Position" className="DesplegableRecurso">
+                    <select
+                        name="Position"
+                        id="Position"
+                        className="DesplegableRecurso"
+                    >
                         <option disabled selected>
                             Selecciona la posición
                         </option>

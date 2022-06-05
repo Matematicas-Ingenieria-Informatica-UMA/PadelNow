@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import "../style/VerPartido.css";
-import { paises } from "../../assets/paises";
+import { paises } from "../../assets/Paises";
 import usePareja from "../../shared/Pareja/usePareja.js";
 import useJugador from "../../shared/Jugador/useJugador.js";
 import usePartido from "../../shared/Partido/usePartido.js";
@@ -50,7 +50,7 @@ export default function VerPartido(props) {
                     </button>
 
                     <button>
-                        <Link to={"/jugadores/" + jugador1p1.id}>
+                        <Link to={"/jugadores/" + jugador2p1.id}>
                             <img
                                 src={jugador2p1.URL}
                                 alt="FotoJugador"
@@ -158,7 +158,7 @@ export default function VerPartido(props) {
                 </div>
                 <div className="ColumnaFoto">
                     <button>
-                        <Link to={"/jugadores/" + jugador1p1.id}>
+                        <Link to={"/jugadores/" + jugador2p2.id}>
                             <img
                                 src={jugador2p2.URL}
                                 alt="FotoJugador"
@@ -167,7 +167,7 @@ export default function VerPartido(props) {
                         </Link>
                     </button>
                     <button>
-                        <Link to={"/jugadores/" + jugador1p1.id}>
+                        <Link to={"/jugadores/" + jugador1p2.id}>
                             <img
                                 src={jugador1p2.URL}
                                 alt="FotoJugador"

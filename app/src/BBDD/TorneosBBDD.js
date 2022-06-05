@@ -3,6 +3,7 @@ export const torneos = [
         id: "1",
         nombre: "Brussel Padel Open",
         faseInicial: "Octavos de Final",
+        lugar: "be",
         institucion: {
             nombre: "World Padel Tour",
             organizador: "Damm",
@@ -14,7 +15,7 @@ export const torneos = [
         anio: "2022",
         ganadores: { jugador1: "Galán", jugador2: "Lebron" },
         categoria: "Masculino",
-        // partidos: [...]
+        partidos: ["1", "2", "4"],
     },
     {
         id: "2",
