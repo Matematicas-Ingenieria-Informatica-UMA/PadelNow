@@ -14,7 +14,7 @@ public final class CreateJugadorRequestMother {
     public static CreateJugadorRequest create(String nombre, String apellido, Sexo sexo, String pais, BrazoDominante brazoDominante, PosicionDeJuego posicionDeJuego, double altura, Date fechaNac) {
         return new CreateJugadorRequest(nombre, apellido, sexo, pais, brazoDominante, posicionDeJuego, altura, fechaNac);
     }
-
+    
     public static CreateJugadorRequest random() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {

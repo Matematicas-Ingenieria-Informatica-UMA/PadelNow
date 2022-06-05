@@ -47,7 +47,7 @@ public class Torneo {
 
     private String foto = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfSXWMgwcnCtlREONx9MboF7enNJAxZ8tqSWZzcBlox-VN6iRWNSPJeeWM3Af9h-RAVco&usqp=CAU";
 
-    private String institucion = "WPT";
+    private String institucion = "World Padel Tour";
 
     @OneToMany(mappedBy = "torneo", cascade = CascadeType.ALL)
     private Collection<Partido> partidos = new ArrayList<>();
