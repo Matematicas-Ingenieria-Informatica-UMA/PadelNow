@@ -2,12 +2,15 @@ package es.padelnow.torneo.useCases.update;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import es.padelnow.jugador.Jugador;
 import es.padelnow.partido.Partido;
 import es.padelnow.partido.PartidoRepository;
 import es.padelnow.torneo.Torneo;
 import es.padelnow.torneo.TorneoRepository;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.Part;
@@ -62,14 +65,14 @@ public class TorneoUpdater {
                             break;
                         case "partidos":
                             boolean ok = true;
-                            Type type = new TypeToken<Collection<Long>>() {
-                            }.getType();
-                            List<Long> inpList = new Gson().fromJson(String.valueOf(json.getLong(key)), type);
+                            JSONArray ja = json.getJSONArray(key);
+                            List<Object> l = ja.toList();
                             Collection<Partido> partidos = new ArrayList<>();
-                            for (Long x : inpList) {
-                                Optional<Partido> p = partidoRepository.findById(x);
-                                if (p.isPresent()) {
-                                    partidos.add(p.get());
+                            for (Object o : l){
+                                Long oid = Long.valueOf(o.toString());
+                                Optional<Partido> j = partidoRepository.findById(oid);
+                                if (j.isPresent()) {
+                                    partidos.add(j.get());
                                 } else {
                                     ok = false;
                                 }
