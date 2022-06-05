@@ -1,73 +1,75 @@
 .Torneo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
 
-  width: fit-content;
-  max-width: 500px;
-  height: fit-content;
-  padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: fit-content;
+    padding: 20px;
 
-  background: linear-gradient(196.7deg, #455981 9.47%, #33354a 70.61%);
-  border-radius: 15px;
+    background: linear-gradient(196.7deg, #455981 9.47%, #33354a 70.61%);
+    border-radius: 15px;
 }
 
 .TorneoDiv1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
 }
 
 .FotoTorneo {
-  border-radius: 50%;
-  width: 12%;
-  height: fit-content;
+    border-radius: 50%;
+    width: 12%;
+    height: fit-content;
 }
 
 .NombreTorneo {
-  height: 30px;
+    height: fit-content;
+    text-align: left;
 }
 
 .InstitucionCircuito {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .KeyValueDiv {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .KeyTorneo {
-  font-weight: 100;
+    font-weight: 100;
 }
 
 .DivAmpliar {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  height: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    height: 25px;
 }
 
 .AmpliarTorneo {
-  height: 100%;
+    height: 100%;
 }
 
 .Vacio {
-  display: flex;
-  position: absolute;
-  height: 0px;
-  opacity: 0;
+    display: flex;
+    position: absolute;
+    height: 0px;
+    opacity: 0;
 }
 
 .InstitucionTorneo {
-  justify-content: flex-start;
-  width: 100%;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .moreInfo {
-  width: 100%;
+    width: 100%;
 }

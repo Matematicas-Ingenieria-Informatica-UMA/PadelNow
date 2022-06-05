@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../style/Torneo.css";
 
 export default function Torneo({ torneo }) {
+    const fase = torneo.faseInicial.replaceAll("_", " ");
     return (
         <button className="Torneo">
             <Link to={`/torneos/${torneo.id}`}>
@@ -21,7 +22,7 @@ export default function Torneo({ torneo }) {
                 </div>
                 <div className="KeyValueDiv">
                     <h3 className="KeyTorneo">Ronda Inicial</h3>
-                    <h3 className="ValueTorneo">{torneo.faseInicial}</h3>
+                    <h3 className="ValueTorneo">{fase}</h3>
                 </div>
             </Link>
         </button>
