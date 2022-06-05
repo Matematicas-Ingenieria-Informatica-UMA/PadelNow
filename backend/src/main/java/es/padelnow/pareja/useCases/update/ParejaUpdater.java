@@ -2,6 +2,7 @@ package es.padelnow.pareja.useCases.update;
 
 import es.padelnow.jugador.Jugador;
 import es.padelnow.jugador.JugadorRepository;
+import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.pareja.Pareja;
 import es.padelnow.pareja.ParejaRepository;
 
@@ -40,12 +41,21 @@ public class ParejaUpdater {
                 while (it.hasNext()) {
                     String key = it.next();
                     switch (key) {
-                        case "temporadas_activo":
-                            pareja.setTemporadasActivo(json.getInt(key));
+                        case "genero":
+                            String genero = json.getString(key);
+                            switch (genero) {
+                                case "FEMENINO" -> pareja.setGenero(Sexo.FEMENINO);
+                                case "MASCULINO" -> pareja.setGenero(Sexo.MASCULINO);
+                            }
                             break;
                         case "entrenador":
                             pareja.setEntrenador(json.getString(key));
                             break;
+                        case "temporadasActivo":
+                            pareja.setTemporadasActivo(json.getInt(key));
+                            break;
+                        case "activa":
+                            pareja.setActiva(json.getBoolean(key));
                         case "jugadores":
                             boolean ok = true;
                             Type type = new TypeToken<Collection<Long>>() {
