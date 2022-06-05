@@ -1,13 +1,19 @@
 import PartidoContext from "./PartidoContext";
 import { useEffect, useState } from "react";
-import { partidos as partidosBBDD } from "../../BBDD/PartidosBBDD";
+import api from "../../api";
 
 export default function PartidoProvider({ children }) {
     const [partidos, setPartidos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setPartidos(partidosBBDD);
+        api.get("/partidos").then(({ data }) => {
+            setPartidos(data);
+            setLoading(false);
+        });
     }, []);
+
+    if (loading) return null;
 
     return (
         <PartidoContext.Provider value={{ partidos }}>

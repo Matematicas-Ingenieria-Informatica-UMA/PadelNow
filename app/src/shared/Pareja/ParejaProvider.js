@@ -1,16 +1,23 @@
 import ParejaContext from "./ParejaContext";
-import {useEffect, useState} from "react";
-import {parejas as parejasBBDD} from "../../BBDD/ParejasBBDD";
+import { useEffect, useState } from "react";
+import api from "../../api";
 
-export default function ParejaProvider({children}) {
-
+export default function ParejaProvider({ children }) {
     const [parejas, setParejas] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setParejas(parejasBBDD);
-    }, [])
+        api.get("/parejas").then(({ data }) => {
+            setParejas(data);
+            setLoading(false);
+        });
+    }, []);
 
-    return <ParejaContext.Provider value={{parejas}}>
-        {children}
-    </ParejaContext.Provider>
+    if (loading) return null;
+
+    return (
+        <ParejaContext.Provider value={{ parejas }}>
+            {children}
+        </ParejaContext.Provider>
+    );
 }

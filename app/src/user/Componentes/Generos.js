@@ -5,9 +5,9 @@ export default function Generos() {
     return (
         <>
             <div className="Generos">
-                <img src="/Masc.svg" alt="Masculino" />
+                <img src="/Masculino.svg" alt="Masculino" />
                 <div className="SepVert"> </div>
-                <img src="/Fem.svg" alt="Femenino" />
+                <img src="/Femenino.svg" alt="Femenino" />
             </div>
         </>
     );

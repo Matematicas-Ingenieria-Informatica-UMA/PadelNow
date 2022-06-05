@@ -35,19 +35,18 @@ export default function Parejas() {
                     >
                         <BotonGenero clase={gender} />
                     </button>
-                    {parejas.map((pareja) => {
-                        let control =
-                            gender === "Masc" ? "Masculino" : "Femenino";
-                        if (pareja.Genero === control) {
-                            return (
-                                <button>
-                                    <Link to={pareja.id}>
-                                        <ParejaMiniatura ID={pareja.id} />
-                                    </Link>
-                                </button>
-                            );
-                        }
-                    })}
+                    {parejas
+                        .filter((p) => {
+                            let control =
+                                gender === "Masc" ? "MASCULINO" : "FEMENINO";
+                            return p.genero === control;
+                        })
+                        .map((pareja, index) => (
+                            <ParejaMiniatura
+                                pareja={pareja}
+                                ranking={index + 1}
+                            />
+                        ))}
                 </div>
             </>
         );
@@ -57,30 +56,24 @@ export default function Parejas() {
                 <Generos />
                 <div className="Parejas">
                     <div className="ParejasGenero">
-                        {parejas.map((pareja) => {
-                            if (pareja.Genero === "Masculino") {
-                                return (
-                                    <button>
-                                        <Link to={pareja.id}>
-                                            <ParejaMiniatura ID={pareja.id} />
-                                        </Link>
-                                    </button>
-                                );
-                            }
-                        })}
+                        {parejas
+                            .filter((p) => p.genero === "MASCULINO")
+                            .map((pareja, index) => (
+                                <ParejaMiniatura
+                                    pareja={pareja}
+                                    ranking={index + 1}
+                                />
+                            ))}
                     </div>
                     <div className="ParejasGenero">
-                        {parejas.map((pareja) => {
-                            if (pareja.Genero === "Femenino") {
-                                return (
-                                    <button>
-                                        <Link to={pareja.id}>
-                                            <ParejaMiniatura ID={pareja.id} />
-                                        </Link>
-                                    </button>
-                                );
-                            }
-                        })}
+                        {parejas
+                            .filter((p) => p.genero === "FEMENINO")
+                            .map((pareja, index) => (
+                                <ParejaMiniatura
+                                    pareja={pareja}
+                                    ranking={index + 1}
+                                />
+                            ))}
                     </div>
                 </div>
             </>

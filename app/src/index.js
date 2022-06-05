@@ -6,8 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import AuthProvider from "./admin/contexts/AuthProvider";
 import JugadorProvider from "./shared/Jugador/JugadorProvider";
 import ParejaProvider from "./shared/Pareja/ParejaProvider";
-import Partido from "./user/Componentes/Partido";
 import PartidoProvider from "./shared/Partido/PartidoProvider";
+import TorneoProvider from "./shared/Torneo/TorneoProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,9 +15,11 @@ root.render(
         <JugadorProvider>
             <ParejaProvider>
                 <PartidoProvider>
-                    <AuthProvider>
-                        <App />
-                    </AuthProvider>
+                    <TorneoProvider>
+                        <AuthProvider>
+                            <App />
+                        </AuthProvider>
+                    </TorneoProvider>
                 </PartidoProvider>
             </ParejaProvider>
         </JugadorProvider>

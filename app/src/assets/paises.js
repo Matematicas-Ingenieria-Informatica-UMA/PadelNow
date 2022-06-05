@@ -1,4 +1,4 @@
-export const paises = {
+export const Paises = {
     af: "Afganistán",
     al: "Albania",
     de: "Alemania",

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { jugadores } from "../../BBDD/JugadoresBBDD";
 import Generos from "../Componentes/Generos";
-
 import JugadorMiniatura from "../Componentes/JugadorMiniatura";
 import BotonGenero from "../Componentes/BotonGenero";
-
 import "../style/Jugadores.css";
+import useJugador from "../../shared/Jugador/useJugador";
 
 export default function Jugadores(props) {
     const [width, setWidth] = useState(0);
     const [gender, setGender] = useState("Masc");
+    const { jugadores } = useJugador();
 
     useEffect(() => {
         const updateWidth = () => {
@@ -26,26 +25,18 @@ export default function Jugadores(props) {
                 <Generos />
                 <div className="Jugadores">
                     <div className="JugadoresGenero">
-                        {jugadores.map((x) => {
-                            if (x.genero === "Masculino") {
-                                return (
-                                    <JugadorMiniatura
-                                        ID={x.id}
-                                    ></JugadorMiniatura>
-                                );
-                            }
-                        })}
+                        {jugadores
+                            .filter((j) => j.sexo === "MASCULINO")
+                            .map((jugador) => (
+                                <JugadorMiniatura jugador={jugador} />
+                            ))}
                     </div>
                     <div className="JugadoresGenero">
-                        {jugadores.map((x) => {
-                            if (x.genero === "Femenino") {
-                                return (
-                                    <JugadorMiniatura
-                                        ID={x.id}
-                                    ></JugadorMiniatura>
-                                );
-                            }
-                        })}
+                        {jugadores
+                            .filter((j) => j.sexo === "FEMENINO")
+                            .map((jugador) => (
+                                <JugadorMiniatura jugador={jugador} />
+                            ))}
                     </div>
                 </div>
             </>
@@ -66,12 +57,14 @@ export default function Jugadores(props) {
                     >
                         <BotonGenero clase={gender} />
                     </button>
-                    {jugadores.map((x) => {
+                    {jugadores.map((jugador) => {
                         let control =
-                            gender === "Masc" ? "Masculino" : "Femenino";
-                        if (x.genero === control) {
+                            gender === "Masc" ? "MASCULINO" : "FEMENINO";
+                        if (jugador.sexo === control) {
                             return (
-                                <JugadorMiniatura ID={x.id}></JugadorMiniatura>
+                                <JugadorMiniatura
+                                    jugador={jugador}
+                                ></JugadorMiniatura>
                             );
                         }
                     })}

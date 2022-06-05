@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import ParejaContext from "./PartidoContext";
+import PartidoContext from "./PartidoContext";
 
-const usePartido = () => useContext(ParejaContext);
+const usePartido = () => useContext(PartidoContext);
 
 export default usePartido;

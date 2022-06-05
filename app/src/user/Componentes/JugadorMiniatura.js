@@ -1,17 +1,17 @@
 import React from "react";
 import { useState } from "react";
-import { paises } from "../../assets/paises";
+import { Paises } from "../../assets/Paises";
+import BrazoDominante from "../../assets/BrazoDominante";
+import PosicionDeJuego from "../../assets/PosicionDeJuego";
 import "../style/Jugador.css";
-import useJugador from "../../shared/Jugador/useJugador";
-import usePareja from "../../shared/Pareja/usePareja";
 import { Link } from "react-router-dom";
 
-export default function JugadorMiniatura(props) {
+export default function JugadorMiniatura({ jugador }) {
     const [clase, setClase] = useState("JugadorNoDisplay");
     const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
-    const { parejas } = usePareja();
-    const { jugadores } = useJugador();
-    const jugador = jugadores.find((x) => x.id === props.ID);
+    const formattedDate = new Date(jugador.fechaNacimiento).toLocaleDateString(
+        "es-ES"
+    );
 
     return (
         <>
@@ -19,9 +19,9 @@ export default function JugadorMiniatura(props) {
                 <button>
                     <Link to={jugador.id}>
                         <img
-                            src={jugador.URL}
+                            src={jugador.foto}
                             className="Imagen"
-                            alt="ProfilePhoto"
+                            alt={jugador.foto}
                         ></img>
                     </Link>
                 </button>
@@ -37,17 +37,17 @@ export default function JugadorMiniatura(props) {
                     <div className={clase}>
                         <div className="keyValue">
                             <h4>Nacimiento</h4>
-                            <h3>{jugador.nacimiento}</h3>
+                            <h3>{formattedDate}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Nacionalidad</h4>
                             <div className="NacionalidadPerfil">
                                 <img
-                                    src={`https://flagcdn.com/256x192/${jugador.nacionalidad}.png`}
+                                    src={`https://flagcdn.com/256x192/${jugador.pais}.png`}
                                     className="BanderaPerfil"
-                                    alt="Bandera País"
+                                    alt={jugador.pais}
                                 ></img>
-                                <h3>{paises[jugador.nacionalidad]}</h3>
+                                <h3>{Paises[jugador.pais]}</h3>
                             </div>
                         </div>
                         <div className="keyValue">
@@ -56,15 +56,15 @@ export default function JugadorMiniatura(props) {
                         </div>
                         <div className="keyValue">
                             <h4>Ranking</h4>
-                            <h3>{jugador.ranking}</h3>
+                            <h3>.</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Brazo Dominante</h4>
-                            <h3>{jugador.brazodominante}</h3>
+                            <h3>{BrazoDominante[jugador.brazoDominante]}</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Compañerx</h4>
-                            <h3>{jugador.compañerx}</h3>
+                            <h3>.</h3>
                         </div>
                         <div className="keyValue">
                             <h4>Altura</h4>
@@ -72,7 +72,7 @@ export default function JugadorMiniatura(props) {
                         </div>
                         <div className="keyValue">
                             <h4>Posición</h4>
-                            <h3>{jugador.posicion}</h3>
+                            <h3>{PosicionDeJuego[jugador.posicionDeJuego]}</h3>
                         </div>
                         <button
                             className="JugadorVerMas JugadorFont"

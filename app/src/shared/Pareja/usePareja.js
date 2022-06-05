@@ -1,6 +1,6 @@
-import {useContext} from "react";
-import JugadorContext from "./ParejaContext";
+import { useContext } from "react";
+import ParejaContext from "./ParejaContext";
 
-const usePareja = () => useContext(JugadorContext);
+const usePareja = () => useContext(ParejaContext);
 
 export default usePareja;

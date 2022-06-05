@@ -3,13 +3,13 @@ import Partido from "../Componentes/Partido.js";
 import Generos from "../Componentes/Generos.js";
 import BotonGenero from "../Componentes/BotonGenero.js";
 import "../style/Partidos.css";
-
-import { partidos } from "../../BBDD/PartidosBBDD.js";
-import { Link } from "react-router-dom";
+import usePartido from "../../shared/Partido/usePartido";
+import Sexo from "../../assets/Sexo";
 
 export default function Partidos() {
     const [width, setWidth] = useState(0);
     const [gender, setGender] = useState("Masc");
+    const { partidos } = usePartido();
 
     useEffect(() => {
         const updateWidth = () => {
@@ -19,36 +19,25 @@ export default function Partidos() {
         updateWidth();
         window.addEventListener("resize", updateWidth);
     }, [width]);
+
     if (width > 1100) {
         return (
             <>
                 <Generos />
                 <div className="Partidos">
                     <div className="PartidosGenero">
-                        {partidos.map((match) => {
-                            if (match.genero === "Masculino") {
-                                return (
-                                    <button>
-                                        <Link to={match.id}>
-                                            <Partido ID={match.id} />
-                                        </Link>
-                                    </button>
-                                );
-                            }
-                        })}
+                        {partidos
+                            .filter((m) => Sexo[m.genero] === "Masculino")
+                            .map((partido) => (
+                                <Partido partido={partido} />
+                            ))}
                     </div>
                     <div className="PartidosGenero">
-                        {partidos.map((match) => {
-                            if (match.genero === "Femenino") {
-                                return (
-                                    <button>
-                                        <Link to={match.id}>
-                                            <Partido ID={match.id} />
-                                        </Link>
-                                    </button>
-                                );
-                            }
-                        })}
+                        {partidos
+                            .filter((m) => Sexo[m.genero] === "Femenino")
+                            .map((partido) => (
+                                <Partido partido={partido} />
+                            ))}
                     </div>
                 </div>
             </>
@@ -69,17 +58,11 @@ export default function Partidos() {
                     >
                         <BotonGenero clase={gender} />
                     </button>
-                    {partidos.map((match) => {
+                    {partidos.map((partido) => {
                         let control =
                             gender === "Masc" ? "Masculino" : "Femenino";
-                        if (match.genero === control) {
-                            return (
-                                <button>
-                                    <Link to={match.id}>
-                                        <Partido ID={match.id} />
-                                    </Link>
-                                </button>
-                            );
+                        if (Sexo[partido.genero] === control) {
+                            return <Partido partido={partido} />;
                         }
                     })}
                 </div>

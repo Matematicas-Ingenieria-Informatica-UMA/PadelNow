@@ -1,16 +1,23 @@
 import JugadorContext from "./JugadorContext";
-import {useEffect, useState} from "react";
-import {jugadores as jugadoresBBDD} from "../../BBDD/JugadoresBBDD";
+import { useEffect, useState } from "react";
+import api from "../../api";
 
-export default function JugadorProvider({children}) {
-
+export default function JugadorProvider({ children }) {
     const [jugadores, setJugadores] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setJugadores(jugadoresBBDD);
-    }, [])
+        api.get("/jugadores").then(({ data }) => {
+            setJugadores(data);
+            setLoading(false);
+        });
+    }, []);
 
-    return <JugadorContext.Provider value={{jugadores}}>
-        {children}
-    </JugadorContext.Provider>
+    if (loading) return null;
+
+    return (
+        <JugadorContext.Provider value={{ jugadores }}>
+            {children}
+        </JugadorContext.Provider>
+    );
 }

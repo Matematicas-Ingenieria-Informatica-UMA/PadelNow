@@ -7,7 +7,7 @@ export default function Torneo(props) {
     const modo = ["ampliar", "disminuir"];
     const [boton, setBoton] = useState(0);
     return (
-        <div className="Torneo">
+        <button className="Torneo">
             <div className="TorneoDiv1">
                 <div className="CITorneo">
                     <h1 className="NombreTorneo">{datos.nombre}</h1>
@@ -84,6 +84,6 @@ export default function Torneo(props) {
                     ></img>
                 </button>
             </div>
-        </div>
+        </button>
     );
 }
