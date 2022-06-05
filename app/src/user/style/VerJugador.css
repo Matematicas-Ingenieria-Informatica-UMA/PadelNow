@@ -1,37 +1,36 @@
-.VerJugador{
+.VerJugador {
     display: flex;
     flex-direction: row;
     padding: 50px;
     height: fit-content;
-
 }
 
-.FotoyBandera{
+.FotoyBandera {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.VerFotoJugador{
+.VerFotoJugador {
     border-radius: 50%;
     width: 250px;
     height: 250px;
 }
 
-.VerBanderaJugador{
+.VerBanderaJugador {
     padding: 5px;
     position: absolute;
     width: 50px;
 }
 
-.VerInformacionJugador{
+.VerInformacionJugador {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.VerNombreParejaJugador{
+.VerNombreParejaJugador {
     font-style: none;
 }
 
@@ -40,28 +39,36 @@
     width: 50px;
 }
 
-.VerTextoJugador{
+.VerTextoJugador {
     padding-left: 30px;
 }
 
-.SepVer{
+.SepVer {
     background-color: aliceblue;
     width: 1px;
     height: 65px;
 }
 
-.VerNombreJugador{
+.VerNombreJugador {
     font-size: 50px;
 }
 
-.VerDatoJugador{
+.VerDatoJugador {
     font-weight: 100;
 }
 
-.VerPartidosJugador{
-    display: grid;
-    grid-template-columns: 50% 50%;
+.VerPartidosJugador {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: space-around;
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .VerPartidosJugador {
+        flex-direction: column;
+    }
 }

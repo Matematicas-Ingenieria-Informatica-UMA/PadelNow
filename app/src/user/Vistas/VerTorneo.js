@@ -8,41 +8,42 @@ export default function VerTorneo(props) {
     const { id: paramId } = useParams();
     const id = paramId || props.ID;
     const { torneos } = useTorneo();
-    const torneo = torneos.find((x) => x.id === id);
+    const torneo = torneos.find((x) => x.id == id);
+    console.log(torneo);
 
     return (
         <>
             <div className="VerTituloInformacionTorneo">
                 <div className="VerTituloTorneo">
                     <img
-                        src={torneo.institucion.foto}
+                        src={torneo.foto}
                         className="VerFotoInstitucion"
                         alt="VerFotoInstitucion"
                     ></img>
                     <h1 className="VerNombreTorneo">{torneo.nombre}</h1>
                     <h3 className="VerNombreInstitucion">
-                        {torneo.institucion.nombre}
+                        {torneo.institucion}
                     </h3>
                 </div>
                 <div className="VerInformacionTorneo">
                     <img
-                        src={"/" + torneo.categoria + ".svg"}
-                        alt={torneo.categoria}
+                        src={"/" + torneo.genero + ".svg"}
+                        alt={torneo.genero}
                     ></img>
                     <img
                         className="VerBanderaTorneo"
-                        src={`https://flagcdn.com/256x192/${torneo.lugar}.png`}
+                        src={`https://flagcdn.com/256x192/${torneo.pais}.png`}
                         alt="Bandera"
                     ></img>
                 </div>
             </div>
-            <div className="SepHor"></div>
+            <div className="SepHor mt-15"></div>
             <div className="VerPartidosJugador">
                 {torneo.partidos.map((p) => {
                     return (
                         <button>
                             <Link to={"/partidos/" + p}>
-                                <Partido ID={p}></Partido>
+                                <Partido partido={p}></Partido>
                             </Link>
                         </button>
                     );

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://239f62af-8ef1-4e72-bde6-f0544c76dc4a.mock.pstmn.io",
+    baseURL: "https://ad56-62-87-103-137.eu.ngrok.io",
 });
 
 export default api;

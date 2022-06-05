@@ -1,32 +1,35 @@
-.VerTituloInformacionTorneo{
+.VerTituloInformacionTorneo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: fit-content;
 }
-.VerTituloTorneo{
+.VerTituloTorneo {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 30px;
+    height: fit-content;
 }
 
-.VerInformacionTorneo{
+.VerInformacionTorneo {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    height: fit-content;
 }
 
-.VerBanderaTorneo{
+.VerBanderaTorneo {
     width: 50px;
     height: 32px;
 }
 
-.VerFotoInstitucion{
+.VerFotoInstitucion {
     width: 100px;
     border-radius: 50%;
 }
 
-.VerNombreTorneo{
+.VerNombreTorneo {
     height: 50px;
     display: flex;
     align-items: center;
@@ -34,7 +37,7 @@
     margin-left: 20px;
 }
 
-.VerNombreInstitucion{
+.VerNombreInstitucion {
     font-size: 20px;
     font-weight: 100;
 }

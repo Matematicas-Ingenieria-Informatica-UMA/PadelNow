@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import Generos from "../Componentes/Generos";
 import BotonGenero from "../Componentes/BotonGenero";
 import Torneo from "../Componentes/Torneo";
-import { torneos } from "../../BBDD/TorneosBBDD";
 import "../style/Torneos.css";
 import { Link } from "react-router-dom";
+import useTorneo from "../../shared/Torneo/useTorneo";
 
 export default function Torneos() {
     const [width, setWidth] = useState(0);
     const [gender, setGender] = useState("Masc");
+    const { torneos } = useTorneo();
 
     useEffect(() => {
         const updateWidth = () => {
@@ -24,22 +25,22 @@ export default function Torneos() {
                 <Generos />
                 <div className="Torneos">
                     <div className="TorneosGenero">
-                        {torneos.map((tournament) => {
-                            if (tournament.categoria === "Masculino") {
+                        {torneos.map((torneo) => {
+                            if (torneo.genero == "MASCULINO") {
                                 return (
-                                    <Link to={tournament.id}>
-                                        <Torneo ID={tournament.id} />
+                                    <Link to={torneo.id}>
+                                        <Torneo torneo={torneo} />
                                     </Link>
                                 );
                             }
                         })}
                     </div>
                     <div className="TorneosGenero">
-                        {torneos.map((tournament) => {
-                            if (tournament.categoria === "Femenino") {
+                        {torneos.map((torneo) => {
+                            if (torneo.genero == "MASCULINO") {
                                 return (
-                                    <Link to={tournament.id}>
-                                        <Torneo ID={tournament.id} />
+                                    <Link to={torneo.id}>
+                                        <Torneo torneo={torneo} />
                                     </Link>
                                 );
                             }
@@ -67,10 +68,10 @@ export default function Torneos() {
                     {torneos.map((x) => {
                         let control =
                             gender === "Masc" ? "Masculino" : "Femenino";
-                        if (x.categoria === control) {
+                        if (x.genero === control) {
                             return (
                                 <Link to={x.id}>
-                                    <Torneo ID={x.id} />
+                                    <Torneo torneo={x} />
                                 </Link>
                             );
                         }

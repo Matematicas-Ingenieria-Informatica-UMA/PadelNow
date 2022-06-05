@@ -8,6 +8,7 @@ import JugadorProvider from "./shared/Jugador/JugadorProvider";
 import ParejaProvider from "./shared/Pareja/ParejaProvider";
 import PartidoProvider from "./shared/Partido/PartidoProvider";
 import TorneoProvider from "./shared/Torneo/TorneoProvider";
+import NoticiaProvider from "./shared/Noticia/NoticiaProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,9 +17,11 @@ root.render(
             <ParejaProvider>
                 <PartidoProvider>
                     <TorneoProvider>
-                        <AuthProvider>
-                            <App />
-                        </AuthProvider>
+                        <NoticiaProvider>
+                            <AuthProvider>
+                                <App />
+                            </AuthProvider>
+                        </NoticiaProvider>
                     </TorneoProvider>
                 </PartidoProvider>
             </ParejaProvider>

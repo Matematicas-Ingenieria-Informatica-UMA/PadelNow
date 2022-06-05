@@ -30,7 +30,9 @@ export default function Partidos() {
                         {partidos
                             .filter((m) => Sexo[m.genero] === "Masculino")
                             .map((partido) => (
-                                <Partido partido={partido} />
+                                <Link to={partido.id}>
+                                    <Partido partido={partido} />
+                                </Link>
                             ))}
                     </div>
                     <div className="PartidosGenero">

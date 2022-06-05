@@ -1,35 +1,39 @@
 import { React, useState } from "react";
-import { torneos } from "../../BBDD/TorneosBBDD";
+import { useParams } from "react-router-dom";
+import useTorneo from "../../shared/Torneo/useTorneo";
 import "../style/Torneo.css";
 
 export default function Torneo(props) {
-    let datos = torneos.find((x) => x.id === props.ID);
+    const { id: paramId } = useParams();
+    const id = paramId || props.ID;
+    const { torneos } = useTorneo();
+    const torneo = torneos.find((x) => x.id === id);
     const modo = ["ampliar", "disminuir"];
     const [boton, setBoton] = useState(0);
     return (
         <button className="Torneo">
             <div className="TorneoDiv1">
                 <div className="CITorneo">
-                    <h1 className="NombreTorneo">{datos.nombre}</h1>
+                    <h1 className="NombreTorneo">{torneo.nombre}</h1>
                     <h4 className="InstitucionCircuito">
-                        {datos.institucion.nombre} - {datos.anio}
+                        {torneo.institucion} - {torneo.anio}
                     </h4>
                 </div>
                 <img
                     className="FotoTorneo"
-                    src={datos.institucion.foto}
+                    src={torneo.foto}
                     alt="LogoInstitución"
                 ></img>
             </div>
             <div className="KeyValueDiv">
                 <h3 className="KeyTorneo">Ronda Inicial</h3>
-                <h3 className="ValueTorneo">{datos.faseInicial}</h3>
+                <h3 className="ValueTorneo">{torneo.faseInicial}</h3>
             </div>
             <div className="KeyValueDiv">
                 <h3 className="KeyTorneo">Ganadores</h3>
                 <h3 className="ValueTorneo">
-                    {datos.ganadores.jugador1.toUpperCase()} /{" "}
-                    {datos.ganadores.jugador2.toUpperCase()}
+                    {torneo.ganadores.jugador1.toUpperCase()} /{" "}
+                    {torneo.ganadores.jugador2.toUpperCase()}
                 </h3>
             </div>
 
@@ -42,7 +46,7 @@ export default function Torneo(props) {
                     Organizador
                 </h3>
                 <h3 className={boton === 1 ? "ValueTorneo" : "Vacio"}>
-                    {datos.institucion.organizador}
+                    {torneo.institucion.organizador}
                 </h3>
             </div>
 
@@ -51,14 +55,14 @@ export default function Torneo(props) {
                     Internacional
                 </h3>
                 <h3 className={boton === 1 ? "ValueTorneo" : "Vacio"}>
-                    {datos.institucion.internacional}
+                    {torneo.institucion.internacional}
                 </h3>
             </div>
 
             <div className={boton === 1 ? "KeyValueDiv" : "Vacio"}>
                 <h3 className={boton === 1 ? "KeyTorneo" : "Vacio"}>Sede</h3>
                 <h3 className={boton === 1 ? "ValueTorneo" : "Vacio"}>
-                    {datos.institucion.sede}
+                    {torneo.institucion.sede}
                 </h3>
             </div>
 
@@ -67,7 +71,7 @@ export default function Torneo(props) {
                     Fundación
                 </h3>
                 <h3 className={boton === 1 ? "ValueTorneo" : "Vacio"}>
-                    {datos.institucion.anioFundacion}
+                    {torneo.institucion.anioFundacion}
                 </h3>
             </div>
 
