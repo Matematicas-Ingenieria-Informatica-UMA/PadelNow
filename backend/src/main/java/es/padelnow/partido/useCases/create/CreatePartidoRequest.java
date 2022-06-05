@@ -1,5 +1,6 @@
 package es.padelnow.partido.useCases.create;
 
+import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.partido.enums.Fase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,5 +18,6 @@ public class CreatePartidoRequest {
     private String juezSilla;
     private Fase fase;
     private Long torneo;
+    private Sexo genero;
     private Collection<Long> parejas;
 }

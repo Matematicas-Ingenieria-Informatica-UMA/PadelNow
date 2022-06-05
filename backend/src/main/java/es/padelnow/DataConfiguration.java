@@ -78,20 +78,31 @@ public class DataConfiguration {
             // TORNEOS
             Torneo torneo = new Torneo("Cervezas Victoria Marbella Master 2022",
                     dateFormat.parse("2022-05-28"),
-                    dateFormat.parse("2022-06-05"), Fase.DIECISEISAVOS_DE_FINAL);
+                    dateFormat.parse("2022-06-05"), Fase.DIECISEISAVOS_DE_FINAL,
+                    Sexo.MASCULINO);
 
             torneoRepository.save(torneo);
 
             // PARTIDOS
             Partido partido1 = new Partido(
-                    "7-6 6-7 7-5",
-                    dateFormat.parse("2022-05-30"),
+                    "7/6 6/7 7/5",
+                    dateFormat.parse("2022-05-29"),
                     "Juez 1",
+                    Sexo.MASCULINO,
+                    Fase.SEMIFINAL,
+                    torneo,
+                    List.of(pareja1, pareja2));
+
+            Partido partido2 = new Partido(
+                    "7/6 6/7 -/-",
+                    dateFormat.parse("2022-05-30"),
+                    "Juez 2",
+                    Sexo.MASCULINO,
                     Fase.FINAL,
                     torneo,
                     List.of(pareja1, pareja2));
 
-            partidoRepository.saveAll(List.of(partido1));
+            partidoRepository.saveAll(List.of(partido1, partido2));
 
             // NOTICIAS
             Noticia noticia1 = new Noticia(

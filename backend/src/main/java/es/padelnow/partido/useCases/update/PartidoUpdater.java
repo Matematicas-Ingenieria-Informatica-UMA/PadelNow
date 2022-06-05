@@ -27,15 +27,14 @@ public class PartidoUpdater {
         this.torneoRepository = torneoRepo;
     }
 
-    public void update(Long id, UpdatePartidoRequest request) {
+    public void update(Long id, String request) {
         Optional<Partido> busquedaPartido = repository.findById(id);
 
         if (busquedaPartido.isPresent()) {
             Partido partido = busquedaPartido.get();
-            //TODO: Merge the request and the database data
             if (request != null) {
 
-                JSONObject json = new JSONObject(request);
+                JSONObject json = new JSONObject(request.trim());
                 Iterator<String> it = json.keys();
                 while (it.hasNext()) {
                     String key = it.next();
@@ -44,11 +43,11 @@ public class PartidoUpdater {
                             partido.setResultado(json.getString(key));
                             break;
                         case "fecha":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 partido.setFecha(d);
-                            } catch (ParseException e){
+                            } catch (ParseException e) {
                                 e.printStackTrace();
                             }
                             break;
@@ -56,22 +55,22 @@ public class PartidoUpdater {
                             partido.setJuezSilla(json.getString(key));
                             break;
                         case "bolas_breaks":
-                            partido.setBolasDeBreaks(json.getInt(key));
+                            partido.setBolasDeBreaks(json.getString(key));
                             break;
                         case "winners":
-                            partido.setWinners(json.getInt(key));
+                            partido.setWinners(json.getString(key));
                             break;
                         case "smashes":
-                            partido.setSmashes(json.getInt(key));
+                            partido.setSmashes(json.getString(key));
                             break;
                         case "errores_no_forzados":
-                            partido.setErroresNoForzados(json.getInt(key));
+                            partido.setErroresNoForzados(json.getString(key));
                             break;
                         case "bolas_oro":
-                            partido.setBolasDeOro(json.getInt(key));
+                            partido.setBolasDeOro(json.getString(key));
                             break;
                         case "duracion":
-                            partido.setDuracion(json.getInt(key));
+                            partido.setDuracion(json.getString(key));
                             break;
                         case "fase":
                             String fase = json.getString(key);

@@ -23,26 +23,14 @@ public class NoticiaUpdater {
         this.repository = repository;
     }
 
-    public void update(Long id, @RequestBody UpdateNoticiaRequest request) {
-        Optional<Noticia> busquedaNoticia = repository.findById(id);
-        if (busquedaNoticia.isPresent()) {
-            Noticia noticia = busquedaNoticia.get();
-            // TODO: Merge the request and the database data
-            repository.save(noticia);
-        } else {
-            throw new IllegalStateException("Noticia with id " + id + " does not exist");
-        }
-    }
 
-    public void updateOld (Long id, @RequestBody UpdateNoticiaRequest request) {
+    public void update(Long id, @RequestBody String request) {
         Optional<Noticia> busquedaNoticia = repository.findById(id);
         if (busquedaNoticia.isPresent()) {
             Noticia n = busquedaNoticia.get();
-            // TODO: Merge the request and the database data
-            // PROPUESTA DE UPDATE
             if (request != null) {
 
-                JSONObject json = new JSONObject(request);
+                JSONObject json = new JSONObject(request.trim());
                 Iterator<String> it = json.keys();
                 while (it.hasNext()) {
                     String key = it.next();
@@ -60,22 +48,37 @@ public class NoticiaUpdater {
                             n.setFoto(json.getString(key));
                             break;
                         case "fecha":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 n.setFecha(d);
-                            } catch (ParseException e){e.printStackTrace();}
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
                             break;
                     }
                 }
 
                 repository.save(n);
+                System.out.println("GUARDADO: " + n.toString());
             } else {
                 throw new IllegalStateException("NoticiaUpdateRequest is null");
             }
 
-        }else {
+        } else {
             throw new IllegalStateException("Noticia with id " + id + " does not exist");
         }
     }
+
+
+//    public void updateNOT(Long id, @RequestBody UpdateNoticiaRequest request) {
+//        Optional<Noticia> busquedaNoticia = repository.findById(id);
+//        if (busquedaNoticia.isPresent()) {
+//            Noticia noticia = busquedaNoticia.get();
+//            // TODO: Merge the request and the database data
+//            repository.save(noticia);
+//        } else {
+//            throw new IllegalStateException("Noticia with id " + id + " does not exist");
+//        }
+//    }
 }

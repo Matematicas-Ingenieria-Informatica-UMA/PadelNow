@@ -32,13 +32,13 @@ public class JugadorUpdater {
             Jugador jugador = busquedaJugador.get();
             // TODO: Merge the request and the database data
             // PROPUESTA DE UPDATE
-            if (request != null){
+            if (request != null) {
 
                 JSONObject json = new JSONObject(request.trim());
                 Iterator<String> it = json.keys();
-                while(it.hasNext()){
+                while (it.hasNext()) {
                     String key = it.next();
-                    switch (key){
+                    switch (key) {
                         case "nombre":
                             jugador.setNombre(json.getString(key));
                             break;
@@ -46,9 +46,9 @@ public class JugadorUpdater {
                             jugador.setApellidos(json.getString(key));
                             break;
                         case "sexo":
-                            if(json.getString(key).equals("MASCULINO")){
+                            if (json.getString(key).equals("MASCULINO")) {
                                 jugador.setSexo(Sexo.MASCULINO);
-                            }else if (json.getString(key).equals("FEMENINO")){
+                            } else if (json.getString(key).equals("FEMENINO")) {
                                 jugador.setSexo(Sexo.FEMENINO);
                             }
                             break;
@@ -65,23 +65,25 @@ public class JugadorUpdater {
                             jugador.setCiudad(json.getString(key));
                             break;
                         case "fechaNacimiento":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 jugador.setFechaNacimiento(d);
-                            } catch (ParseException e){e.printStackTrace();}
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
                             break;
                         case "brazoDominante":
-                            if(json.getString(key).equals("ZURDO")){
+                            if (json.getString(key).equals("ZURDO")) {
                                 jugador.setBrazoDominante(BrazoDominante.ZURDO);
-                            }else if (json.getString(key).equals("DIESTRO")){
+                            } else if (json.getString(key).equals("DIESTRO")) {
                                 jugador.setBrazoDominante(BrazoDominante.DIESTRO);
                             }
                             break;
                         case "posicionDeJuego":
-                            if(json.getString(key).equals("DERECHA")){
+                            if (json.getString(key).equals("DERECHA")) {
                                 jugador.setPosicionDeJuego(PosicionDeJuego.DERECHA);
-                            }else if (json.getString(key).equals("REVES")){
+                            } else if (json.getString(key).equals("REVES")) {
                                 jugador.setPosicionDeJuego(PosicionDeJuego.REVES);
                             }
                             break;
@@ -89,7 +91,7 @@ public class JugadorUpdater {
                 }
 
                 repository.save(jugador);
-                System.out.println("GUARDADO: " + jugador.toString() );
+                System.out.println("GUARDADO: " + jugador.toString());
             } else {
                 throw new IllegalStateException("JugadorUpdateRequest is null");
             }

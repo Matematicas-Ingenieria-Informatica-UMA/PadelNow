@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.lang.reflect.Type;
+
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
@@ -27,14 +28,14 @@ public class ParejaUpdater {
         this.jugadorRepository = jr;
     }
 
-    public void update(Long id, @RequestBody UpdateParejaRequest request) {
+    public void update(Long id, @RequestBody String request) {
         Optional<Pareja> busquedaPareja = repository.findById(id);
         if (busquedaPareja.isPresent()) {
             Pareja pareja = busquedaPareja.get();
-            //TODO: Merge the request and the database data
+
             if (request != null) {
 
-                JSONObject json = new JSONObject(request);
+                JSONObject json = new JSONObject(request.trim());
                 Iterator<String> it = json.keys();
                 while (it.hasNext()) {
                     String key = it.next();
@@ -59,7 +60,9 @@ public class ParejaUpdater {
                                     ok = false;
                                 }
                             }
-                            if(ok){pareja.setJugadores(jugadores);}
+                            if (ok) {
+                                pareja.setJugadores(jugadores);
+                            }
                             break;
                     }
                 }

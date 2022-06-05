@@ -1,5 +1,6 @@
 package es.padelnow.torneo.useCases.create;
 
+import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.partido.enums.Fase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,4 +16,5 @@ public class CreateTorneoRequest {
     private Date fechaInicial;
     private Date fechaFinal;
     private Fase faseInicial;
+    private Sexo genero;
 }

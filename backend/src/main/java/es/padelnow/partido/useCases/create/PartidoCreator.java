@@ -34,6 +34,7 @@ public class PartidoCreator {
                 request.getResultado(),
                 request.getFecha(),
                 request.getJuezSilla(),
+                request.getGenero(),
                 request.getFase(),
                 torneo,
                 parejas
