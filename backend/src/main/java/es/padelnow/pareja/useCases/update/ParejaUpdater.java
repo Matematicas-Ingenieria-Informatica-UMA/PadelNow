@@ -6,6 +6,7 @@ import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.pareja.Pareja;
 import es.padelnow.pareja.ParejaRepository;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -58,12 +59,12 @@ public class ParejaUpdater {
                             pareja.setActiva(json.getBoolean(key));
                         case "jugadores":
                             boolean ok = true;
-                            Type type = new TypeToken<Collection<Long>>() {
-                            }.getType();
-                            List<Long> inpList = new Gson().fromJson(String.valueOf(json.getLong(key)), type);
+                            JSONArray ja = json.getJSONArray(key);
+                            List<Object> l = ja.toList();
                             Collection<Jugador> jugadores = new ArrayList<>();
-                            for (Long x : inpList) {
-                                Optional<Jugador> j = jugadorRepository.findById(x);
+                            for (Object o : l){
+                                Long oid = Long.valueOf(o.toString());
+                                Optional<Jugador> j = jugadorRepository.findById(oid);
                                 if (j.isPresent()) {
                                     jugadores.add(j.get());
                                 } else {
