@@ -45,7 +45,7 @@ public class PartidoUpdater {
                             break;
                         case "fecha":
                             try{
-                                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 partido.setFecha(d);
                             } catch (ParseException e){
@@ -56,22 +56,22 @@ public class PartidoUpdater {
                             partido.setJuezSilla(json.getString(key));
                             break;
                         case "bolas_breaks":
-                            partido.setBolasDeBreaks(json.getString(key));
+                            partido.setBolasDeBreaks(json.getInt(key));
                             break;
                         case "winners":
-                            partido.setWinners(json.getString(key));
+                            partido.setWinners(json.getInt(key));
                             break;
                         case "smashes":
-                            partido.setSmashes(json.getString(key));
+                            partido.setSmashes(json.getInt(key));
                             break;
                         case "errores_no_forzados":
-                            partido.setErroresNoForzados(json.getString(key));
+                            partido.setErroresNoForzados(json.getInt(key));
                             break;
                         case "bolas_oro":
-                            partido.setBolasDeOro(json.getString(key));
+                            partido.setBolasDeOro(json.getInt(key));
                             break;
                         case "duracion":
-                            partido.setDuracion(json.getString(key));
+                            partido.setDuracion(json.getInt(key));
                             break;
                         case "fase":
                             String fase = json.getString(key);

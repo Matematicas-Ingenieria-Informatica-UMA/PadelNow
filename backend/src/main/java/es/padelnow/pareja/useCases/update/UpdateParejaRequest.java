@@ -19,9 +19,6 @@ public class UpdateParejaRequest {
 
     private String entrenador;
 
-    private Collection<Partido> partidos;
-
-    private Collection<Jugador> jugadores;
-
+    private Collection<Long> jugadores;
 
 }

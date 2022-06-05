@@ -66,10 +66,10 @@ public class JugadorUpdater {
                             break;
                         case "fechaNacimiento":
                             try{
-                                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 jugador.setFechaNacimiento(d);
-                            } catch (ParseException e){}
+                            } catch (ParseException e){e.printStackTrace();}
                             break;
                         case "brazoDominante":
                             if(json.getString(key).equals("ZURDO")){

@@ -53,9 +53,6 @@ public class NoticiaUpdater {
                         case "cuerpo":
                             n.setCuerpo(json.getString(key));
                             break;
-                        case "autor":
-                            n.setAutor(json.getString(key));
-                            break;
                         case "subtitulo":
                             n.setSubtitulo(json.getString(key));
                             break;
@@ -64,10 +61,10 @@ public class NoticiaUpdater {
                             break;
                         case "fecha":
                             try{
-                                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 n.setFecha(d);
-                            } catch (ParseException e){}
+                            } catch (ParseException e){e.printStackTrace();}
                             break;
                     }
                 }
