@@ -44,11 +44,11 @@ public class PartidoUpdater {
                             partido.setResultado(json.getString(key));
                             break;
                         case "fecha":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 partido.setFecha(d);
-                            } catch (ParseException e){
+                            } catch (ParseException e) {
                                 e.printStackTrace();
                             }
                             break;

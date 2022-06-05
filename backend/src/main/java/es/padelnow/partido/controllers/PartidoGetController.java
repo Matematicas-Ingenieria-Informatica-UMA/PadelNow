@@ -25,7 +25,7 @@ public class PartidoGetController {
         return finder.find(id);
     }
 
-    @GetMapping("/partido")
+    @GetMapping
     public List<Partido> findAll() {
         return finder.findAll();
     }

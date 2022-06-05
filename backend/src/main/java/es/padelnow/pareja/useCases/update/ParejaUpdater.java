@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.lang.reflect.Type;
+
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
@@ -59,7 +60,9 @@ public class ParejaUpdater {
                                     ok = false;
                                 }
                             }
-                            if(ok){pareja.setJugadores(jugadores);}
+                            if (ok) {
+                                pareja.setJugadores(jugadores);
+                            }
                             break;
                     }
                 }

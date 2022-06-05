@@ -60,11 +60,13 @@ public class NoticiaUpdater {
                             n.setFoto(json.getString(key));
                             break;
                         case "fecha":
-                            try{
+                            try {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                                 Date d = sdf.parse(json.getString(key));
                                 n.setFecha(d);
-                            } catch (ParseException e){e.printStackTrace();}
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
                             break;
                     }
                 }
@@ -74,7 +76,7 @@ public class NoticiaUpdater {
                 throw new IllegalStateException("NoticiaUpdateRequest is null");
             }
 
-        }else {
+        } else {
             throw new IllegalStateException("Noticia with id " + id + " does not exist");
         }
     }

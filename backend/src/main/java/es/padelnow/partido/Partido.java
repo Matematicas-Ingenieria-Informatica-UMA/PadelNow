@@ -1,6 +1,7 @@
 package es.padelnow.partido;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.torneo.Torneo;
 import es.padelnow.pareja.Pareja;
 import es.padelnow.partido.enums.Fase;
@@ -18,10 +19,11 @@ import java.util.Date;
 @Entity
 public class Partido {
 
-    public Partido(String resultado, Date fecha, String juezSilla, Fase fase, Torneo torneo, Collection<Pareja> parejas) {
+    public Partido(String resultado, Date fecha, String juezSilla, Sexo genero, Fase fase, Torneo torneo, Collection<Pareja> parejas) {
         this.resultado = resultado;
         this.fecha = fecha;
         this.juezSilla = juezSilla;
+        this.genero = genero;
         this.fase = fase;
         this.torneo = torneo;
         this.parejas = parejas;
@@ -41,17 +43,19 @@ public class Partido {
     @Column(nullable = false)
     private String juezSilla;
 
-    private int bolasDeBreaks = 0;
+    private String bolasDeBreaks = "-/- -/-";
 
-    private int winners = 0;
+    private String winners = "- -";
 
-    private int smashes = 0;
+    private String smashes = "-/- -/-";
 
-    private int erroresNoForzados = 0;
+    private String erroresNoForzados = "- -";
 
-    private int bolasDeOro = 0;
+    private String bolasDeOro = "- -";
 
-    private int duracion = 0;
+    private String duracion = "00:00:00";
+
+    private Sexo genero;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

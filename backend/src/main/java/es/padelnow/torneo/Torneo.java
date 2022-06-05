@@ -1,5 +1,6 @@
 package es.padelnow.torneo;
 
+import es.padelnow.jugador.enums.Sexo;
 import es.padelnow.partido.Partido;
 import es.padelnow.partido.enums.Fase;
 import lombok.Getter;
@@ -17,11 +18,12 @@ import java.util.Date;
 @Entity
 public class Torneo {
 
-    public Torneo(String nombre, Date fechaInicial, Date fechaFinal, Fase faseInicial) {
+    public Torneo(String nombre, Date fechaInicial, Date fechaFinal, Fase faseInicial, Sexo genero) {
         this.nombre = nombre;
         this.fechaInicial = fechaInicial;
         this.fechaFinal = fechaFinal;
         this.faseInicial = faseInicial;
+        this.genero = genero;
     }
 
     @Id
@@ -37,6 +39,8 @@ public class Torneo {
     private Date fechaFinal;
 
     private Fase faseInicial;
+
+    private Sexo genero;
 
     @OneToMany(mappedBy = "torneo", cascade = CascadeType.ALL)
     private Collection<Partido> partidos = new ArrayList<>();
