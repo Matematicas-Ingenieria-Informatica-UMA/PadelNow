@@ -9,7 +9,7 @@ import Sexo from "../../assets/Sexo";
 
 export default function Partidos() {
     const [width, setWidth] = useState(0);
-    const [gender, setGender] = useState("Masc");
+    const [gender, setGender] = useState("Masculino");
     const { partidos } = usePartido();
 
     useEffect(() => {
@@ -39,7 +39,9 @@ export default function Partidos() {
                         {partidos
                             .filter((m) => Sexo[m.genero] === "Femenino")
                             .map((partido) => (
-                                <Partido partido={partido} />
+                                <Link to={partido.id}>
+                                    <Partido partido={partido} />
+                                </Link>
                             ))}
                     </div>
                 </div>
@@ -52,10 +54,10 @@ export default function Partidos() {
                     <button
                         className="BotonGenero"
                         onClick={() => {
-                            if (gender === "Masc") {
-                                setGender("Fem");
+                            if (gender === "Masculino") {
+                                setGender("Femenino");
                             } else {
-                                setGender("Masc");
+                                setGender("Masculino");
                             }
                         }}
                     >
@@ -63,9 +65,13 @@ export default function Partidos() {
                     </button>
                     {partidos.map((partido) => {
                         let control =
-                            gender === "Masc" ? "Masculino" : "Femenino";
+                            gender === "Masculino" ? "Masculino" : "Femenino";
                         if (Sexo[partido.genero] === control) {
-                            return <Partido partido={partido} />;
+                            return (
+                                <Link to={partido.id}>
+                                    <Partido partido={partido} />
+                                </Link>
+                            );
                         }
                     })}
                 </div>

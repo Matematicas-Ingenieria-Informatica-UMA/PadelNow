@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import useJugador from "../../shared/Jugador/useJugador.js";
 import "../style/VerPareja.css";
-import Paises from "../../assets/Paises";
 import usePareja from "../../shared/Pareja/usePareja.js";
 import usePartido from "../../shared/Partido/usePartido.js";
 import Partido from "../Componentes/Partido";
@@ -11,15 +10,13 @@ export default function VerPareja(props) {
     const { id: paramId } = useParams();
     const id = paramId || props.ID;
     const { parejas } = usePareja();
-    const pareja = parejas.find((x) => x.id === id);
+    const pareja = parejas.find((x) => x.id == id);
 
-    const { jugadores } = useJugador();
-    const jugador1 = jugadores.find((x) => pareja.IDjugador1 === x.id);
-    const jugador2 = jugadores.find((x) => pareja.IDjugador2 === x.id);
+    const [jugador1, jugador2] = pareja.jugadores;
 
     const { partidos } = usePartido();
     const partidosJugados = partidos.filter(
-        (x) => x.idPareja1 === pareja.id || x.idPareja2 === pareja.id
+        (x) => x.parejas[0].id == pareja.id || x.parejas[1].id == pareja.id
     );
 
     console.log(jugador1, jugador2, pareja);
@@ -75,7 +72,7 @@ export default function VerPareja(props) {
             <div className="SepHor"></div>
             <div className="VerPartidosJugador">
                 {partidosJugados.map((p) => {
-                    return <Partido ID={p.id}></Partido>;
+                    return <Partido partido={p}></Partido>;
                 })}
             </div>
         </>

@@ -21,15 +21,15 @@ export default function VerTorneo(props) {
                         alt="VerFotoInstitucion"
                     ></img>
                     <h1 className="VerNombreTorneo">{torneo.nombre}</h1>
-                    <h3 className="VerNombreInstitucion">
-                        {torneo.institucion}
-                    </h3>
                 </div>
                 <div className="VerInformacionTorneo">
                     <img
                         src={"/" + torneo.genero + ".svg"}
                         alt={torneo.genero}
                     ></img>
+                    <h3 className="VerNombreInstitucion">
+                        {torneo.institucion}
+                    </h3>
                     <img
                         className="VerBanderaTorneo"
                         src={`https://flagcdn.com/256x192/${torneo.pais}.png`}
@@ -37,7 +37,7 @@ export default function VerTorneo(props) {
                     ></img>
                 </div>
             </div>
-            <div className="SepHor mt-15"></div>
+            <div className="SepHor"></div>
             <div className="VerPartidosJugador">
                 {torneo.partidos.map((p) => {
                     return (

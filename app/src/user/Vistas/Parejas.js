@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import usePareja from "../../shared/Pareja/usePareja.js";
 export default function Parejas() {
     const [width, setWidth] = useState(0);
-    const [gender, setGender] = useState("Masc");
+    const [gender, setGender] = useState("Masculino");
     const { parejas } = usePareja();
     useEffect(() => {
         const updateWidth = () => {
@@ -25,10 +25,10 @@ export default function Parejas() {
                     <button
                         className="BotonGenero"
                         onClick={() => {
-                            if (gender === "Masc") {
-                                setGender("Fem");
+                            if (gender === "Masculino") {
+                                setGender("Femenino");
                             } else {
-                                setGender("Masc");
+                                setGender("Masculino");
                             }
                         }}
                     >
@@ -37,7 +37,9 @@ export default function Parejas() {
                     {parejas
                         .filter((p) => {
                             let control =
-                                gender === "Masc" ? "MASCULINO" : "FEMENINO";
+                                gender === "Masculino"
+                                    ? "MASCULINO"
+                                    : "FEMENINO";
                             return p.genero === control;
                         })
                         .map((pareja, index) => (

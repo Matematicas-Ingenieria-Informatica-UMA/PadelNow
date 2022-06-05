@@ -8,7 +8,7 @@ import useTorneo from "../../shared/Torneo/useTorneo";
 
 export default function Torneos() {
     const [width, setWidth] = useState(0);
-    const [gender, setGender] = useState("Masc");
+    const [gender, setGender] = useState("Masculino");
     const { torneos } = useTorneo();
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export default function Torneos() {
                     </div>
                     <div className="TorneosGenero">
                         {torneos.map((torneo) => {
-                            if (torneo.genero == "MASCULINO") {
+                            if (torneo.genero == "FEMENINO") {
                                 return (
                                     <Link to={torneo.id}>
                                         <Torneo torneo={torneo} />
@@ -56,10 +56,10 @@ export default function Torneos() {
                     <button
                         className="BotonGenero"
                         onClick={() => {
-                            if (gender === "Masc") {
-                                setGender("Fem");
+                            if (gender === "Masculino") {
+                                setGender("Fememenino");
                             } else {
-                                setGender("Masc");
+                                setGender("Masculino");
                             }
                         }}
                     >
@@ -67,7 +67,7 @@ export default function Torneos() {
                     </button>
                     {torneos.map((x) => {
                         let control =
-                            gender === "Masc" ? "Masculino" : "Femenino";
+                            gender === "Masculino" ? "MASCULINO" : "FEMENINO";
                         if (x.genero === control) {
                             return (
                                 <Link to={x.id}>

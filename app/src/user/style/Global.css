@@ -111,6 +111,10 @@ input {
   align-items: flex-start;
 }
 
+a{
+  text-decoration: none;
+}
+
 /*BOTONES*/
 
 button {
