@@ -12,7 +12,7 @@ public interface TorneoRepository extends JpaRepository<Torneo, Long> {
 
     @Query(value = "SELECT t FROM Torneo t WHERE"
             + " LOWER(t.nombre) LIKE LOWER('%:keyword%')"
-            + " LIMIT 3", nativeQuery = true)
+            + " LIMIT 5", nativeQuery = true)
     List<Torneo> search(@Param(value = "keyword") String keyword);
 
 }

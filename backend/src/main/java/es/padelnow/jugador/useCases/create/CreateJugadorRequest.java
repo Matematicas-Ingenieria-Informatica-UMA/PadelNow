@@ -19,4 +19,11 @@ public class CreateJugadorRequest {
     private PosicionDeJuego posicionDeJuego;
     private double altura;
     private Date fechaNacimiento;
+
+    public CreateJugadorRequest(String nombre, String apellidos, Sexo sexo, String pais){
+        this.nombre=nombre;
+        this.apellidos=apellidos;
+        this.sexo=sexo;
+        this.pais=pais;
+    }
 }

@@ -3,10 +3,15 @@ package es.padelnow.noticia.useCases.update;
 import es.padelnow.noticia.Noticia;
 
 import es.padelnow.noticia.NoticiaRepository;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.Optional;
 
 @Service
@@ -29,39 +34,51 @@ public class NoticiaUpdater {
         }
     }
 
-//    public void updateOld (Long id, @RequestBody String request) {
-//        Noticia n = repository.getById(id);
-//        try {
-//            JSONObject json = new JSONObject(request);
-//            Iterator<String> it = json.keys();
-//            while (it.hasNext()) {
-//                String key = it.next();
-//                switch (key) {
-//                    case "titulo":
-//                        n.setTitulo(json.getString(key));
-//                        break;
-//                    case "cuerpo":
-//                        n.setCuerpo(json.getString(key));
-//                        break;
-//                    case "autor":
-//                        n.setAutor(json.getString(key));
-//                        break;
-//                    case "subtitulo":
-//                        n.setSubtitulo(json.getString(key));
-//                        break;
-//                    case "foto":
-//                        try {
-//                            n.setFoto(new URL(json.getString(key)));
-//                        } catch (MalformedURLException e) {
-//                            e.printStackTrace();
-//                        }
-//                        break;
-//                }
-//            }
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
+    public void updateOld (Long id, @RequestBody UpdateNoticiaRequest request) {
+        Optional<Noticia> busquedaNoticia = repository.findById(id);
+        if (busquedaNoticia.isPresent()) {
+            Noticia n = busquedaNoticia.get();
+            // TODO: Merge the request and the database data
+            // PROPUESTA DE UPDATE
+            if (request != null) {
 
+                JSONObject json = new JSONObject(request);
+                Iterator<String> it = json.keys();
+                while (it.hasNext()) {
+                    String key = it.next();
+                    switch (key) {
+                        case "titulo":
+                            n.setTitulo(json.getString(key));
+                            break;
+                        case "cuerpo":
+                            n.setCuerpo(json.getString(key));
+                            break;
+                        case "autor":
+                            n.setAutor(json.getString(key));
+                            break;
+                        case "subtitulo":
+                            n.setSubtitulo(json.getString(key));
+                            break;
+                        case "foto":
+                            n.setFoto(json.getString(key));
+                            break;
+                        case "fecha":
+                            try{
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                                Date d = sdf.parse(json.getString(key));
+                                n.setFecha(d);
+                            } catch (ParseException e){}
+                            break;
+                    }
+                }
+
+                repository.save(n);
+            } else {
+                throw new IllegalStateException("NoticiaUpdateRequest is null");
+            }
+
+        }else {
+            throw new IllegalStateException("Noticia with id " + id + " does not exist");
+        }
+    }
 }

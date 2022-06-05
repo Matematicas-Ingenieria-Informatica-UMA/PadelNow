@@ -14,7 +14,7 @@ public interface PartidoRepository extends JpaRepository<Partido, Long> {
             + " LOWER(p.resultado) LIKE LOWER('%:keyword%')"
             + " OR LOWER(p.fase) LIKE LOWER('%:keyword%')"
             + " OR LOWER(p.winners) LIKE LOWER('%:keyword%')"
-            + " LIMIT 3", nativeQuery = true)
+            + " LIMIT 5", nativeQuery = true)
     List<Partido> search(@Param(value = "keyword") String keyword);
 
 }

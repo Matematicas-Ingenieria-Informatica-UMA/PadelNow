@@ -34,5 +34,5 @@ public class UpdatePartidoRequest {
 
     private String fase;
 
-    private Torneo torneo;
+    private Long torneo;
 }

@@ -14,7 +14,7 @@ public interface JugadorRepository extends JpaRepository<Jugador, Long> {
     @Query(value = "SELECT j FROM Jugador j WHERE"
             + " LOWER(j.nombre) LIKE LOWER('%:keyword%')"
             + " OR LOWER(j.apellidos) LIKE LOWER('%:keyword%')"
-            + " LIMIT 3", nativeQuery = true)
+            + " LIMIT 5", nativeQuery = true)
     List<Jugador> search(@Param(value = "keyword") String keyword);
 
 }
