@@ -8,22 +8,25 @@ import JugadorProvider from "./shared/Jugador/JugadorProvider";
 import ParejaProvider from "./shared/Pareja/ParejaProvider";
 import PartidoProvider from "./shared/Partido/PartidoProvider";
 import TorneoProvider from "./shared/Torneo/TorneoProvider";
+import NoticiaProvider from "./shared/Noticia/NoticiaProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <JugadorProvider>
-            <ParejaProvider>
-                <PartidoProvider>
-                    <TorneoProvider>
-                        <AuthProvider>
-                            <App />
-                        </AuthProvider>
-                    </TorneoProvider>
-                </PartidoProvider>
-            </ParejaProvider>
-        </JugadorProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <JugadorProvider>
+      <ParejaProvider>
+        <PartidoProvider>
+          <TorneoProvider>
+            <NoticiaProvider>
+              <AuthProvider>
+                <App />
+              </AuthProvider>
+            </NoticiaProvider>
+          </TorneoProvider>
+        </PartidoProvider>
+      </ParejaProvider>
+    </JugadorProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
