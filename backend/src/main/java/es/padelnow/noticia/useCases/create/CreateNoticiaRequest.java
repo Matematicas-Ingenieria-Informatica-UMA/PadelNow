@@ -15,5 +15,5 @@ public class CreateNoticiaRequest {
     private String cuerpo;
     private String autor;
     private String subtitulo;
-    private URL foto;
+    private String foto;
 }

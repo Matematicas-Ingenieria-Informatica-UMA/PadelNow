@@ -14,6 +14,6 @@ public interface NoticiaRepository extends JpaRepository<Noticia, Long> {
             + " LOWER(n.titulo) LIKE LOWER('%:keyword%')"
             + " OR LOWER(n.cuerpo) LIKE LOWER('%:keyword%')"
             + " OR LOWER(n.subtitulo) LIKE LOWER('%:keyword%')"
-            + " LIMIT 3", nativeQuery = true)
+            + " LIMIT 5", nativeQuery = true)
     List<Noticia> search(@Param(value = "keyword") String Keyword);
 }

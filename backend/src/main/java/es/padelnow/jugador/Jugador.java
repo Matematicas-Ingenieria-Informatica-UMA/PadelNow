@@ -61,4 +61,11 @@ public class Jugador {
     private void onCreate() {
         foto = "https://clinicaangeleslm.com/v2/images/images/PNG/user.png";
     }
+
+    public Jugador(String nombre, String apellidos, Sexo sexo, String pais){
+        this.nombre=nombre;
+        this.apellidos=apellidos;
+        this.sexo=sexo;
+        this.pais=pais;
+    }
 }

@@ -41,7 +41,7 @@ public class Noticia {
     private Date fecha;
 
     @Column
-    private URL foto;
+    private String foto;
 
     public Noticia(String titulo, String autor, Date fecha) {
         this.titulo = titulo;
@@ -54,7 +54,7 @@ public class Noticia {
         this.id = id;
     }
 
-    public Noticia(String titulo, String cuerpo, String autor, String subtitulo, URL foto) {
+    public Noticia(String titulo, String cuerpo, String autor, String subtitulo, String foto) {
         this(titulo, autor, new Date(System.currentTimeMillis()));
         this.cuerpo = cuerpo;
         this.foto = foto;
