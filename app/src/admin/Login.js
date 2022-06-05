@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, Navigate, Redirect } from "react-router-dom";
 import "./style/Login.css";
 import api from "../api";
-import useAuth from "./hooks/useAuth";
+import useAuth from "./auth/useAuth";
 
 export default function Login() {
   const [username, setUsername] = useState("");

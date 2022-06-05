@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./style/Recursos.css";
-import useAuth from "./hooks/useAuth";
+import useAuth from "./auth/useAuth";
 import { Link, Navigate } from "react-router-dom";
 
 export default function RecursosHome() {

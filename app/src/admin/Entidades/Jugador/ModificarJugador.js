@@ -1,98 +1,136 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
 import "../../style/CrearRecurso.css";
 import "../../../user/style/Global.css";
-import { useParams } from "react-router-dom";
 import useJugador from "../../../shared/Jugador/useJugador";
+import { useForm } from "react-hook-form";
+import { Paises } from "../../../assets/Paises";
 
 export default function ModificarJugador() {
   const { jugadores } = useJugador();
   const { id } = useParams();
-  const jugador = jugadores.find((x) => x.id === id);
+  const jugador = jugadores.find((x) => x.id === parseInt(id));
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
 
-  const [dia, mes, anyo] = jugador.nacimiento.split("/");
   return (
     <>
       <h1 className="TituloAdmin">PadelNow - MODIFICAR JUGADOR</h1>
 
-      <div className="CreaRecursoCard">
+      <form className="CreaRecursoCard" onSubmit={handleSubmit(onSubmit)}>
         <h1 className="CenterAlign">
           Rellene únicamente los datos del jugador a modificar
         </h1>
         <div className="IncidenciaTop">
           <div className="InputStyle DataInput">
             <img src="/Profile.svg" alt="Profile" />
-            <input type="text" id="Name" placeholder={jugador.nombre} />
+            <input
+              type="text"
+              id="Name"
+              defaultValue={jugador.nombre}
+              {...register("nombre")}
+            />
           </div>
           <div className="InputStyle DataInput">
-            <input type="text" id="Surnames" placeholder={jugador.apellidos} />
+            <input
+              type="text"
+              id="Surnames"
+              defaultValue={jugador.apellidos}
+              {...register("apellidos")}
+            />
           </div>
         </div>
         <div className="IncidenciaTop">
           <div className="InputStyle DateInput">
             <p className="m-0">Fecha de Nacimiento</p>
-            <input type="date" id="Birth" value={`${anyo}-${mes}-${dia}`} />
+            <input
+              type="date"
+              id="Birth"
+              {...register("fechaNacimiento")}
+              defaultValue={jugador.fechaNacimiento}
+            />
           </div>
-          <select name="Gender" id="Gender" className="DesplegableRecurso">
-            <option disabled selected>
-              Selecciona el género ({jugador.genero})
-            </option>
+          <select
+            name="Gender"
+            id="Gender"
+            className="DesplegableRecurso"
+            {...register("sexo")}
+            defaultValue={jugador.sexo}
+          >
+            <option disabled>Selecciona el género ({jugador.sexo})</option>
 
-            <option>Masculino</option>
+            <option>MASCULINO</option>
 
-            <option>Femenino</option>
+            <option>FEMENINO</option>
           </select>
         </div>
         <div className="IncidenciaTop">
-          <div className="InputStyle DataInput">
-            <input
-              type="text"
-              id="Nationality"
-              placeholder={`Nacionalidad: (${jugador.pais})`}
-            />
-          </div>
+          <select
+            type="text"
+            className="DesplegableRecurso"
+            id="Nationality"
+            defaultValue={`Nacionalidad`}
+            {...register("pais")}
+          >
+            {Object.entries(Paises).map(([k, v]) => (
+              <option value={k}>{v}</option>
+            ))}
+          </select>
+
           <div className="InputStyle DataInput">
             <input
               type="text"
               id="City"
               placeholder={`Ciudad: (${jugador.ciudad})`}
+              {...register("ciudad")}
             />
           </div>
         </div>
         <div className="IncidenciaTop">
-          <select name="Dominant" id="Dominant" className="DesplegableRecurso">
-            <option disabled selected>
-              Selecciona el brazo dominante ({jugador.brazoDominante})
-            </option>
+          <select
+            name="Dominant"
+            id="Dominant"
+            className="DesplegableRecurso"
+            {...register("brazoDominante")}
+            defaultValue={jugador.brazoDominante}
+          >
+            <option disabled>Selecciona el brazo dominante</option>
 
-            <option>Diestro</option>
+            <option>DIESTRO</option>
 
-            <option>Zurdo</option>
+            <option>ZURDO</option>
           </select>
           <div className="InputStyle DataInput">
-            <input type="text" id="PhotoURL" placeholder={`${jugador.foto}`} />
+            <input
+              type="url"
+              id="PhotoURL"
+              placeholder={`${jugador.foto}`}
+              {...register("foto")}
+            />
           </div>
         </div>
         <div className="IncidenciaTop">
-          <div className="InputStyle DataInput">
-            <input type="number" id="ID" placeholder={`ID: (${jugador.id})`} />
-          </div>
-          <select name="Position" id="Position" className="DesplegableRecurso">
-            <option disabled selected>
-              Selecciona la posición ({jugador.posicionDeJuego})
-            </option>
+          <select
+            name="Position"
+            id="Position"
+            className="DesplegableRecurso"
+            defaultValue={jugador.posicionDeJuego}
+            {...register("posicionDeJuego")}
+          >
+            <option disabled>Selecciona la posición</option>
 
-            <option>Revés</option>
+            <option>REVES</option>
 
-            <option>Derecha</option>
+            <option>DERECHA</option>
           </select>
         </div>
-        <button className="BotonConFondo">Modificar Jugador</button>
+        <button type="submit" className="BotonConFondo">
+          Modificar Jugador
+        </button>
         <Link to="/admin/recursos/jugadores" className="SimpleButton">
           Cancelar
         </Link>
-      </div>
+      </form>
     </>
   );
 }

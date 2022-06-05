@@ -9,6 +9,7 @@ import useJugador from "../../../shared/Jugador/useJugador";
 
 export default function JugadorAdmin() {
   const { jugadores } = useJugador();
+  console.log(jugadores);
 
   return (
     <>
@@ -25,14 +26,14 @@ export default function JugadorAdmin() {
       <div className="Jugadores">
         <div className="JugadoresGenero">
           {jugadores
-            .filter((j) => j.genero === "MASCULINO")
+            .filter((j) => j.sexo === "MASCULINO")
             .map((jugador) => (
               <JugadorCRUD jugador={jugador} />
             ))}
         </div>
         <div className="JugadoresGenero">
           {jugadores
-            .filter((j) => j.genero === "FEMENINO")
+            .filter((j) => j.sexo === "FEMENINO")
             .map((jugador) => (
               <JugadorCRUD jugador={jugador} />
             ))}

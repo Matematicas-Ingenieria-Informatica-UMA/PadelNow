@@ -3,22 +3,34 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Jugadores.css";
 import "../../style/Recursos.css";
+import api from "../../../api";
+import useJugador from "../../../shared/Jugador/useJugador";
 
 export default function JugadorCRUD({ jugador }) {
   const [clase, setClase] = useState("JugadorNoDisplay");
   const [eliminar, setEliminar] = useState("Jugador");
   const [boton, setBoton] = useState("JugadorVerMas JugadorFont");
+  const { setJugadores } = useJugador();
 
   const formattedFecha = new Date(jugador.fechaNacimiento).toLocaleDateString(
     "es-ES"
   );
+
+  const deleteJugador = async () => {
+    try {
+      await api.delete(`/jugadores/${jugador.id}`);
+      setJugadores((jugadores) => jugadores.filter((j) => j.id !== jugador.id));
+    } catch (err) {
+      alert("Error al eliminar el jugador");
+    }
+  };
 
   return (
     <>
       <div className={eliminar}>
         <div className="CRUDElements">
           <img
-            onClick={() => setEliminar("CRUDNoDisplay")}
+            onClick={deleteJugador}
             src="/Delete.svg"
             alt="Delete"
             className="ButtonPlayer"
