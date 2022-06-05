@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/jugadores")
 public class JugadorPostController {
     JugadorCreator creator;
 
@@ -17,7 +18,7 @@ public class JugadorPostController {
         this.creator = creator;
     }
 
-    @PostMapping("/jugador")
+    @PostMapping
     public ResponseEntity<Jugador> create(@RequestBody CreateJugadorRequest request) {
         Jugador jugador = creator.create(request);
 

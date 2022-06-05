@@ -15,7 +15,7 @@ public class TorneoCreator {
     }
 
     public Torneo create(CreateTorneoRequest request) {
-        Torneo torneo = new Torneo(request.getNombre(), request.getFechaInicial(), request.getFechaFinal());
+        Torneo torneo = new Torneo(request.getNombre(), request.getFechaInicial(), request.getFechaFinal(), request.getFaseInicial());
         return repository.save(torneo);
     }
 }

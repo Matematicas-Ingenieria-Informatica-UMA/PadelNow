@@ -26,7 +26,7 @@ public class JugadorUpdater {
         this.repository = repository;
     }
 
-    public void update(Long id, UpdateJugadorRequest request) {
+    public void update(Long id, String request) {
         Optional<Jugador> busquedaJugador = repository.findById(id);
         if (busquedaJugador.isPresent()) {
             Jugador jugador = busquedaJugador.get();
@@ -34,7 +34,7 @@ public class JugadorUpdater {
             // PROPUESTA DE UPDATE
             if (request != null){
 
-                JSONObject json = new JSONObject(request);
+                JSONObject json = new JSONObject(request.trim());
                 Iterator<String> it = json.keys();
                 while(it.hasNext()){
                     String key = it.next();
@@ -74,7 +74,7 @@ public class JugadorUpdater {
                         case "brazoDominante":
                             if(json.getString(key).equals("ZURDO")){
                                 jugador.setBrazoDominante(BrazoDominante.ZURDO);
-                                }else if (json.getString(key).equals("DIESTRO")){
+                            }else if (json.getString(key).equals("DIESTRO")){
                                 jugador.setBrazoDominante(BrazoDominante.DIESTRO);
                             }
                             break;
@@ -89,6 +89,7 @@ public class JugadorUpdater {
                 }
 
                 repository.save(jugador);
+                System.out.println("GUARDADO: " + jugador.toString() );
             } else {
                 throw new IllegalStateException("JugadorUpdateRequest is null");
             }

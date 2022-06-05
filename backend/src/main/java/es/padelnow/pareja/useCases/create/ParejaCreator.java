@@ -23,9 +23,7 @@ public class ParejaCreator {
 
     public Pareja create(CreateParejaRequest request) {
         List<Jugador> jugadores = jugadorRepository.findAllById(request.getJugadores());
-        Pareja pareja = new Pareja(request.getEntrenador(), request.getGenero());
-        jugadores.forEach(jugador -> jugador.setPareja(pareja));
-        pareja.setJugadores(jugadores);
+        Pareja pareja = new Pareja(request.getEntrenador(), request.getGenero(), jugadores);
         return parejaRepository.save(pareja);
     }
 }

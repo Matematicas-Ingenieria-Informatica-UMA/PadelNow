@@ -6,12 +6,10 @@ import es.padelnow.noticia.useCases.update.UpdateNoticiaRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/noticias")
 public class NoticiaPutController {
 
     private final NoticiaUpdater updater;
@@ -21,7 +19,7 @@ public class NoticiaPutController {
         this.updater = updater;
     }
 
-    @PutMapping("/noticia/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Noticia> update(@PathVariable Long id, @RequestBody UpdateNoticiaRequest request) {
         System.out.println(request.toString());
         updater.update(id, request);

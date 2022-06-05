@@ -66,24 +66,19 @@ public class DataConfiguration {
                     "Ignacio", "Ávila Reyes", Sexo.MASCULINO, 1.75, "br",
                     dateFormat.parse("2001-12-31"), BrazoDominante.DIESTRO, PosicionDeJuego.DERECHA);
 
+            jugadorRepository.saveAll(List.of(jugador1, jugador2, jugador3, jugador4, jugador5, jugador6));
+
             //PAREJAS
-            Pareja pareja1 = new Pareja("Carlos Pozzoni", Sexo.MASCULINO);
-            Pareja pareja2 = new Pareja("Jorge Martinez", Sexo.MASCULINO);
+            Pareja pareja1 = new Pareja("Carlos Pozzoni", Sexo.MASCULINO, List.of(jugador1, jugador2));
+            Pareja pareja2 = new Pareja("Jorge Martinez", Sexo.MASCULINO, List.of(jugador3, jugador4));
 
             parejaRepository.saveAll(List.of(pareja1, pareja2));
-
-            jugador1.setPareja(pareja1);
-            jugador2.setPareja(pareja1);
-            jugador3.setPareja(pareja2);
-            jugador4.setPareja(pareja2);
-
-            jugadorRepository.saveAll(List.of(jugador1, jugador2, jugador3, jugador4, jugador5, jugador6));
 
 
             // TORNEOS
             Torneo torneo = new Torneo("Cervezas Victoria Marbella Master 2022",
                     dateFormat.parse("2022-05-28"),
-                    dateFormat.parse("2022-06-05"));
+                    dateFormat.parse("2022-06-05"), Fase.DIECISEISAVOS_DE_FINAL);
 
             torneoRepository.save(torneo);
 

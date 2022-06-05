@@ -8,9 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/partidos")
 public class PartidoPostController {
     private final PartidoCreator creator;
 
@@ -19,7 +21,7 @@ public class PartidoPostController {
         this.creator = creator;
     }
 
-    @PostMapping("/partido")
+    @PostMapping
     public ResponseEntity<Partido> create(@RequestBody CreatePartidoRequest request) {
         Partido partido = creator.create(request);
         return new ResponseEntity<>(partido, HttpStatus.CREATED);

@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.openapitools.jackson.nullable.*;
 
 import java.net.URL;
 import java.util.Date;
@@ -20,26 +19,13 @@ public class UpdateJugadorRequest {
 
     private Long id;
 
-    private JsonNullable<String> nombre;
-    private JsonNullable<String> apellidos;
-    private JsonNullable<Sexo> sexo;
-    private JsonNullable<String> foto;
-    private JsonNullable<Float> altura;
-    private JsonNullable<String> pais;
-    private JsonNullable<String> ciudad;
-    private JsonNullable<Date> fechaNacimiento;
-    private JsonNullable<BrazoDominante> brazoDominante;
-    private JsonNullable<PosicionDeJuego> posicionDeJuego;
-
-    /*
-
     private String nombre;
 
     private String apellidos;
 
     private Sexo sexo;
 
-    private URL foto;
+    private String foto;
 
     private Float altura;
 
@@ -52,7 +38,5 @@ public class UpdateJugadorRequest {
     private BrazoDominante brazoDominante;
 
     private PosicionDeJuego posicionDeJuego;
-
-    */
 
 }

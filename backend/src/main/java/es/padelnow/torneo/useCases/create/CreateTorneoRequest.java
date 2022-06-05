@@ -1,5 +1,6 @@
 package es.padelnow.torneo.useCases.create;
 
+import es.padelnow.partido.enums.Fase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,4 +14,5 @@ public class CreateTorneoRequest {
     private String nombre;
     private Date fechaInicial;
     private Date fechaFinal;
+    private Fase faseInicial;
 }
